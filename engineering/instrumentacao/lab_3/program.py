@@ -6,7 +6,9 @@ Programa para resolução do relatório 3 de instrumentação.
 ##################################################################
 import matplotlib.pyplot as plt
 import numpy as np
+import math
 from scipy.fft import fft,fftfreq
+import scipy.fftpack
 
 # Importando dados
 ##################################################################
@@ -100,6 +102,10 @@ dados_name_2 = ["seno_2kh_100000_data",
                  "quad_2kh_1024_data",
                  "quad_2kh_1000_data"]
 
+
+
+
+
 # Plotando dados
 ##################################################################
 for i, caso in enumerate(dados):
@@ -110,23 +116,20 @@ for i, caso in enumerate(dados):
 
     T = 1/(10 * 10**3)
 
-    yf = np.array(fft(caso))* 2.0/N
-    xf = fftfreq(N,T)
+    dados_teste_x = np.linspace(0, N * T, N)
+    dados_teste_y = caso
 
-    f1 = np.linspace(0, (N-1)*T, N-1)
+    yf = scipy.fftpack.fft(dados_teste_y)
+    xf = np.linspace(0.0, 1.0//(T),N)
 
-    plt.plot(f1,np.abs(yf[1:]))
+    plt.plot(xf,np.abs(yf) * 2.0/N)
     plt.grid()
     plt.xlabel("Frequência (Hz)")
     plt.ylabel("Amplitude")
     plt.title(dados_name[i])
 
-    # plt.show()
-
-    # plt.show()
-    # print("fim do programa")
-
     plt.savefig(dados_name[i] + ".png")
+
     plt.close()
 
 
@@ -138,23 +141,21 @@ for i, caso in enumerate(dados_2):
 
     T = 1/(10 * 10**3)
 
-    yf = np.array(fft(caso[0]))* 2.0/N
-    yf2 = np.array(fft(caso[1]))* 2.0/N
-    xf = fftfreq(N,T)
+    dados_teste_x = np.linspace(0, N * T, N)
+    dados_teste_y = caso[0]
+    dados_teste_y_2 = caso[1]
 
-    f1 = np.linspace(0, (N-1)*T, N-1)
+    yf = scipy.fftpack.fft(dados_teste_y)
+    yf_2 = scipy.fftpack.fft(dados_teste_y_2)
+    xf = np.linspace(0.0, 1.0//(T),N)
 
-    plt.plot(f1,np.abs(yf[1:]), label="com friltro")
-    plt.plot(f1,np.abs(yf2[1:]), label="Sem filtro")
+    plt.plot(xf,np.abs(yf) * 2.0/N, label="com friltro")
+    plt.plot(xf,np.abs(yf_2) * 2.0/N, label="Sem filtro")
     plt.grid()
     plt.xlabel("Frequência (Hz)")
     plt.ylabel("Amplitude")
     plt.legend()
     plt.title(dados_name_2[i])
-
-    plt.show()
-
     # plt.show()
-    # print("fim do programa")
-
     plt.savefig(dados_name_2[i] + ".png")
+    plt.close()
