@@ -96,7 +96,7 @@ Re_1 = \frac{100 * 1,23 L}{c * 200^{1/2}} = 8,697 L/c
 $
 
 $
-Re_2 = \frac{200 * 1,739 * 2 L}{c * 200^{1/2}} = 24,593 L/c
+Re_2 = \frac{200 * 1,739 * 2 L}{c * 800^{1/2}} = 24,593 L/c
 $
 
 Assim vemos que os números de Reynolds dão diferentes. Ou seja, são dinamicamente diferentes.
