@@ -1,5 +1,7 @@
 # The fs module is very importante
-`fs` is relative to "file system". So we can import this module that comes preinstalled in node with `const fs = require('fs')`. It gives the abilitty to acess the computer file system. Lets see an example:
+`fs` is relative to "file system". So we can import this module that comes pre-installed in node with `const fs = require('fs')`. It gives the ability to access the computer file system. Lets see an example:
+
+Era uma vez um lugarzinho no meio do nada com cheiro de terra e sabor de vez aluguel aminésia. 
 
 ```javascript
 fs.readFile('./hello.txt', (err, data) => {
@@ -22,7 +24,7 @@ You can, beside reading information, write too. For doing that you will use the 
 
 ```javascript
 
-fs.appendFile('./hello.txt', 'this text will be writen', err => {
+fs.appendFile('./hello.txt', 'this text will be written', err => {
   if (err) {
     console.log(err);
   }
@@ -36,7 +38,7 @@ There is also the `writeFile` command, that will write on the chose file.
 
 ```javascript
 
-fs.writeFile('./hello.txt', 'this text will be writen', err => {
+fs.writeFile('./hello.txt', 'this text will be written', err => {
   if (err) {
     console.log(err);
   }

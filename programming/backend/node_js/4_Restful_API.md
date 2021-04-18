@@ -11,13 +11,13 @@ The `url` parameters must make sense. That is, if we call for the url `\profile`
 
 We can have some informations from the request, as follows:
 
-```Javascript
+```javascript
 const express = require('express');
 
 const app = express();
 
-app.use(urlencoded({extended: false}));
-app.use(json());
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
 
 app.get('/profile/:id', (req,res) => {
 
