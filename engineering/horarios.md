@@ -28,21 +28,25 @@
 -----------------------------------------------------
 
 # Avisos
-- Pesquisar formas de salvar modelos de treinamento e treinar mais de uma vez o mesmo modelo.
 - Pesquisar formas de deixar o modelo mais rápido.
 - Estudar transistors de eletrônica de aeronaves, uma vez que o assunto está um pouco nebuloso.
 - Iniciar procura de emprego no Canadá.
 
 -----------------------------------------------------
-# TODO (06/04)
+# TODO (20/04)
+[x]Reunião do mflab.
 []Instrumentação - Ver aula assíncrona (2) [][].
-[x]Eletrônica -  fazer trabalho.
 []aerodinâmica - Começar a lista de aerodinâmica.
 []TC2 - ver aula assíncrona 8. -> https://youtu.be/O7tKbDqGnLc
-[x]Reunião do mflab.
-
 
 -----------------------------------------------------
+# TODO (06/04)
+[-]Instrumentação - Ver aula assíncrona (2) [][].
+[x]Eletrônica -  fazer trabalho.
+[-]aerodinâmica - Começar a lista de aerodinâmica.
+[-]TC2 - ver aula assíncrona 8. -> https://youtu.be/O7tKbDqGnLc
+[x]Reunião do mflab.
+
 # TODO (05/04)
 - Foi passada a lista três de instrumentação.
 - Prova dia 19. Uma questão pra aula toda.

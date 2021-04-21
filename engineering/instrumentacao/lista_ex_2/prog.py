@@ -72,7 +72,7 @@ def less_square_linear_reduction(vector_x, vector_y, show_graph):
         plt.ylabel("Desvio")
         plt.show()
         print("Linear regrecion ==> f(x) = {:.3f} x + {:.3f}".format(a_constant, b_constant))
-    return a_constant, b_constant, losses
+    return [a_constant, b_constant, losses]
 
 
 
@@ -100,7 +100,7 @@ def questao_1_b():
 
     print("primera questão - b")
 
-    _, _, loss_fit = less_square_linear_reduction(data_x, data_y, False)
+    [_, _, loss_fit] = less_square_linear_reduction(data_x, data_y, False)
 
     print("Calculando o desvio padrão da reta")
 
@@ -149,7 +149,7 @@ def questao_1_d():
     data_x = [120, 90, 60, 30, 0, -30, -60, -90, -120]
     data_y = [0.99, 0.92, 0.79, 0.67, 0.51, 0.38, 0.21, 0.088, 0.018]
 
-    a_fit, b_fit, loss_fit = less_square_linear_reduction(data_x, data_y, False)
+    [a_fit, b_fit, loss_fit] = less_square_linear_reduction(data_x, data_y, False)
 
     print("primeira questão - d")
 
@@ -202,29 +202,58 @@ def questao_1_e():
     data_x = [120, 90, 60, 30, 0, -30, -60, -90, -120]
     data_y = [0.99, 0.92, 0.79, 0.67, 0.51, 0.38, 0.21, 0.088, 0.018]
 
-    a_fit, _, loss_fit =less_square_linear_reduction(data_x, data_y, False)
+    [a_fit, _, loss_fit] =less_square_linear_reduction(data_x, data_y, False)
 
 
     print("primeira questão - e")
     max_loss = np.array(loss_fit).max()
 
-    FS = 120
+    f_s = 120
 
-    Li = max_loss/FS
-    print (Li)
+    l_i = max_loss/f_s
+    print (l_i)
     print(10 * a_fit)
 
+def prova():
+    '''
+    Segunda questão da primeira prova de instrumentação
+    '''
+
+    compressão_ida = [-0.0351805, -0.1014555, -0.237981, -0.377301, -0.656438,
+                       -1.008969, -1.71]
+    compressão_vir = [-0.0332095, -0.1002115, -0.243285, -0.377443, -0.659317,
+                       -1.008895, -1.71]
+    compressão_peso = [0, 0.490, 1.474, 2.457, 4.439, 6.959, 11.997]
+
+    tração_ida = [0.0766392, 0.1261190, 0.262307, 0.399873, 0.679279, 1.032813,
+                    1.738543]
+    tração_vir = [0.0731370, 0.1283680, 0.266097, 0.405097, 0.680896,
+                      1.033632, 1.738543]
+    tração_peso = [0.580, 1.070, 2.054, 3.040, 5.022, 7.542, 12.58]
+
+    [_, _, _] = less_square_linear_reduction(compressão_peso, compressão_ida, True)
+    [_, _, _] = less_square_linear_reduction(compressão_peso, compressão_vir, True)
+    [_, _, _] = less_square_linear_reduction(tração_peso, tração_ida, True)
+    [_, _, _] = less_square_linear_reduction(tração_peso, tração_vir, True)
+
+    print("prova")
 
 # Main call
 ###############################################################################
 if __name__ == "__main__":
-    questao_1_a()
-    questao_1_b()
-    questao_1_c()
-    questao_1_d()
-    questao_1_e()
+    # questao_1_a()
+    # questao_1_b()
+    # questao_1_c()
+    # questao_1_d()
+    # questao_1_e()
 
     # Laboratório
+
+    # Prova
+
+    prova()
+    exit()
+
 
     # Data input
     DATA_10 = []
@@ -244,17 +273,17 @@ if __name__ == "__main__":
             DATA_30.append(float(line))
 
     # Data statistical results:
-    data_x = [11, 20, 30]
-    data_y = [12.1624, 21.9345, 32.3169]
+    DATA_X = [11, 20, 30]
+    DATA_Y = [12.1624, 21.9345, 32.3169]
 
-    a, b, loss = less_square_linear_reduction(data_x, data_y, True)
+    [a, b, loss] = less_square_linear_reduction(DATA_X, DATA_Y, True)
 
-    rangee = data_y[2] - data_y[0]
+    RANGEE = DATA_Y[2] - DATA_Y[0]
 
-    print(rangee)
+    print(RANGEE)
 
     maximo = np.array(loss).max()
 
     print(maximo)
 
-    print(maximo/rangee)
+    print(maximo/RANGEE)
