@@ -72,11 +72,7 @@ Para determinar a função de corrente sobre um cilindro infinito usamos a defin
 
 Assim, com esses dados, consideramos um cilindro de centro sobre a origem do sistema cartesiano e de raio $r$. O fluido que encontra-se sobre ele no infinito possui velocidade horizontal igual a $U$ e flui no sentido positivo de $X$. E podemos ver que existem dois pontos de estagnação que se encontram encostados no cilindro sobre o eixo cartesiano $X$, conforme a figura:
 
-
-
-
-
-
+![](./lista_Exercicios_3_16.png)
 
 
 
