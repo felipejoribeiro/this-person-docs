@@ -33,13 +33,19 @@
 - Iniciar procura de emprego no Canadá.
 
 -----------------------------------------------------
-# TODO (20/04)
-[x]Reunião do mflab.
+# TODO (22/04)
 []Instrumentação - Ver aula assíncrona (2) [][].
-[]aerodinâmica - Começar a lista de aerodinâmica.
+[]aerodinâmica - Fazer questão da lista de aerodinâmica.
 []TC2 - ver aula assíncrona 8. -> https://youtu.be/O7tKbDqGnLc
+[]TC2 - ver aula assíncrona 9. -> https://youtu.be/O7tKbDqGnLc
 
 -----------------------------------------------------
+# TODO (20/04)
+[x]Reunião do mflab.
+[-]Instrumentação - Ver aula assíncrona (2) [][].
+[x]aerodinâmica - Começar a lista de aerodinâmica.
+[-]TC2 - ver aula assíncrona 8. -> https://youtu.be/O7tKbDqGnLc
+
 # TODO (06/04)
 [-]Instrumentação - Ver aula assíncrona (2) [][].
 [x]Eletrônica -  fazer trabalho.

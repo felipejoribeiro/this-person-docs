@@ -20,7 +20,7 @@ If you have a Arch based system install with pacman the required package:
 sudo pacman -S nodejs-lts-dubnium
 ```
 
-## To check your noce installation
+## To check your node installation
 To se if node is installed and it's version, you can run the following command:
 
 ```
@@ -29,11 +29,11 @@ node -v
 If this command results in a version on the prompt, you can now run node, just like python and you will see it's terminal on the screen where you can performe mathematical opperations proving that javascript is indeed runing in your box.
 
 ## JavaScript on the terminal
-It's interesting, for example, that, different from the brownser javascript, here, we dont have some objects that we taked for granted there. Like the window object. Those are not defined here. But we have others that are essential in the server side. 
+It's interesting, for example, that, different from the brownser javascript, here, we don't have some objects that we took for granted there. Like the window object. Those are not defined here. But we have others that are essential in the server side. 
 
 One example is the `global` object. It has a bunch of things we can use. We wont be able to execute 'global.fetch' and 'document' too, for example. Because, once more, these are objects declared in the brownser execution of javascript only.
 
-More one object that we have here is the `process` object, that comes with information about the javascript process. One important command that suffounds `process` is the `process.exit()` that terminate the node instance and get you back to your bash session.
+More one object that we have here is the `process` object, that comes with information about the javascript process. One important command that resides in `process` is the `process.exit()` that terminate the node instance and get you back to your bash session.
 
 ## Executing JavaScript scripts with node
 Now that we have a JavaScript interpreter we can execute scripts just like python (again). For example, executing the following code with the command `node file.js` results in `9` and `<path>` in the console:
@@ -81,7 +81,7 @@ module.exports = {
 But there is a way of using ES6 expressions from node version 12 and beyond, what is better as the syntax is more palatable. The functions turn into `import {largeNumber} from './file_2.mjs'` and `export const largeNumber = 356`. This can be done in two ways:
 - The first way is by changing the extension name to `file.mjs` as hinted before. This is important to tell to the node interpreter to use ES6 syntax.
 
-- The other way is to run `npm init -y` to create a `package.json` file in the project folder. There you can instruct node to consider modules in a ES6 way by defining `"type":"module"` inside the `pachage.jason` file.
+- The other way is to run `npm init -y` to create a `package.json` file in the project folder. There you can instruct node to consider modules in a ES6 way by defining `"type":"module"` inside the `package.jason` file.
 
 ## The three types of modules in node
 There are three kind of modules in node. First there is the ones you create like the ones we studied above. 

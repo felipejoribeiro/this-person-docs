@@ -1,5 +1,5 @@
 # The RESTful APIs
-A `RESTful` API is a web archtectural style. It conssists in a set of rules that determine how the server must react to input http requests attending to some standards. So, when we are talking about communication between servers there is much more flexibilitty than a web client. But those things can be applied in the browser aswell. In this sense the standards are verry important to preserve compatibilitty in the API ecossistem.
+A `RESTful` API is a web architectural style. It consists in a set of rules that determine how the server must react to input http requests attending to some standards. So, when we are talking about communication between servers there is much more flexibility than a web client. But those things can be applied in the browser as well. In this sense the standards are very important to preserve compatibility in the API ecosystem.
 
 It uses these commands to interact with clients:
 - `get()` : Receive a resource.
@@ -7,7 +7,7 @@ It uses these commands to interact with clients:
 - `post()`: Create a resource.
 - `delete()`: Delete a resource.
 
-The `url` parameters must make sense. That is, if we call for the url `\profile` with a `delete()` function, we will delete a profile. Other characteristic is that it is stateless in a sense that one call doesn't depend on another. Each call is a independent entity with a end on itself that execute an action. A server doens't need to memorise things, just acess to the database and the rules. 
+The `url` parameters must make sense. That is, if we call for the url `\profile` with a `delete()` function, we will delete a profile. Other characteristic is that it is stateless in a sense that one call doesn't depend on another. Each call is a independent entity with a end on itself that execute an action. A server doesn't need to memorise things, just access to the database and the rules. 
 
 We can have some informations from the request, as follows:
 
