@@ -32,12 +32,35 @@
 - Estudar transistors de eletrônica de aeronaves, uma vez que o assunto está um pouco nebuloso.
 - Iniciar procura de emprego no Canadá.
 
+- Nome do arquivo de prova deve ser número de matrícula na prova de eletrônica.
+- para o trabalho de instrumentação: https://www.youtube.com/watch?v=hjmM7wRGMPE
+- 
+
+#########################################################################################################
+# APLICA A FUNÇÃO PREDICT (TANTO NO CONJUNTO DE DADOS DE TREINAMENTO QUANTO NO CONJUNTO DE DADOS DE TESTE)
+train_predict = y_scaler.inverse_transform(moe.predict_values(np.c_[x_train_serie]))
+teste_predict = y_scaler.inverse_transform(moe.predict_values(np.c_[x_teste_serie]))
+#########################################################################################################
+##############################################################################################
+# DEFINE UM ESCALADOR PARA A NORMALIZAÇÃO DOS DADOS
+x_scaler = MinMaxScaler() # APLICA UM NORMALIZAÇÃO DOS DADOS 
+y_scaler = MinMaxScaler() # APLICA UM NORMALIZAÇÃO DOS DADOS 
+x_scaler = x_scaler.fit(x_train_serie)
+y_scaler = y_scaler.fit(y_train_serie)
+########################################################################################
 -----------------------------------------------------
 # TODO (22/04)
-[]Instrumentação - Ver aula assíncrona (2) [][].
-[]aerodinâmica - Fazer questão da lista de aerodinâmica.
-[]TC2 - ver aula assíncrona 8. -> https://youtu.be/O7tKbDqGnLc
-[]TC2 - ver aula assíncrona 9. -> https://youtu.be/O7tKbDqGnLc
+[-]Instrumentação - Ver aula assíncrona (2) [][].
+[x]aerodinâmica - Fazer questão da lista de aerodinâmica.
+[-]TC2 - ver aula assíncrona 8. -> https://youtu.be/O7tKbDqGnLc
+[-]TC2 - ver aula assíncrona 9. -> https://youtu.be/O7tKbDqGnLc
+
+-----------------------------------------------------
+# TODO (22/04)
+[-]Instrumentação - Ver aula assíncrona (2) [][].
+[x]aerodinâmica - Fazer questão da lista de aerodinâmica.
+[-]TC2 - ver aula assíncrona 8. -> https://youtu.be/O7tKbDqGnLc
+[-]TC2 - ver aula assíncrona 9. -> https://youtu.be/O7tKbDqGnLc
 
 -----------------------------------------------------
 # TODO (20/04)
