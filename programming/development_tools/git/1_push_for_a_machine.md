@@ -1,4 +1,4 @@
-#Push for a machine
+# Push for a machine
 On this document we will see how to push commits for a machine.
 That is, if you have a raspberry pi, we will se how to use it as a git server like github, but without the UI stuff.
 
