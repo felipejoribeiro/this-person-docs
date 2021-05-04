@@ -181,7 +181,7 @@ Podemos fazer isso com o seguinte diagrama:
 ## 7 - Sétima questão
 ![](./lista_Exercicios_3_8.png)
 
-As forças aerodinâmicas que atuam sobre um corpo insidem sobre o centro de pressão. Um componente muito importante é o da força de arrasto que sempre aponta no sentido contrário ao do movimento. Dessa forma, quando temos um centro de pressão na traseira do corpo, a força de arrasto cria componentes que restauram. Por outro lado, se o centro de pressão está no fronte, qualquer inclinação faz a força de arrasto gerar componentes no mesmo sentido dessa rotação. Equilibrar um movimento assim é como equilibrar um pêndulo invertido. Seguem as imagens:
+As forças aerodinâmicas que atuam sobre um corpo operam sobre o centro de pressão. Um componente muito importante é o da força de arrasto que sempre aponta no sentido contrário ao do movimento. Dessa forma, quando temos um centro de pressão na traseira do corpo, a força de arrasto cria componentes que restauram. Por outro lado, se o centro de pressão está no fronte, qualquer inclinação faz a força de arrasto gerar componentes no mesmo sentido dessa rotação. Equilibrar um movimento assim é como equilibrar um pêndulo invertido. Seguem as imagens:
 
 
 ![](./lista_Exercicios_3_17.png)
@@ -266,6 +266,26 @@ O que nos diz que isso é uma constante em todo o domínio. Porém isso não oco
 
 ## 10 - Décima questão
 ![](./lista_Exercicios_3_11.png)
+
+$
+\psi_{fonte} = \frac{Q}{2 \pi} \theta_1
+$
+
+$
+\psi_{fonte} = - \frac{Q}{2 \pi} \theta_2
+$
+
+Assim, pra achar o total:
+
+$
+\psi_{fonte} = \frac{Q}{2 \pi} \theta - \frac{Q}{2 \pi} \theta_2
+$
+
+Que nos dá a equação de corrente final:
+
+$
+\psi_{fonte} = \frac{Q}{2 \pi} (\theta_1 - \theta_2)
+$
 
 
 ## 11 - Décima primeira questão
