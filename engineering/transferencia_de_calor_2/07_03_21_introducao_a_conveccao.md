@@ -64,7 +64,7 @@ $
     q_s^{\prime\prime} = h (T_s - T_\infty)
 $
 
-Onde h é um coeficiente chamado de coeficiente de convecção que engloba todos os efeitos da camada limite.
+Onde $h$ é um coeficiente chamado de coeficiente de convecção que engloba todos os efeitos da camada limite.
 Um dos objetivos dessa disciplina é determinar essa constante:
 
 $

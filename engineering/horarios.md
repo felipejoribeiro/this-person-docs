@@ -52,7 +52,7 @@ y_scaler = y_scaler.fit(y_train_serie)
 -----------------------------------------------------
 # TODO (30/04)
 [  ]TC2 - ver aula assíncrona 8. -> https://youtu.be/O7tKbDqGnLc
-[  ]TC2 - ver aula assíncrona 9. -> https://youtu.be/O7tKbDqGnLc
+[  ]TC2 - ver aula assíncrona 9. -> https://www.youtube.com/watch?v=oehp1zOCRY0
 [  ]TC2 - ver aula assíncrona 10. -> https://youtu.be/-3AznJTM9sY
 
 -----------------------------------------------------
