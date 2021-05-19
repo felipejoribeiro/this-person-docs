@@ -4,14 +4,15 @@ The partitions  were created in a minimal manner. With one Swap partition (6G), 
 Then, it was installed the following packages:
 - base
 - base-devel
-- linux-lts
-- linux-lts-headers
+- linux
+- linux-headers
 - linux-firmware
 - intel-ucode
 - git
 - vim
 - sudo
-- dialog
+
+Then configured locales and language.
 
 Then I configured the hostname and hosts.
 
@@ -50,33 +51,44 @@ Installed some other programs:
 - htop
 - neofetch
 
-Configured the AUR helper
-It installed go in the process. But i got rid of it with the command:
-
-`sudo pacman -Rns $(pacman -Qtdq)`
-
 Then, i installed the graphical interface. For that i installed the Nvidia drivers:
-- nvidia-lts
+- nvidia
 - nvidia-utils
 - nvidia-settings
+- nvidia-prime (for allowing us to run nvidia only in apps that require it)
 - mesa
 
-Faltaram os pacotes de 32 bits:
-- lib32-nvidia-utils
-- lib32-mesa
+To execute a program with Nvidia graphics you must use the `prime-run` before the command. A way to test this feature is to install the `glxinfo` (AUR) package. When runned it just outputs the glx information about the environment. So, if you execute `glxinfo | grep "renderer"`, if everything is correct, the intel graphycs will appear, and if you execute `prime-run glxinfo | grep "renderer"` then the Nvidia graphics card will popup.
 
 Them i installed the display server:
 - xorg
 - xorg-server
 - xorg-xinit
 - xorg-apps
-- bumblebee
 
 Them copied the configuration file.
 
 `cp /etc/X11/xinit/xinitrc /home/<user>/.xinitrc`
 
-Them, installed the window manager and the compositor:
+Them, installed the window manager, compositor and some other stuff:
 - bspwm
+- sxhkd
 - picom
+- nitrogen
+- arandr
+- alacritty
+
+Them i copied the configuration files for the bspwm and sxhkd and edited the sxhkd one to open the alacritty terminal. And then i edited the .xinitrc file to open the bspwm window manager and initiate picom.
+
+Then i configured the AUR helper with a yay installation.
+
+
+Then i installed some more programs:
+- blender
+- gotop
+
+Cuda seems to be ok and the computer isn't heating in idle.
+
+
+
 
