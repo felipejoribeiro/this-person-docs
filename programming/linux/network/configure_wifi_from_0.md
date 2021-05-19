@@ -31,6 +31,13 @@ Notice that the wright one is being used. This must be assured.
 
 ### Setting up the inteface
 Now that you know that the right driver is installed, you must set up the interface (the wireless one). For that, first, check the available ones with the `ip link` command. A wireless interface must be displayed. Normally it's name is something similar to `wlan0`.
-Then you must turn on the interface with the `ip link set wlan0 on` command.
+Then you must turn on the interface with the `ip link set wlan0 up` command.
 Now you can use any Internet manager program to scan and connect to a wifi access point.
 
+## with networkmanager and iwc
+If you use the Networkmanager as the manager of your network you can run the `nmcli` to check the status of your internet interfaces.
+If your wifi is ok you can scan for available connections with the `nmcli dev wifi` command.
+
+run `nmcli dev wifi connect <SSID_or_BSSID> password <password>`
+
+And that's it. You are on.
