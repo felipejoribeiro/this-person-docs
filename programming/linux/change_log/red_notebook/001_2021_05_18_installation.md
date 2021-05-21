@@ -60,6 +60,7 @@ Then, i installed the graphical interface. For that i installed the Nvidia drive
 - mesa
 - lib32-mesa
 - xf86-video-intel
+- libglvnd
 
 Then i configured nvidia to update initramfs after any driver update. For that i created the file `/etc/pacman.d/hooks/nvidia.hook`, with:
 ```
@@ -198,6 +199,7 @@ StartLimitBurst=0
 [Service]
 Type=oneshot
 Restart=on-failure
+ExecStartPre=/bin/sleep 10
 ExecStart=/bin/bash -c 'echo 60 > /sys/class/power_supply/BAT1/charge_control_end_threshold'
 
 [Install]
@@ -235,7 +237,7 @@ Then I disabled the grub initial menu and hided the initial logs with:
 
 ```
 GRUB_CMDLINE_LINUX_DEFAULT=quiet
-GRUB_CMDLINE_LINUX="console=tty12"
+GRUB_CMDLINE_LINUX="console=tty2"
 ```
 Then saved the changes with `grub-mkconfig -o /boot/grub/grub.cfg`.
 
@@ -244,10 +246,27 @@ To know the name of each window I installed the `xorg-xprop` package that allow 
 
 Then i changed the picom version. Installed the `picom-ibhagwan-git`(aur) one. To activate good blur.
 
-Then i created the alacritty config and made a basic one. Installed `powerline-fonts` and `powertline` as new fonts.
+Then i created the alacritty config and made a basic one. Installed `powerline-fonts` and `powertline` as new fonts. And seted the Dracula theme with direct colors.
+
+Then i configured the ssh servir in the machine. this was done with the installation of:
+- `openssh`
+- `ssh-audit`(aur)
+
+And i configured some security things like disabling password inwards authentication and desanbling root logging. All this can be done in `/etc/ssh/sshd_config`
+
+Then i cloned this notes repository and started making these registers in the notebook.
 
 Then i configured the lightdm greatter. For that i installed:
 - `lightdm`
 - `lightdm-gtk-greeter`
+And enabled the `lightdm` system service.
+And then created the file `.xprofile` that will replace the `.xinitrc` when we initiate the computer with `lightdm`.
 
-created polybar folder in `.config/`
+Then i configured the polybar installyng the `polybar`(AUR) package. Created the polybar config file. And copyied the `launch.sh` file in the config polybar directory. And finally I configured bspwm to call it on startup.
+
+Then i configured `thunderbird` as my email client.
+
+Then i configured the keyboard hotkeys with `ACPI` events. This was done installing the `acpid` package and starting it with `sudo systemctl enable/start acpid.service`.
+Then you can make the `journalctl -f` command to listten what each button does, and configure the `/etc/acpi/handler.sh` to react accordingly to each keyboard command. As studied earlier, this can be used to change the fan profile and other things.
+
+
