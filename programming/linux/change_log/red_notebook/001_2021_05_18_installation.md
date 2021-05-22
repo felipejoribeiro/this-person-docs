@@ -1,5 +1,10 @@
 # Installation of the arch OS
 The partitions  were created in a minimal manner. With one Swap partition (6G), the EFI FAT32 one (300M) and the linux file system (~450G). They where placed in the main *SSD* in the notebook.
+`mkfs.fat -F32 /dev/sda1`
+`mkswap /dev/sda2`
+`swapon /dev/sda2`
+`mkfs.ext4 /dev/sda3`
+
 
 Then, it was installed the following packages:
 - base
@@ -8,22 +13,91 @@ Then, it was installed the following packages:
 - linux-headers
 - linux-firmware
 - intel-ucode
-- git
-- vim
-- sudo
+
+```
+    
+    pacstrap /mnt base base-devel linux linux-headers linux-firmware intel-ucode
+
+```
+
+Then create the file system with:
+
+`genfstab -U /mnt >> /mnt/etc/fstab`
+
+Then enter the new arch machine:
+
+`arch-chroot /mnt`
 
 Then configured locales and language.
 
+#### Setting our time zone
+Now that we are in the right system we can set the timezone. For that you can reference the right region with the command `ln -sf /usr/share/zoneinfo/Brazil/East /etc/localtime` for my case given the place i reside. Than you can set the hardware clock with the command `hwclock --systohc`. Than you must define the locale by editing the file `/etc/locale.gen`. This can be done with vim, but you must install it first with `pacman -S vim`. Then find the right locale and uncomment it. After that you must run the command `locale-gen`. You can uncomment how much locales you need. You can see the ones activated with the command `locale -a`.
+
+And, finally, create the file `/etc/locale.conf` with:
+```
+    LANG=en_US.UTF-8
+```
+And make the keyboard layout stay persistent in `/etc/vconsole.conf`:
+```
+    KEYMAP=us
+```
 Then I configured the hostname and hosts.
+
+#### Setting the Host name
+Now we will set the computer hostname editing a file again with vim. The file is `/etc/hostname` and you can set it to whatever you want. And we must add some other hosts locally adding the following lines in the file `/etc/hosts`:
+
+```
+    
+    127.0.0.1   localhost
+    ::1         localhost
+    127.0.1.1   my_second_arch.localdomain    my_second_arch    
+
+```
+Then, I installed some programs
+- git
+- vi
+- vim
+- sudo
 
 Then I created the my user and gave it sudo capabilities.
 
-Then I configured Grub and installed some grub utilities for ufi.
+#### Creating a user and a password (for the root too)
+Now we must create a user and a password for the user. And we must create a password for the root. So to do that we will run the `passwd` command that change the root password.
+
+Now we will create the user and the user password as well. For that we run the command `useradd -m felipejoribeiro`. And then create the password for the user with `passwd felipejoribeiro`.
+
+And finally, we must add the new user in some groups to give it permissions (to run the sudo command for example). For that we run the command `usermod -aG wheel,audio,video,optical,storage felipejoribeiro` 
+
+#### Installing SUDO 
+Them we can install the **sudo** program. With pacman by running the `pacman -S sudo` command. And after that you can edit the sudo configurations with the command `visudo`. Than search for the line `# %wheel ALL=(ALL) ALL` and uncomment it (line 82). That will give privileges to your new born user, as it is in the wheel group.
+
+Then i installed the bootloader. I configured Grub and installed some grub utilities for ufi.
+
+#### Installing the bootloader
+The BIOS checks the Master Boot Record (MBR), which is a 512 byte section located first on the Hard Drive. It looks for a bootloader (like GRUB). The hard drive's partition tables are also located here. If you remember, we created a partition for the EFI with this exact size. We will install the bootloader there now.
+
 - grub
 - efibootmgr
 - dosfstools
 - os-prober
 - mtools
+
+After that we must make our EFI directory and our boot directory. For that we use the commands `mkdir /boot/EFI` to create the directory and `mount /dev/sda1 /boot/EFI` to mount the EFI partition to the newborn directory.
+
+Remember, your bios must not be configured with the option `UEFI or legacy`. It must be set to `UEFI only`. If it's not the case the following command will result in an error. But the solution is to `exit`, and `shutdown now`. And then, configure your bios properly. After that, boot in your usb again, mount again `/dev/sda3 in /mnt` and do a `arch-chroot /mnt` again. And mount the `EFI` partition again to `/boob/EFI`. And repeat the bellow command.
+
+And finally we can install grub in it with `grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck`. Than we must create a config file for the boot loader. That can be done with `grub-mkconfig -o /boot/grub/grub.cfg`. 
+
+
+Then i configured grub to display the correct resolution editing the `/etc/default/grub` with:
+
+```
+GRUB_TIMEOUT_STYLE=hidden
+GRUB_GFXMODE=1920x1080x32,1024x768x32,auto
+GRUB_GXPAYLOAD_LINUX=keep
+```
+
+Then i disable the grub initial menu altering the `/etc/default/grub` file with a final `grub-mkconfig -o /boot/grub/grub.cfg` command.
 
 Then I installed the internet manager:
 - iwd
@@ -31,12 +105,19 @@ Then I installed the internet manager:
 - network-manager-applet
 - wireless_tools
 
+And you must enable iwd with `systemctl enable iwd` and `systemctl enable NetworkManager.service`.
+
+Then i rebooted in the new system.
+
 And connected to the internet with the nmcli utility with the commands that are available in the internet linux personal man.
 
-Then i disable the grub initial menu altering the `/etc/default/grub` file with the `GRUB_TIMEOUT=0` change with a final `grub-mkconfig -o /boot/grub/grub.cfg` command.
+Then, following the tips and tricks session of the nvidia arch wiki page i found a way of managing the low resolution in system startup for grub and initial prints. For that, i had to mount the `EFI` partition and create a file `/EFI/refind/refind.conf` in there with `use_graphics_for linux`. I had to do the same thing in the file `/etc/refind.d/refind.conf`.
 
 Then i enabled the firewall installing and enabling ufw:
 - ufw
+
+`sudo ufw enable`
+`sudo systemctl enable ufw.service`
 
 No rules where added.
 
@@ -54,13 +135,10 @@ Installed some other programs:
 Then, i installed the graphical interface. For that i installed the Nvidia drivers:
 - nvidia
 - nvidia-utils
-- lib32-nvidia-utils
 - nvidia-settings
-- nvidia-prime (for allowing us to run nvidia only in apps that require it)
 - mesa
-- lib32-mesa
 - xf86-video-intel
-- libglvnd
+
 
 Then i configured nvidia to update initramfs after any driver update. For that i created the file `/etc/pacman.d/hooks/nvidia.hook`, with:
 ```
@@ -81,15 +159,12 @@ NeedsTargets
 Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /usr/bin/mkinitcpio -P'
 ```
 
-To execute a program with Nvidia graphics you must use the `prime-run` before the command. A way to test this feature is to install the `glxinfo` (AUR) package. When runned it just outputs the glx information about the environment. So, if you execute `glxinfo | grep "renderer"`, if everything is correct, the intel graphycs will appear, and if you execute `prime-run glxinfo | grep "renderer"` then the Nvidia graphics card will popup.
-
-I installed `inxi`(AUR) too, to get some information about the display drivers and screens. It can be done with the command `inxi -G`
-
 Them i installed the display server:
 - xorg
 - xorg-server
 - xorg-xinit
 - xorg-apps
+- xorg-xrandr
 
 Them copied the configuration file.
 
@@ -105,23 +180,44 @@ Them, installed the window manager, compositor and some other stuff:
 
 Them i copied the configuration files for the bspwm and sxhkd and edited the sxhkd one to open the alacritty terminal. And then i edited the .xinitrc file to open the bspwm window manager and initiate picom.
 
-Then i configured the AUR helper with a yay installation.
 
+Then, i created the file `/etc/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf` with:
+
+```
+Section "OutputClass"
+    Identifier "intel"
+    MatchDriver "i915"
+    Driver "modesetting"
+EndSection
+
+Section "OutputClass"
+    Identifier "nvidia"
+    MatchDriver "nvidia-drm"
+    Driver "nvidia"
+    Option "AllowEmptyInitialConfiguration"
+    Option "PrimaryGPU" "yes"
+    ModulePath "/usr/lib/nvidia/xorg"
+    ModulePath "/usr/lib/xorg/modules"
+EndSection
+
+```
+
+And added the following to `.xinitrc`
+
+```
+xrandr --setprovideroutputsource modesetting NVIDIA-0
+xrandr --auto
+```
+
+In this moment, it's possible to connect through HDMI with the television. Awesome stuff.
+
+Then i configured the AUR helper with a yay installation.
 
 Then i installed some more programs:
 - blender
-- gotop
+- gotop(AUR)
 
 Cuda seems to be ok and the computer isn't heating in idle. Funny thing is that the 120Hz display is working out of the box. Nice.
-
-Then, following the tips and tricks session of the nvidia arch wiki page i found a way of managing the low resolution in system startup for grub and initial prints. For that, i had to mount the `EFI` partition and create a file `/EFI/refind/refind.conf` in there with `use_graphics_for linux`. I had to do the same thing in the file `/etc/refind.d/refind.conf`.
-
-Then i configured grub to display the correct resolution editing the `/etc/default/grub` with:
-
-```
-GRUB_GFXMODE=1920x1080x32,1024x768x32,auto
-GRUB_GXPAYLOAD_LINUX=keep
-```
 
 Then i installed the brave browser with `yay -Syu brave-bin`.
 
@@ -132,6 +228,14 @@ Then i enabled the multilib repositories editing the `/etc/pacman.conf` file wit
 Include=/etc/pacman.d/mirrorlist
 ```
 And then updated the system with a `sudo pacman -Syyu` command.
+
+And after 
+
+- lib32-nvidia-utils
+- lib32-mesa
+
+
+I installed `inxi`(AUR) too, to get some information about the display drivers and screens. It can be done with the command `inxi -G`
 
 Then i configured audio, installing:
 - `alsa-utils`
@@ -153,6 +257,26 @@ And I enabled the DTS alsa creating the file `/etc/asound.conf` with:
 <confdir:pcm/dca.conf>
 ```
 The sound is gorgeous now. Really pleasant. I didn't configured the pulseeffects. There are some settups you can explore in the internet.
+
+And the sound is functional through the HDMI port, and this is truly amazing.
+
+So i tried install steam, as it's the most demanding program i know.
+- `steam`
+- `ttf-ms-win8`(aur)
+- `ttf-liberation`
+- `wqy-zenhei`
+- `steamcmd`(aur)
+- `proton`(aur)
+
+I tested some games and valheim runned smoothly. Dark souls 3 was nice too.
+
+Then i configured the nvidia-prime utility:
+
+- nvidia-prime (for allowing us to run nvidia only in apps that require it)
+- libglvnd
+
+To execute a program with Nvidia graphics you must use the `prime-run` before the command. A way to test this feature is to install the `glxinfo` (AUR) package. When runned it just outputs the glx information about the environment. So, if you execute `glxinfo | grep "renderer"`, if everything is correct, the intel graphycs will appear, and if you execute `prime-run glxinfo | grep "renderer"` then the Nvidia graphics card will popup.
+
 
 Then i configured the touchpad of the notebook installing these programs:
 - `xf86-input-libinput`
@@ -209,15 +333,6 @@ And then enable it. Then you can change `60` for whatever percentage you like. T
 
 There seems to be some problem with the renderer. When i open the brave brownser there is some error mensages. And i can't open it with `prime-run`. I installed `hal`(aur) to try to solve but without success. But blender is fine and cuda is functional in blender, so it's something software specific.
 
-So i tried install steam, as it's the most demanding program i know.
-- `steam`
-- `ttf-ms-win8`(aur)
-- `ttf-liberation`
-- `wqy-zenhei`
-- `steamcmd`(aur)
-- `proton`(aur)
-
-I tested some games and valheim runned smoothly. Dark souls was nice too.
 
 Then i installed some archiving compressing software:
 - `tar`
@@ -262,7 +377,23 @@ Then i configured the lightdm greatter. For that i installed:
 And enabled the `lightdm` system service.
 And then created the file `.xprofile` that will replace the `.xinitrc` when we initiate the computer with `lightdm`.
 
-Then i configured the polybar installyng the `polybar`(AUR) package. Created the polybar config file. And copyied the `launch.sh` file in the config polybar directory. And finally I configured bspwm to call it on startup.
+And remember to configure the Nvidia_only thing for lightdm. For that you need to create a file in `/etc/lightdm/display_setup.sh`:
+
+```
+#!/bin/sh
+xrandr --setprovideroutputsource modesetting NVIDIA-0
+xrandr --auto
+```
+And make it runable with `chmod +x /etc/lightdm/display_setup.sh`.
+
+And you need to edit the file `/etc/lightdm/lightdm.conf`:
+rasgado
+```
+[Seat:*]
+display-setup-script=/etc/lightdm/display_setup.sh
+```
+
+Then i configured the polybar installing the `polybar`(AUR) package. Created the polybar config file. And copyied the `launch.sh` file in the config polybar directory. And finally I configured bspwm to call it on startup.
 
 Then i configured `thunderbird` as my email client.
 
