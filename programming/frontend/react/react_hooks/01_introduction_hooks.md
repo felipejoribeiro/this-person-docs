@@ -7,7 +7,7 @@ So, the central idea behind `hooks` is that you can use it in a function to "Hoo
 
 Before hooks, we only created function components without state, that is, they only return rendered component given the input values. if a component must have state, then we would have to make it a class.
 
-The first thing is to import some libraries in the class script. Like follows:
+The first thing is to import some libraries in the class script. You don't need to install anything, as it is implemented in React. Like follows:
 
 ```javascript
 import React, {useState, useEffect} from 'react'
