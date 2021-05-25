@@ -248,6 +248,7 @@ Then i configured audio, installing:
 - `pulsemixer`
 - `lib32-libpulse`
 - `lib32-alsa-plugins`
+- `pavucontrol`
 - `pulseeffects-legacy-git`(aur)
 - `dcaenc`(aur)
 
@@ -270,14 +271,6 @@ So i tried install steam, as it's the most demanding program i know.
 
 I tested some games and valheim runned smoothly. Dark souls 3 was nice too.
 
-Then i configured the nvidia-prime utility:
-
-- nvidia-prime (for allowing us to run nvidia only in apps that require it)
-- libglvnd
-
-To execute a program with Nvidia graphics you must use the `prime-run` before the command. A way to test this feature is to install the `glxinfo` (AUR) package. When runned it just outputs the glx information about the environment. So, if you execute `glxinfo | grep "renderer"`, if everything is correct, the intel graphycs will appear, and if you execute `prime-run glxinfo | grep "renderer"` then the Nvidia graphics card will popup.
-
-
 Then i configured the touchpad of the notebook installing these programs:
 - `xf86-input-libinput`
 - `xorg-xinput`
@@ -290,27 +283,65 @@ Section "InputClass"
     Driver "libinput"
     MatchIsTouchpad "on"
     Option "Tapping" "on"
-		Option "NaturalScrolling" "true"
+    Option "NaturalScrolling" "true"
     Option "TappingButtonMap" "lmr"
 EndSection
 ```
 
+To turn on and off the touchpad you can see the xinput devices with the `xinput list` and then turn off the touchpad with `xinput disable <name>`. In the case of this keyboard it's `xinput disable 14`. But the cursor still on. To disable the cursor you must install the `unclutter` package. You run it with `unclutter -idle 1 -root`. And the mouse will be hidden when you don't move it for one second. I ended adding it to `.xprofile`.
+
+May add the disable option to the keyboard hotkeys.
+
 And that is it. Now the touchpad works flawlessly.
 
-And then i had to manage the fan speed controll. For that i had to play a with the registers in the notebook that do that. Scary stuff. For that i had to install:
+Then i configured the lightdm greatter. For that i installed:
+- `lightdm`
+- `lightdm-gtk-greeter`
+And enabled the `lightdm` system service.
+And then created the file `.xprofile` that will replace the `.xinitrc` when we initiate the computer with `lightdm`.
 
-- `asus-fan-dkms-git`(aur)
-- `nbfc`(aur)
-
-And then the following commands start to function:
+And remember to configure the Nvidia_only thing for lightdm. For that you need to create a file in `/etc/lightdm/display_setup.sh`:
 
 ```
-# ec-probe write 0x5e 0x80 # silent mode
-# ec-probe write 0x5e 0x40 # balance mode
-# ec-probe write 0x5e 0xC0 # performance mode
+#!/bin/sh
+xrandr --setprovideroutputsource modesetting NVIDIA-0
+
+# set up the two monitors for bspwm
+my_laptop_external_monitor=$(xrandr --query | grep 'HDMI-0')
+if [[ $my_laptop_external_monitor = *disconnected* ]]; then
+	xrandr --auto
+else
+	if [[ $my_laptop_external_monitor = *connected* ]]; then
+		xrandr --output HDMI-0 --mode 1920x1080 --pos 0x0 --rotate normal --output eDP-1-1 --primary --mode 1920x1080 --pos 0x1080 --rotate normal
+	else
+		xrandr --auto
+	fi
+fi
+```
+And make it runable with `chmod +x /etc/lightdm/display_setup.sh`.
+
+And you need to edit the file `/etc/lightdm/lightdm.conf`:
+rasgado
+```
+[Seat:*]
+display-setup-script=/etc/lightdm/display_setup.sh
 ```
 
-Then it is flawless. In the future i will try to implement this in the polybar or something like that.
+And one last thing was necessary. The nvidia module wasn't being loaded in boot. This was resulting in problems for the lightdm to access the Nvidia only config in the first xrandr commands. To solve that i configured the modules to be loaded in system boot. So before the lightdm execution, creating the `/etc/modules-load.d/nvidia.conf` file with `nvidia` in and `/etc/modules-load.d/nvidia-drm.conf` with `nvidia-drm`.
+
+And you need to configure the `.xprofile` file with the following:
+```
+# Compositor
+picom --experimental-backend &
+
+# Background image
+nitrogen --restore &
+
+# Window manager
+exec bspwm
+```
+
+And the results were stelar. Now the hdmi works perfectly with sound and everything.
 
 Then i discovered a way of controlling the battery charging process. The battery controllers are all present in `/sys/class/power_supply/BAT1/` and here you can see the power level, and set the maximum battery level to charge. Really cool stuff. But this value is reseted at system boot. So to activate it we must create a `service` file, as proposed in the arch wiki. This file must be created in `/etc/systemd/system/battery-charge-threshold.service`:
 
@@ -329,10 +360,8 @@ ExecStart=/bin/bash -c 'echo 60 > /sys/class/power_supply/BAT1/charge_control_en
 [Install]
 WantedBy=multi-user.target
 ```
+
 And then enable it. Then you can change `60` for whatever percentage you like. There are more options to deal with hibernation, but i didn't bother to setup now as i rarely use this feature. But if you want this in the future, just take a look in the Asus arch wiki man page.
-
-There seems to be some problem with the renderer. When i open the brave brownser there is some error mensages. And i can't open it with `prime-run`. I installed `hal`(aur) to try to solve but without success. But blender is fine and cuda is functional in blender, so it's something software specific.
-
 
 Then i installed some archiving compressing software:
 - `tar`
@@ -340,28 +369,19 @@ Then i installed some archiving compressing software:
 - `unzip`
 - `p7zip`
 - `gzip`
-- `rar`(aur)
 - `unrar`
 
 And a better cp utility for large files:
 - `rsync`
 
-Then I installed an image viewer, the `vimiv` package and i choose a background image. Of a squid and i setted it as default.
-
-Then I disabled the grub initial menu and hided the initial logs with:
-
-```
-GRUB_CMDLINE_LINUX_DEFAULT=quiet
-GRUB_CMDLINE_LINUX="console=tty2"
-```
-Then saved the changes with `grub-mkconfig -o /boot/grub/grub.cfg`.
+Then I installed an image viewer, the `vimiv` package and i choose a background image.
 
 Then I did some initial config with picom. Copied the default configuration file in `~/.config/picom/` and made the terminal transparent.
 To know the name of each window I installed the `xorg-xprop` package that allow us tu click in windows with the `xprop` command to know information about that window.
 
 Then i changed the picom version. Installed the `picom-ibhagwan-git`(aur) one. To activate good blur.
 
-Then i created the alacritty config and made a basic one. Installed `powerline-fonts` and `powertline` as new fonts. And seted the Dracula theme with direct colors.
+Then i created the alacritty config and made a basic one. Installed And seted the Dracula theme with direct colors.
 
 Then i configured the ssh servir in the machine. this was done with the installation of:
 - `openssh`
@@ -369,35 +389,58 @@ Then i configured the ssh servir in the machine. this was done with the installa
 
 And i configured some security things like disabling password inwards authentication and desanbling root logging. All this can be done in `/etc/ssh/sshd_config`
 
-Then i cloned this notes repository and started making these registers in the notebook.
+And then i had to manage the fan speed controll. For that i had to play a with the registers in the notebook that do that. Scary stuff. For that i had to install:
 
-Then i configured the lightdm greatter. For that i installed:
-- `lightdm`
-- `lightdm-gtk-greeter`
-And enabled the `lightdm` system service.
-And then created the file `.xprofile` that will replace the `.xinitrc` when we initiate the computer with `lightdm`.
+- `asus-fan-dkms-git`(aur)
+- `nbfc`(aur)
 
-And remember to configure the Nvidia_only thing for lightdm. For that you need to create a file in `/etc/lightdm/display_setup.sh`:
+And then the following commands start to function:
 
 ```
-#!/bin/sh
-xrandr --setprovideroutputsource modesetting NVIDIA-0
-xrandr --auto
+# ec-probe write 0x5e 0x80 # silent mode
+# ec-probe write 0x5e 0x40 # balance mode
+# ec-probe write 0x5e 0xC0 # performance mode
 ```
-And make it runable with `chmod +x /etc/lightdm/display_setup.sh`.
 
-And you need to edit the file `/etc/lightdm/lightdm.conf`:
-rasgado
-```
-[Seat:*]
-display-setup-script=/etc/lightdm/display_setup.sh
-```
+Then it is flawless. In the future i will try to implement this in the keyboard hotkeys.
+
+
+Then i configured the nvidia-prime utility:
+
+- nvidia-prime (for allowing us to run nvidia only in apps that require it)
+- libglvnd
+
+To execute a program with Nvidia graphics you must use the `prime-run` before the command. A way to test this feature is to install the `glxinfo` (AUR) package. When runned it just outputs the glx information about the environment. So, if you execute `glxinfo | grep "renderer"`, if everything is correct, the intel graphycs will appear, and if you execute `prime-run glxinfo | grep "renderer"` then the Nvidia graphics card will popup. Other choice is to use `inxi -G` too. I prefeer as it is smaller.
+
+There seems to be some problem with the renderer. When i open the brave brownser there is some error mensages. And i can't open it with `prime-run`. I installed `hal`(aur) to try to solve but without success. But blender is fine and cuda is functional in blender, so it's something software specific.
+
+This works with the external HDMI too but you have to exclude the nvidia config module you created in the `/etc/X11` folder. And the name of the screens change too, but i found that this is the perfect solution. Everything jus works. Like a charm.
+
 
 Then i configured the polybar installing the `polybar`(AUR) package. Created the polybar config file. And copyied the `launch.sh` file in the config polybar directory. And finally I configured bspwm to call it on startup.
 
-Then i configured `thunderbird` as my email client.
+Then i configured `thunderbird` as my email client and configured some emails.
+
+Then i installed and configured the fish shell. Registered it to open in alacritty. And installed some programs:
+- `jq`
+- `exa`
+- `bat`
 
 Then i configured the keyboard hotkeys with `ACPI` events. This was done installing the `acpid` package and starting it with `sudo systemctl enable/start acpid.service`.
-Then you can make the `journalctl -f` command to listten what each button does, and configure the `/etc/acpi/handler.sh` to react accordingly to each keyboard command. As studied earlier, this can be used to change the fan profile and other things.
+Then you can make the `journalctl -f` command to listten what each button does, and configure the `/etc/acpi/handler.sh` to react accordingly to each keyboard command. As studied earlier, this can be used to change the fan profile and other things. And i configured each button with the right commands.
 
+Mapped the fan to the mute mic for the moment.
+
+Created a bunch of shell scripts to handle system things.
+
+Installed:
+- asus_fanmode
+- acpid
+
+There are buttons that are dead. Will check it later. The fun button is wrong too.
+
+Then i installed the libbre office package:
+- libreoffice-writer
+- ttf-dejavu
+- ttf-inconsolata
 
