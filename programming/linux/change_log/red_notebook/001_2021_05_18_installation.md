@@ -322,6 +322,7 @@ And make it runable with `chmod +x /etc/lightdm/display_setup.sh`.
 
 And you need to edit the file `/etc/lightdm/lightdm.conf`:
 rasgado
+
 ```
 [Seat:*]
 display-setup-script=/etc/lightdm/display_setup.sh
@@ -414,7 +415,7 @@ To execute a program with Nvidia graphics you must use the `prime-run` before th
 
 There seems to be some problem with the renderer. When i open the brave brownser there is some error mensages. And i can't open it with `prime-run`. I installed `hal`(aur) to try to solve but without success. But blender is fine and cuda is functional in blender, so it's something software specific.
 
-This works with the external HDMI too but you have to exclude the nvidia config module you created in the `/etc/X11` folder. And the name of the screens change too, but i found that this is the perfect solution. Everything jus works. Like a charm.
+This works with the external HDMI too but you have to exclude the nvidia config module you created in the `/etc/X11` folder. And the name of the screens change too, but i found that this is the perfect solution. Everything jus works. Like a charm. One thing is that now and then the nvidia driver isn't loaded resulting in the `nvidia-settings` not launching. This can be solved restarting the lightdm process, but i have too look up a batter solution. I thing the module isn't loaded before Xorg, os something. Will look at this more in the future.
 
 
 Then i configured the polybar installing the `polybar`(AUR) package. Created the polybar config file. And copyied the `launch.sh` file in the config polybar directory. And finally I configured bspwm to call it on startup.
@@ -443,4 +444,47 @@ Then i installed the libbre office package:
 - libreoffice-writer
 - ttf-dejavu
 - ttf-inconsolata
+
+Then i installed rofi
+- rofi
+- ttf-meslo (aur)
+
+Then in installed neovim:
+- neovim-nightly-bin (aur)
+- pip3 install neovim
+- nodejs-lts-fermium
+- npm install neovim -g
+- python2
+- python2-pip
+- xclip
+- ruby
+- yarn
+- gem install neovim
+- pearl-git
+- cpan & install Log:log4perl
+- cpan & install Neovim::Ext
+
+Created the `.config/nvim` folder.
+Perl is massive. Didn't manage to install properly but was too afraid to uninstall it.
+
+Then i installed zathura:
+- zathura
+- zathura-cb
+- zathura-djvu
+- zathura-pdf-mupdf
+- zathura-ps
+- zaread-git (aur)
+
+The last one allows to read office/libreoffice documents with zathura. To run this just do `zaread /path/to/document.docx`.
+
+Installed pandoc aswell as it was a dependency of zaread.
+- pandoc
+
+
+Then I checked how to see disk usage and maintenance with:
+- ncdu
+
+And installed a program to update the mirror list of pacman:
+- reflector
+and used it to create updated mirror lists.
 
