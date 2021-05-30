@@ -440,6 +440,15 @@ Installed:
 
 There are buttons that are dead. Will check it later. The fun button is wrong too.
 
+Then it was possible to make the mute and volume buttons functioning. For that i created files in `/etc/acpi/events/`, `vol-m`, `vol-u` and `vol-d`, there goes the `vol-m` as an example:
+
+```
+event=button/mute
+action=runuser -u fejori -- amixer set Master toggle
+```
+
+Now these buttons are functioning great.
+
 Then i installed the libbre office package:
 - libreoffice-writer
 - ttf-dejavu
@@ -487,4 +496,196 @@ Then I checked how to see disk usage and maintenance with:
 And installed a program to update the mirror list of pacman:
 - reflector
 and used it to create updated mirror lists.
+
+Optimized the system to ssd activating weekly fstrim with the following command:
+```
+systemctl enable fstrim.timer
+```
+There is an option to do this continually, but this is bad for performance. anything had to be downloaded.
+
+Then i configured some fonts in the system. For that i used font-matrix:
+- fontmatrix (AUR)
+Which is nice to navigate the fonts and compare then and experiment with the text. But everything can be solved in the terminal.
+All your fonts are located in `/usr/share/fonts` or `~/.local/share/fonts`. There are the directories where all the `.ttf` files are located.
+To isntall a font, just download the `.ttf` file and then move it to one of the two font directories just mentioned.
+Then you need to run `sudo fc-cache -fv` and all the fonts in the two files will be installed and available to programs. 
+To preview the fonts with the `display` command, that already was installed in my machine. Maybe it's a component of the kernel.
+You can see all fonts that are present in the system with the command:
+`fc-list`.
+
+Insatlled some more locales to, en_CA and fr_CA.
+
+Then, i fixed the cedilla letter by editing the configuration files:
+
+```
+sudo vim /usr/lib/gtk-3.0/3.0.0/immodules.cache
+
+sudo vim /usr/lib/gtk-2.0/2.10.0/immodules.cache
+```
+There i found the lines with "cedilla" and "Cedilla", like:
+
+```
+"cedilla" "Cedilla" "gtk30" "/usr/share/locale" "az:ca:co:fr:gv:oc:pt:sq:tr:wa"
+```
+And added `:en` in the end in both cache files.
+
+Then i created a backup file with the following command:
+
+```
+sudo cp /usr/share/X11/locale/en_US.UTF-8/Compose /usr/share/X11/locale/en_US.UTF-8/Compose.bak
+```
+
+And then i changed the compose file with the commands:
+
+```
+sudo sed 's/ć/ç/g' < /usr/share/X11/locale/en_US.UTF-8/Compose | sed 's/Ć/Ç/g' > Compose
+sudo mv Compose /usr/share/X11/locale/en_US.UTF-8/Compose
+```
+
+and finally  i instructed the system to load the cedilla module writing the following in the `/etc/environment`:
+
+```
+GTK_IM_MODULE=cedilla
+QT_IM_MODULE=cedilla
+```
+Now the cedilla works as it should.
+
+Then i installed some new fonts as recomended by dt:
+- ttf-inconsolata: Doesn't have italics. Well readable.
+- nerd-fonts-source-code-pro: Has italics.
+- otf-code-new-roman(aur):
+- ttf-roboto-mono
+- ttf-hack
+- ttf-ubuntu-font-family
+- ttf-mononoki(aur)
+- noto-fonts-emoji
+- ttf-twemoji(aur)
+- otf-openmoji(aur)
+- ttf-symbola(aur)
+
+And to explore the fonts after installation I installed `font-manager`(aur).
+And installed the emoji piker from rofi:
+- rofimoji
+- xdotool
+
+And then i created a file `01-emoji.conf` in `~/.config/fontconfig/conf.d/` with the following code:
+
+```
+<?xml version="1.0"?>
+  <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+  <fontconfig>
+
+   <alias>
+     <family>sans-serif</family>
+     <prefer>
+       <family>Hack</family>
+       <family>Noto Color Emoji</family>
+       <family>Twitter Color Emoji</family>
+     </prefer> 
+   </alias>
+
+   <alias>
+     <family>serif</family>
+     <prefer>
+       <family>Hack</family>
+       <family>Noto Color Emoji</family>
+       <family>Twitter Color Emoji</family>
+     </prefer>
+   </alias>
+
+   <alias>
+    <family>monospace</family>
+    <prefer>
+       <family>Hack</family>
+       <family>Noto Color Emoji</family>
+       <family>Twitter Color Emoji</family>
+     </prefer>
+   </alias>
+
+  </fontconfig>
+```
+
+And this is it. Emojis are functioning correctly. Everything is awesome.
+
+Then I installed the `Ranger` file manager and some dependencies:
+- ueberzug
+- transmission-cli
+- calibre
+- poppler
+- imagemagick
+- ffmpegthumbnailer
+- w3m
+- mediainfo
+- openscad
+- atool
+- udev
+- udisks2
+
+And installed `vlc` and `obs-studio` packages.
+
+Then i installed the print screen utilities:
+- flameshot
+- peek
+
+Everything is configured very nicelly.
+
+And other prograns:
+- cbonsai
+
+Then i configured latex, installing the following packages:
+- texlive-most
+- biber
+- tllocalmgr-git
+- latex-mk(aur)
+
+Then I disabled the wpa_supplicant service, as i use other network utility.
+
+Then i installed other file manager, the pcmanfm-gtk3.
+
+- kde-gtk-config
+
+Then I installed:
+- lxappearance-gtk3
+
+And was possible to configure the theme of gtk apps.
+
+Then i installed the Unity idle:
+- unityhub (aur)
+- dotnet-runtime
+- dotnet-sdk
+- mono-msbuild
+- mono
+- ncurses5-compat-libs (aur)
+
+```
+"omnisharp.useGlobalMono": "always"
+```
+
+I created the shell script to execut `nvm` too and added the projects to unity. But it not worked at first. I had to install one of the tutorial projects to things work properlly. But now everything runs fine. About the Omnisharp, after some nasty stuff it came to work, don't know really how, but things got well.
+
+Now, with everything perfect you need to configure a backup functionality. For that:
+- timeshift (aur)
+
+Then you can start the program in the terminal with `timeshift-gtk`. I couldn't run from rofi as it require sudo. But there wasn't enough space, strangely. Then i disabled all scheduled so that i could always umount the sda driver as i don't need to sync it.
+
+Then i installed lollipop.
+
+Then i configured automounting for pendrives. For that i installed:
+- udisks2
+- udiskie
+
+There was a problem with the audio after an update, solved installing:
+- alsa-lib
+
+And deleting a file as asked in the error prompt trying to run alsa-mixer.
+
+Then i configured pollybar to controll media:
+- playerctl
+- dbus-python (pip)
+
+
+
+
+
+
 
