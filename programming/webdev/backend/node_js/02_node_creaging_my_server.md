@@ -1,9 +1,9 @@
 # Creating the damn server
-Now we will see how to create the server with node. The first thing we must do is indicate to nodemon our `server.js` file. That is done by editin the file `package.json` with the following line: `"start":"nodemon server.js"`.
+Now we will see how to create the server with node. The first thing we must do is indicate to nodemon our `server.js` file. That is done by editing the file `package.json` with the following line: `"start":"nodemon server.js"`.
 
 You can populate the file with:
 
-```Javascript
+```javascript
 
 // Server development file
 const http = require('http');
@@ -28,12 +28,10 @@ server.listen(3000);
 
 There we can se the importance of the `http` module. It is used for creating the `server` object that inputs a function that is called every time that there is interaction with the specified port (`server.listen(3000)`). The arguments of this function can be `request` and `response`. With request we can take information about the requesting client, like url, method, headers, with:
 
-```Javascript 
-
+```javascript 
 console.log('headers', request.headers);
 console.log('method', request.method);
 console.log('url', request.url);
-
 ```
 So with any request we can see all this information about the system making the request. Those are informations that came with the http request.
 
@@ -82,8 +80,7 @@ So the request for the favicon is made in the address `/favicon.ico` and is made
 ## Creating a node API
 So now we can do all sort of things. One of those is that we don't need to response an `html`. We can answer http calls with jason, as an API. For that we must change the type of the response of course and the response, as we can see ahead.
 
-```Javascript
-
+```javascript
 // Server development file
 const http = require('http');
 
@@ -103,14 +100,13 @@ const server = http.createServer((request, response)=>{
 })
 
 server.listen(3000);
-
 ```
 
 And the `http` call will respond with an `json` with useful information. Thing is, you can read the `url` information and depending of the type of the request you can send different kinds of things. Such flexibility is awesome. In the following example, depending on the `url` of the `http` call all sorts of information are passed, and when only the `localhost` **ip** is called a html page is the response.
 
 Here is an example of implementation:
 
-```Javascript
+```javascript
 
 // Server development file
 const http = require('http');

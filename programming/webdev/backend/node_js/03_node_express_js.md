@@ -4,7 +4,7 @@ When we are in the Front End we can use React to enhance our lives as developers
 ## Installing Express on a project
 The first thing that needs to be done is installing the library:
 
-```
+```bash
 npm install express
 ```
 

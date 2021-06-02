@@ -4,7 +4,7 @@ On this archive we will see how to install node in a fresh installed machine.
 ### Debian
 If you have a Debian based server, than all you need to do to have the node LTS edition is the following commands:
 
-```shell
+```bash
 sudo apt update
 sudo apt install nodejs npm
 ```
