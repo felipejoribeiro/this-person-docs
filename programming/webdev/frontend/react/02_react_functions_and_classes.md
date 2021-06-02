@@ -75,3 +75,69 @@ There are some good methods to take note:
 -`React.Children.only(this.props.children)`: Return the only child, and if there is more than one throws.
 -`React.Children.toArray(this.props.children)`: Returns a simple array of children elements.
 
+### React Functions
+One of the ways in witch we can create components is with functions. The convention is to create components with Capital first letter and CammelCase. Then you must return the `jsx` that the component must render. Like follows:
+
+```javascript
+import React from "react"
+import ReactDOM from "react-dom"
+
+function MyApp() {
+  return (
+    <div>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <ol>
+    </ol>
+    </div>
+  )
+}
+
+ReactDOM.render(
+  <MyApp />,
+  document.getElementById("root")
+)
+```
+The element then can be referenced in `jsx` like a `HTML` tag. But you could implement this function in a different file and import it. In that case you would need to export it there, but we will see that in a moment.
+
+It is important to notice that you can only return one element, not two. In the latter case you must wrap everything in a `<div></div>` tag.
+
+Other convention to naming, When dealing with `React` components is to give the same name of the component to the file where it is stored, like, if we were to move the `<MyApp/>` component definition to a different file it would be placed in `MyApp.js`.
+
+So the app above can be translated as follows: 
+
+
+```javascript
+import React from "react"
+
+function MyApp() {
+  return (
+    <div>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <ol>
+    </ol>
+    </div>
+  )
+}
+export default MyInfo
+```
+
+```javascript
+import React from "react"
+import ReactDOM from "react-dom"
+import MyApp from "./MyApp"
+
+ReactDOM.render(
+  <MyApp />,
+  document.getElementById("root")
+)
+```
+Notice that when we import an `jsx` file the extencions is optional. And we need to import `React` always to have access to the `jsx` tags.
+

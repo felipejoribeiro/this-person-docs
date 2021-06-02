@@ -80,7 +80,7 @@ ReactDOM.render(
 ```
 With is just the same function saw before, but here it encapsulate all page creating what is known as a `React app`. The element where `React` renders itself is on the pages `root` component. So the frame work occupies the complete page.
 
-Is worth mentioning that the `App` component is imported too from other `javascript` code. It's another react component in a structure known as `component composition`.
+Is worth mentioning that the `App` component is imported too from other `javascript` code. It's another react component in a structure known as `component composition`. This is important as enable us to scatter our code through out various files and this is a relief in comparisson with `HTML` for example.
 
 And last, but not least, here we import the `React` libraries in the javascript code as in this case we installed those locally with `npm`. In this case they will be sent with the page to the client. And even when you create an app with `create-react-app`, the html page will be created as well with the following:
 
