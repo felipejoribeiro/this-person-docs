@@ -27,13 +27,17 @@ In this case we have only functions composing the react app. All of then returns
 
 ### Props
 
-The input arguments of the function is called `props`, and they are passed through the `jsx` element sintax as shown. Note that every time that you must insert javascript elements inside the `HTML` sections you must wrap the code in brackets.
+The input arguments of the function is called `props`, and they are passed through the `jsx` element sintax as shown. Note that every time that you must insert javascript elements inside the `HTML` sections you must wrap the code in brackets, otherwise it will interpret it as plain text.
 
 Other than `Props` the children are passed as well. It is recommended to always start a component name with Capital letters as `React` treats components starting with lowercase letters as `DOM` tags, like `<div>`.
 
 It's recommended to give names to `Props` that refers to the components point of view and not the applications's perspective.
 
 A final observation that worth mention is that all `Props` must be pure functions, that is, they must not modify the content of it's props. They are `read only`.
+
+If the props aren't served then they will be `null` in the component. And will not be rendered. But this don't break the component. If the props are used as text in the component they will not be displayed. But this may cause issues if more complex logic operations aremade withe these. This is important as you can create styles that react logically to these situations creating components that are more reusable.
+
+A way of using these `components` with `Props` is with ` array_b = array.map(function)`, that is a higher order array method. It takes a function as parameter and parses the array with it. Other methods that worth mention are `filter`, `reduce` and others. It will return an array of thing. It can be an array of components, and in this case this cab simply be placed directly in the `jsx` and things will render as expected.
 
 ### Child
 If your react component has child components, a developer can access then with a `this.props.children` statement. It returns a array, containing the references to the child React node instances. Here goes an example:
@@ -139,5 +143,30 @@ ReactDOM.render(
   document.getElementById("root")
 )
 ```
-Notice that when we import an `jsx` file the extencions is optional. And we need to import `React` always to have access to the `jsx` tags.
+Notice that when we import an `jsx` file the extencions is optional. And we need to import `React` always to have access to the `jsx` tags. These tags are called `Elements` and they represent vanilla `HTML` elements in our `DOM`.
+
+### React Classes
+Class based components are interesting. They can store state and deal with events. As we can define functions in there and let then handle events. they too must return some rendered components. Here goes the minimal example of `class` component:
+
+```javascript
+class App extends React.Component {
+  yourMethodHere() {
+    console.log("hy")
+  }
+
+  render() {
+    yourMethodHere()
+    return (
+      <div>
+        <h1>Code goes here</h1>
+      </div>
+    )
+  }
+}
+
+export default App
+```
+
+The  render method returns What must be rendered, but it can execute logic as well. Which will occur when the class is rendered. That is usefull for conditional styling and other things. and the class can accept `Props` too. That can be accomplished with `this.props.value`.
+
 
