@@ -103,8 +103,8 @@ class App extends React.Component {
     }
 }
 ```
-The binding is necessary for allowing us to use `setState()`. But you can avoid it using arrow functions in the definition of the method:
 
+The binding is necessary for allowing us to use `setState()`. But you can avoid it using arrow functions in the definition of the method:
 
 ```javascript
 class App extends React.Component {
@@ -134,7 +134,16 @@ class App extends React.Component {
 }
 ```
 
-In this way the binding isn't necessary.
+In this way the binding isn't necessary. It is important to notice that the event function will return the `event` as an input. To have more than this input you must do the following:
 
+```javascript
+<div className="todo-item">
+    <input 
+        type="checkbox" 
+        checked={props.item.completed} 
+        onChange={() => props.handleChange(props.item.id)}/>
+    <p>{props.item.text}</p>
+</div>
+```
 
-
+So the arrow function will have `event` as the input, but we will not use it. Instead we will use just the id as the functions executes the `handleChange()` method with `props.item.id` as input. Just for comprehension sake, if you wanted to make the arrow function modification, but leave the calling the same way as before, you would just need to make this function definition: `onChange={(event) => props.handleChange(event)}`.
