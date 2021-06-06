@@ -15,7 +15,7 @@ Which open the chosen note in `Neovim` for editing or reading. And it's possible
 
 ![gif](./rofi.gif)
 
-The dot files are located in this [Repo]().
+The dot files are located in this [Repo](https://github.com/felipejoribeiro/my-dev-environment).
 
 ## Table of contents
 Here goes all subjects and files that are present in the repo:
@@ -37,4 +37,4 @@ All words here were written by myself and were based in a multitude of fonts tha
 If you which to contribute fell free to send a pull request. New informations, revisions or corrections are welcome.
 
 ## Licenses
-[MIT](https://github.com/electron/electron/blob/master/LICENSE)
+[MIT](https://github.com/felipejoribeiro/this-person-docs/blob/main/LICENSE)
