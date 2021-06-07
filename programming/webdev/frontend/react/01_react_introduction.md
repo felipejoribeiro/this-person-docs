@@ -63,6 +63,12 @@ ReactDOM.render(e(LikeButton), domContainer);
 
 And that's it. The final function will render the component in the specified `html` component. You can reuse this component too, in other elements in the page.
 
+Notice that, we can't use `jsx` in this context as we don't have `React` properly installed locally, so we have to use the `React.createElement()` always which is a burden. The best way is by using the `create-react-app` utility with the following command: 
+
+```bash
+npx create-react-app
+```
+
 Interestingly enough, when you create a `React app` there will be an file called `Index.js` that will have something like this:
 
 ```javascript
