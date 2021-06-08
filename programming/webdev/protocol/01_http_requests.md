@@ -112,7 +112,10 @@ Connection: Keep-Alive
 ```
 (This example shows how you can pass plain XML to your web server.)
 
-
+## Default mensages.
+Every http request is sent with an status number. Here are the most important:
+- 200 : OK
+- 201 : Resource created
 
 
 
