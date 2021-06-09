@@ -36,6 +36,15 @@ And then you just need to create the remote as previously explained:
 git remote add new_remote_name <name_of_host>:/path/to/empty/repo
 ```
 
+## Auto deploying
+If you want to deploy your project when you push something to your server, one thing you can do is use `git hooks`. Navigate ( in your server ) to the repository where the project is. Now, go to `.git/hooks/`, then create the file `post-receive` (no extencion) with the following text:
+
+```
+
+npm build /path/to/your/project
+
+```
+If your project is a react app. If it isn't then adapt the command to the right one, for build. And that is it. The mensages of the deployment will even appear in your console when you run `git push <remote_name>`. Awesome stuff. 
+
+
 So this is it. Happy pushing!
-
-
