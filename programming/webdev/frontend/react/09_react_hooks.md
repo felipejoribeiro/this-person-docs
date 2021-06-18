@@ -16,13 +16,6 @@ import React, {useState, useEffect} from 'react'
 This will be used in the Hooks creation inside the function. So now we will convert a react class into a function with the use of these React Hooks:
 
 ```javascript
-import React, { Component } from 'react'
-import CardList from '../components/CardList'
-import SearchBox from '../components/SearchBox'
-import Scroll from '../components/Scroll'
-import ErrorBoundry from '../components/ErrorBoundry'
-import './App.css'
-
 class App extends Component {
   constructor (props) {
     super(props)
@@ -47,23 +40,7 @@ class App extends Component {
     const filteredRobots = robots.filter(robot => {
       return robot.name.toLowerCase().includes(searchfield.toLowerCase())
     })
-    return !robots.length
-      ? <h1> Loading </h1>
-      : (
-        <div className='tc'>
-          <h1> Robo Friends </h1>
-          <SearchBox searchChange={this.onSearchChange}>
-            Search bar.
-          </SearchBox>
-          <Scroll>
-            <ErrorBoundry>
-              <CardList robots = {filteredRobots}>
-                List of cards
-              </CardList>
-            </ErrorBoundry>
-          </Scroll>
-        </div>
-        )
+    return()
   }
 }
 
@@ -72,14 +49,6 @@ export default App
 And the version after the implementation of hooks:
 
 ``` javascript
-import React, {useState, useEffect} from 'react'
-
-import CardList from '../components/CardList'
-import SearchBox from '../components/SearchBox'
-import Scroll from '../components/Scroll'
-import ErrorBoundry from '../components/ErrorBoundry'
-import './App.css'
-
 function App () {
 
 	const [robots, setRobots] = useState([])
@@ -88,7 +57,7 @@ function App () {
 	useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then(response => response.json())
-      .then(users => { setRobots(users)});
+      .then(users => { setRobots(users) });
 	},[])
 
   const onSearchChange = (event) => {
@@ -98,32 +67,39 @@ function App () {
 	const filteredRobots = robots.filter(robot => {
 		return robot.name.toLowerCase().includes(searchfield.toLowerCase())
 	})
-
-	return !robots.length
-		? <h1> Loading </h1>
-		: (
-			<div className='tc'>
-				<h1> Robo Friends </h1>
-
-				<SearchBox searchChangeFunc={onSearchChange}>
-					Search bar.
-				</SearchBox>
-
-				<Scroll>
-					<ErrorBoundry>
-						<CardList passed_robots = {filteredRobots}>
-							List of cards
-						</CardList>
-					</ErrorBoundry>
-				</Scroll>
-			</div>
-			)
+  return()
 }
 
 export default App
 ```
 
+Observe that the `useState()` function returns an `Array` which the first element is the variable that references the state, and the second is the function to change the state.
+If your state has various elements. For each one you must call the `useState()` function.
+
 So the `useState()` is used to create the state and determine a variable to receive the state element and a function to alter it. And the `useEffect()` determine side effects from a function component. That is, logical operations that occurs from environment events like mount and umount.
+
+Functions for life cycle like `componentDidMount`, `componentDidUpdate` and `componentWillUnmount` can be used with `hooks` too. With:
+
+```javascript
+useEffect(() => {
+  //Logic
+}, [variable, to, watch, change]);
+```
+
+If you don't declare the list, the effect will run with any change to the component, having the same effect as `componentDidUpdate`. And if you declare a empty list `[]`, it will have the same effect as `componentDidMount`.
+
+To use `componentWillUnmount` we have to do something like this:
+
+```javascript
+useEffect(() => {
+  //Logic
+  return () => {
+    // Logic to run when the component is umount
+  }
+}, []);
+```
+
+So, the returned function of the effect will be run when the component unmount.
 
 That is not a reason to dump all classes from your code. These tools can be used together without problems. So you can use then with strategy.
 And there is a bunch of legacy code that will stay implemented as classes. So be aware of both and know how to work with both.

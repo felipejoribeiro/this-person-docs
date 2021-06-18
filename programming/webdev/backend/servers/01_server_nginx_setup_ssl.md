@@ -45,7 +45,7 @@ ln -s /etc/nginx/sites-available/felipejoribeiro_config /etc/nginx/sites-enabled
 
 And create the `/var/www/felipejoribeiro` directory but with a name of your liking. And you can populate this with index.html and create a basic webpage.
 
-And then, just restart `nginx` with `systemctl reload nginx`.
+And then, just restart `nginx` with `systemctl restart nginx`.
 
 ### Enabling ssl certificate.
 Just execute the `certbot` utility with the command `certbot --nginx` and follow the prompts. And configure to redirect all traffic to `https`. And that is it! now your site is encripted. Congrats.
