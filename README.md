@@ -29,6 +29,7 @@ Here goes all subjects and files that are present in the repo:
 - PostgreSQL
 - html
 - css
+- flask
 
 ## Authorship
 All words here were written by myself and were based in a multitude of fonts that range from `Youtube` videos to `books` and academic `articles`. But, as these notes are intended for personal usage, rarely these fonts are mentioned in the text, only when strictly necessary for future research.
