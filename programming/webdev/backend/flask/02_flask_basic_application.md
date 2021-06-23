@@ -36,7 +36,9 @@ def user(name):
 	return '<h1>Hello, {}!</h1>'.format(name)
 ```
 
-The text in the `URL` in the place of the dynamic part will enter the function as an input. In this case in the `name` variable. These are `strings` by default, but can have different types if you declare it with `/user/<int:id>` for example. Flask supports these types: `string`, `int`, `float` and path for routes. The path type is a special string type that can include forward slashes, unlike the string type. Here we have a minimal functional basic flask application:
+The text in the `URL` in the place of the dynamic part will enter the function as an input. In this case in the `name` variable. These are `strings` by default, but can have different types if you declare it with `/user/<int:id>` for example. Flask supports these types: `string`, `int`, `float` and path for routes. The path type is a special string type that can include forward slashes, unlike the string type.
+
+Here we have a minimal functional basic flask application:
 
 ```python
 from flask import Flask
@@ -47,9 +49,14 @@ def index():
     return '<h1>Hello World!</h1>'
 ```
 
-If you get the `AttributeError: module 'importlib._bootstrap' has no attribute 'SourceFileLoader'` error, maybe your python version is off, or a lib maybe.
+If you get the `AttributeError: module 'importlib._bootstrap' has no attribute 'SourceFileLoader'` error, maybe your python version is off, or a lib maybe. 
+
+To run the app, just run the following commands: `export FLASK_APP=hello.py` and `flask run`.
+
+There is other way another way of initiating the development server, with .
 
 If everything is ok you can enter the provided link and see your `/` endpoint. If you try to access any other, it will result in an `404 - not found` page. This way of serving the the app is intended just for development. The proper way of serving in production will be discussed further.
+
 
 
 
