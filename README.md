@@ -1,7 +1,7 @@
 # Personal WIKI
 Here resides all information gandered through the ages concerning software development. This include knowledge about web development, linux, information security and other topics. The material is composed by notes that are scattered in an directory tree that is organized by subject. 
 
-![library](./books.png)
+![library](./data/books.png)
 
 All files are in `MarkDown` format which is a lightweight markup language that allows plain text formating. The reason for it was that these plain text files are easily searchable with fuzzy finders and grep commands, which makes information queries really easy.
 
@@ -13,7 +13,7 @@ ls -R ~/notes | grep -v README | grep .md | sed "s/;/ /g" | rofi -dmenu -p "Open
 
 Which open the chosen note in `Neovim` for editing or reading. And it's possible to convert these notes to `PDF` as well if required with `Pandoc`:
 
-![gif](./rofi.gif)
+![gif](./data/rofi.gif)
 
 The dot files are located in this [Repo](https://github.com/felipejoribeiro/my-dev-environment).
 
