@@ -185,4 +185,149 @@ In this case it compares the sent name with the previous saved. If it is differe
 In this example the mensages are rendered using the bootstrap template for style.
 A for loop is used because there could be multiple messages queued for display, one for each time `flash()` was called in the previous request cycle. This is necessary because all messages that are not displayed are discarted. And more than one can emerge.
 
+# Email
+Many applications need to notify users in some occasions. A good method is via email. Python has a standard library `smtplib` that sends emails, but flask has its own wrapper for it that integrates nicely with the app. It's called `Flask-Mail` and it connects to localhost at port 25 and sends email without authentication. you can install it with `pip install flask-mail`. Here goes some configurations:
+
+|Key|Default|Description
+|-|-|-
+|MAIL_SERVER|localhost|Hostname or IP address of the email server
+|MAIL_PORT|25|Port of the email server
+|MAIL_USE_TLS|False|Enable Transport Layer Security (TLS) security
+|MAIL_USE_SSL|False|Enable Secure Sockets Layer (SSL) security
+|MAIL_USERNAME|None|Mail account username
+|MAIL_PASSWORD|None|Mail account password
+
+During development it may be more convenient to connect to an external `SMTP` server. The following application uses `Google Gmail` account:
+
+```python
+import os
+# ...
+app.config['MAIL_SERVER'] = 'smtp.googlemail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')
+```
+
+But remember, never write account credentials directly in your scripts. More so if you pretend to release the project in open source field. If that is the case, have a script that imports this information from environment variables, or from a file that isn't tracked by git.
+
+Notice that it takes the credentials from environment variable, so don't forget to declare then before initiating the app:
+
+```bash
+export  MAIL_USERNAME=<Gmail username>
+export  MAIL_PASSWORD=<Gmail password>
+```
+
+Remember too that Gmail accounts are configured by default ro require external applications to use OAuth2 authentication to connect to the email server. You can change that in your accounts settings enabling "Allow less secure apps". If enabling this configuration in your personal account concerns you, create a secondary account just for that.
+
+To use the extension you must initialize it with:
+
+```python
+from flask_mail import Mail
+mail = Mail(app)
+```
+
+## Sending an email from the python shell
+You can start a python shell and send a test email:
+
+```bash
+(venv) $ flask shell
+>>> from flask_mail import Message
+>>> from hello import mail
+
+>>> msg = Message('test email', sender='you@example.com',
+        recipients=['you@example.com'])
+>>> msg.body = 'This is the plain text body'
+>>> msg.html = 'This is the <b>HTML</b> body'
+>>> with app.app_context():
+       mail.send(msg)
+
+```
+
+So it's important to have an application context runing as the `send()` method uses `current_app`.
+
+## Integrating emails with the application
+To avoid having to create email messages manually every time, it is a good idea to abstract the common parts of the application's email sending functionality into a  function. An additional benefit, you can render emails from `Jinja2` templates.
+The implementation can be seen ahead:
+
+```python
+from flask_mail import Message
+
+app.config['FLASKY_MAIL_SUBJECT_PREFIX'] = '[Flasky]'
+app.config['FLASKY_MAIL_SENDER'] = 'Flasky Admin <flasky@example.com>'
+
+def send_email(to, subject, template, **kwargs):
+    msg = Message(app.config['FLASKY_MAIL_SUBJECT_PREFIX'] + subject,
+                  sender=app.config['FLASKY_MAIL_SENDER'], recipients=[to])
+    msg.body = render_template(template + '.txt', **kwargs)
+    msg.html = render_template(template + '.html', **kwargs)
+    mail.send(msg)
+```
+There must be two versions, one in plain text and one in `html`. Now you can call this function from your view functions to send automated responses as follows:
+
+```python
+
+# ...
+
+app.config['FLASKY_ADMIN'] = os.environ.get('FLASKY_ADMIN')
+
+# ...
+
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    form = NameForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.name.data).first()
+        if user is None:
+            user = User(username=form.name.data)
+            db.session.add(user)
+            session['known'] = False
+            if app.config['FLASKY_ADMIN']:
+                send_email(app.config['FLASKY_ADMIN'], 'New User',
+                           'mail/new_user', user=user)
+        else:
+            session['known'] = True
+        session['name'] = form.name.data
+        form.name.data = ''
+        return redirect(url_for('index'))
+    return render_template('index.html', form=form, name=session.get('name'),
+                           known=session.get('known', False))
+```
+
+So now when someone registers the form an response email is sent to the user. Remember to set the `FLASKY_ADMIN` environment variable before testing.
+
+
+## Asynchronous Email
+Sending the email can freeze the request thread for a moment. Such thing makes the browser application irresponsive during that time. To avoid that the email can be sent through a background thread. Like in the following example:
+
+```python
+from threading import Thread
+
+def send_async_email(app, msg):
+    with app.app_context():
+        mail.send(msg)
+
+def send_email(to, subject, template, **kwargs):
+    msg = Message(app.config['FLASKY_MAIL_SUBJECT_PREFIX'] + subject,
+                  sender=app.config['FLASKY_MAIL_SENDER'], recipients=[to])
+    msg.body = render_template(template + '.txt', **kwargs)
+    msg.html = render_template(template + '.html', **kwargs)
+    thr = Thread(target=send_async_email, args=[app, msg])
+    thr.start()
+    return thr
+```
+
+This implementation highlights an interesting problem. Many flask extensions operate under the assumption that there are active application and/or request contexts. Like how `send()` requires `current_app` to work. But this creates a problem, as another thread would take off the function from the application context. So we need to create this context artificially with `app.app_context()`. The app instance is passed to the thread as an argument so that a context can be create.
+
+If you test this new version you will notice how it is more fluid. But its important to notice that if you have a server that creates lots and lots of emails, better than create a job for every email is to have a dedicated one just for doing that.
+
+
+
+
+
+
+
+
+
+
 
