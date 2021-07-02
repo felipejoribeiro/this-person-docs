@@ -53,12 +53,12 @@ pip install flask-sqlalchemy
 
 The database is specified as a `URL`. Here are some examples of declaring the database:
 
-|Database engine|URL|
-|-|-
-|MySQL|mysql://username:password@hostname/database|
-|Postgres|postgresql://username:password@hostname/database|
-|SQLite (Linux, macOS) |sqlite:////absolute/path/to/database|
-|SQLite (Windows)|sqlite:///c:/absolute/path/to/database|
+| Database engine       | URL
+| -                     | -
+| MySQL                 | mysql://username:password@hostname/database
+| Postgres              | postgresql://username:password@hostname/database
+| SQLite (Linux, macOS) | sqlite:////absolute/path/to/database
+| SQLite (Windows)      | sqlite:///c:/absolute/path/to/database
 
 In the `URL` you must specify the `hostname` that refers to the server where the database is hosted (this could be `localhost`, for example). There is the name of the database too in the url. For databases that require authentication you must send the `username` and `password` as well.
 
@@ -109,35 +109,35 @@ It's always good to name your tables as the default name don't follow good conve
 
 The first argument in the `db.Column()` method is th type of the database column and model attribute. Here goes the available ones:
 
-|Type name|Python type|Description
-|-|-|-
-|Integer|int|Regular integer, typically 32 bits
-|SmallInteger|int|Short-range integer, typically 16 bits
-|BigInteger|int or long|Unlimited precision integer
-|Float|float|Floating-point number
-|Numeric|decimal.Decimal|Fixed-point number
-|String|str|Variable-length string
-|Text|str|Variable-length string, optimized for large or unbounded length
-|Unicode|unicode|Variable-length Unicode string
-|UnicodeText|unicode|Variable-length Unicode string, optimized for large or unbounded length
-|Boolean|bool|Boolean value
-|Date|datetime.date|Date value
-|Time|datetime.time|Time value
-|DateTime|datetime.datetime|Date and time value
-|Interval|datetime.timedelta Time| interval
-|Enum|str|List of string values
-|PickleType|Any Python object|Automatic Pickle serialization
-|LargeBinary|str|Binary blob
+| Type name    | Python type             | Description
+| -            | -                       | -
+| Integer      | int                     | Regular integer, typically 32 bits
+| SmallInteger | int                     | Short-range integer, typically 16 bits
+| BigInteger   | int or long             | Unlimited precision integer
+| Float        | float                   | Floating-point number
+| Numeric      | decimal.Decimal         | Fixed-point number
+| String       | str                     | Variable-length string
+| Text         | str                     | Variable-length string, optimized for large or unbounded length
+| Unicode      | unicode                 | Variable-length Unicode string
+| UnicodeText  | unicode                 | Variable-length Unicode string, optimized for large or unbounded length
+| Boolean      | bool                    | Boolean value
+| Date         | datetime.date           | Date value
+| Time         | datetime.time           | Time value
+| DateTime     | datetime.datetime       | Date and time value
+| Interval     | datetime.timedelta Time | interval
+| Enum         | str                     | List of string values
+| PickleType   | Any Python object       | Automatic Pickle serialization
+| LargeBinary  | str                     | Binary blob
 
 The remaining arguments specify configuration options for each attribute:
 
-|Option name|Description|
-|-|-|
-|primary_key|If set to True, the column is the table’s primary key.|
-|unique|If set to True, do not allow duplicate values for this column.|
-|index|If set to True, create an index for this column, so that queries are more efficient.
-|nullable|If set to True, allow empty values for this column. If set to False, the column will not allow null values.|
-|default|Define a default value for the column.|
+| Option name | Description
+| -           | -
+| primary_key | If set to True, the column is the table’s primary key.
+| unique      | If set to True, do not allow duplicate values for this column.
+| index       | If set to True, create an index for this column, so that queries are more efficient.
+| nullable    | If set to True, allow empty values for this column. If set to False, the column will not allow null values.
+| default     | Define a default value for the column.
 
 Flask requires that all models have defined a primary key column. It's commonly named id. Notice that both models include a `__repr__()` method to give them a readable string representation that can be used for debugging and testing purposes.
 
@@ -157,25 +157,142 @@ Here, the `role_id` column is added to the `User` table as a `foreign key`. The 
 
 Some times the `db.relationship()` can locate the relationship's foreign key on its own, but sometimes it cannot. There are configuration options to this function as well:
 
-|Option name|Description|
-|-|-|
-|backref|Add a back reference in the other model in the relationship.|
-|primaryjoin|Specify the join condition between the two models explicitly. This is necessary only for ambiguous relationships.
-|lazy|Specify how the related items are to be loaded. Possible values are select (items are loaded on demand the first time they are accessed), immediate (items are loaded when the source object is loaded), joined (items are loaded immediately, but as a join), subquery (items are loaded immediately, but as a subquery), noload (items are never loaded), and dynamic (instead of loading the items, the query that can load them is given).
-|uselist|If set to False, use a scalar instead of a list.|
-|order_by|Specify the ordering used for the items in the relationship.|
-|secondary|Specify the name of the association table to use in many-to-many relationships.|
-|secondaryjoin|Specify the secondary join condition for many-to-many relationships when SQLAlchemy cannot determine it on its own.|
+| Option name   | Description
+| -             | -
+| backref       | Add a back reference in the other model in the relationship.
+| primaryjoin   | Specify the join condition between the two models explicitly. This is necessary only for ambiguous relationships.
+| lazy          | Specify how the related items are to be loaded. Possible values are select (items are loaded on demand the first time they are accessed), immediate (items are loaded when the source object is loaded), joined (items are loaded immediately, but as a join), subquery (items are loaded immediately, but as a subquery), noload (items are never loaded), and dynamic (instead of loading the items, the query that can load them is given).
+| uselist       | If set to False, use a scalar instead of a list.
+| order_by      | Specify the ordering used for the items in the relationship.
+| secondary     | Specify the name of the association table to use in many-to-many relationships.
+| secondaryjoin | Specify the secondary join condition for many-to-many relationships when SQLAlchemy cannot determine it on its own.
 
 There are other types other relationships besides `one-to-many` as this one. One example is the `one-to-one` relationship, and it can be implemented using `one` in the place of `many` in the previous example. There is an aditional type, more complex, called `many-to-many` that needs a third table to describe the relations. It will be better discussed ahead.
 
-## Data operations 
+## Database operations 
+Now we will explore some database operations via `flak shell`. Make sure that the environment variable `FLASK_APP` is set to the proper app before calling the shell.
 
+## Creating new tables
+First we must create the databases. The `db.create_all()` method locates all the subclasses of `db.Model` and creates corresponding tables in the database for them.
 
+```python
+from hello import db
+db.create_all()
+```
 
+By default it creates a `SQLite` database.
 
+## Inserting rows
+Now we can create a few `rows` in `Users`:
 
+```python
+from hello import Role, User
 
+admin_role = Role(name='Admin')
+mod_role = Role(name='Moderator')
+user_role = Role(name='User')
 
+user_john = User(username='john', role=admin_role)
+user_susan = User(username='susan', role=user_role)
+user_david = User(username='david', role=user_role)
+```
+These data weren't written to the database yet and just exist in memory. To do that you must perform the following opperations:
+
+```python
+db.session.add(admin_role)
+db.session.add(mod_role)
+db.session.add(user_role)
+db.session.add(user_john)
+db.session.add(user_susan)
+db.session.add(user_david)
+db.session.commit()
+```
+Then it will write the information in nonvolatile memory. If an error occur while the session is being written, the whole session is discarded. This is good as avoid partial updates in the database that would lead to database inconsistences.
+
+You can call `db.session.rollback()` too, if you want to trash all modifications present in the present session. 
+
+## Modifying rows
+The `add()` method can be also used to update models. This can be done with the following instructions:
+
+```python
+admin_role.name = 'Administrator'
+db.session.add(admin_role)
+db.session.commit()
+```
+
+## Deleting rows
+There is also a `delete()` method. The following code deletes the `Moderator` role from the database:
+
+```python
+db.session.delete(mod_role)
+db.session.commit()
+```
+Notice that the change, as always must be committed.
+
+## Querying Rows
+There is a `query` object that the `Flask-SQLAlchemy` makes available for each model. The most basic one is the following, which returns the entire contents of the table:
+
+```python
+Role.query.all()
+User.query.all()
+```
+But, you can make the search more specific with the help of the `filter_by`. The following code has an example:
+
+```python
+User.query.filter_by(role=user_role).all()
+```
+It's possible to inspect the native `SQL` command that was issued as a string:
+
+```python
+str(User.query.filter_by(role=user_role))
+```
+
+Here is an output example:
+
+```
+'SELECT users.id AS users_id, users.username AS users_username,
+users.role_id AS users_role_id \nFROM users \nWHERE :param_1 = users.role_id'
+```
+
+## Loading existing databases
+Not always you want to create stuff. If you just initiated an app and just want to load information from the databases. Here is the command:
+
+```python
+user_role = Role.query.filter_by(name='User').first()
+```
+
+So here we loaded just the first result and not `all()`. If the query don't find results it will return `None`. Multiple filters can be performed in chain to better describe what is the required data. There are a number of fiters too, as follows:
+
+| Option      | Description
+| -           | -
+| filter()    | Returns a new query that adds an additional filter to the original query
+| filter_by() | Returns a new query that adds an additional equality filter to the original query
+| limit()     | Returns a new query that limits the number of results of the original query to the given number
+| offset()    | Returns a new query that applies an offset into the list of results of the original query
+| order_by()  | Returns a new query that sorts the results of the original query according to the given criteria
+| group_by()  | Returns a new query that groups the results of the original query according to the given criteria
+
+Besides `all()` there are other query execution methods as follows:
+
+| Option         | Description
+| -              | -
+| all()          | Returns all the results of a query as a list
+| first()        | Returns the first result of a query, or None if there are no results
+| first_or_404() | Returns the first result of a query, or aborts the request and sends a 404 error as the response if there are no results
+| get()          | Returns the row that matches the given primary key, or None if no matching row is found
+| get_or_404()   | Returns the row that matches the given primary key or, if the key is not found, aborts the request and sends a 404 error as the response
+| count()        | Returns the result count of the query
+| paginate()     | Returns a Pagination object that contains the specified range of results
+
+Relationships function in a similar way to queries. The following example queries the `one-to-many` relationship between roles and users from both ends:
+
+```python
+>>> users = user_role.users
+>>> users
+>>> users
+[<User 'susan'>, <User 'david'>]
+>>> users[0].role
+<Role 'User'>
+```
 
 
