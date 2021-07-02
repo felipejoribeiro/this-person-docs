@@ -294,5 +294,163 @@ Relationships function in a similar way to queries. The following example querie
 >>> users[0].role
 <Role 'User'>
 ```
+Querying in this way has a small problem. It always does an `all()` internally to return the list of users. As the query operator is in hide, you can't refine the query with filters. 
+
+To prevent this, we can add a additional configuration when creating the relationship:
+
+```python
+class Role(db.Model):
+    __tablename__ = 'roles'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(64), unique=True)
+    # users = db.relationship('User', backref='role')   # old way
+    users = db.relationship('User', backref='role', lazy='dynamic')
+
+    def __repr__(self):
+        return '<Role %r>' % self.name
+```
+
+With the `lazy` configuration the query will return a query that hasn't executed yet, so you can add filters and further configuration:
+
+```python
+>>> user_role.users.order_by(User.username).all()
+[<User 'david'>, <User 'susan'>]
+>>> user_role.users.count()
+2
+```
+
+## Database use in view functions
+Now we can perform these database operations in our view functions. Here goes an example of usage inside the `index()` view function described before:
+
+```python
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    form = NameForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.name.data).first()
+        if user is None:
+            user = User(username=form.name.data)
+            db.session.add(user)
+            db.session.commit()
+            session['known'] = False
+        else:
+            session['known'] = True
+        session['name'] = form.name.data
+        form.name.data = ''
+        return redirect(url_for('index'))
+    return render_template('index.html',
+        form=form, name=session.get('name'),
+        known=session.get('known', False))
+```
+
+So, here, each time a name is bubmitted the application checks for it in the database using the `filter_by()` query fileter. Remember to create the tables before tinker with then.
+
+You can make the frontend have information about the save process as well:
+
+```html
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Flasky{% endblock %}
+{% block page_content %}
+    <div class="page-header">
+        <h1>Hello, {% if name %}{{ name }}{% else %}Stranger{% endif %}!</h1>
+        {% if not known %}
+        <p>Pleased to meet you!</p>
+        {% else %}
+        <p>Happy to see you again!</p>
+        {% endif %}
+    </div>
+
+    {{ wtf.quick_form(form) }}
+{% endblock %}
+```
+
+So if the name was present in the database the website will greet you accordingly.
+
+## Integration with the python shell
+Having to import the database instance and the models each time a shell session is started is loads of work. You can automatically import these objects.
+
+You can add a `shell context processor` with the `app.shell_context_processor` decorator.
+This is shown in the following example:
+
+```python
+@app.shell_context_processor
+def make_shell_context():
+    return dict(db=db, User=User, Role=Role)
+```
+
+So, now, when you initiate a `flask shell` it will import these things without the need fo action.
+
+## Database migrations with flask-migrate
+There are moments when you have to alter a database. The only way of making a table the updated version of itself is by destroying it first. The harmless and most reliable method of doing this is with the `database migration framework`. It works similarly to a source code version controll, but it keeps track of the database schema, allowing incremental changes to be applied.
+
+There is a framework called `Alembic` that was written by the `SQLAlchemy` developer. But dealing directly with it isn't necessary. For that you can use the `Flask-Migrate` extension. It is a `Alembic` wrapper that integrates it sinlessly with the flask command.
+ 
+## Creating a Migration repository
+First, we must install the tool with `pip install flask-migrate`. Then we must import it in our project with `from flask_migrate import Migrate`. And in the code you must do the following:
+
+```python
+from flask_migrate import Migrate
+
+# ...
+
+migrate = Migrate(app, db)
+```
+
+Now, when you work in a new project, you can add support for database migrations with the `init` subcommand:
+
+```bash
+(venv) $ flask db init
+  Creating directory /home/flask/flasky/migrations...done
+  Creating directory /home/flask/flasky/migrations/versions...done
+  Generating /home/flask/flasky/migrations/alembic.ini...done
+  Generating /home/flask/flasky/migrations/env.py...done
+  Generating /home/flask/flasky/migrations/env.pyc...done
+  Generating /home/flask/flasky/migrations/README...done
+  Generating /home/flask/flasky/migrations/script.py.mako...done
+  Please edit configuration/connection/logging settings in
+  '/home/flask/flasky/migrations/alembic.ini' before proceeding.
+```
+
+This command create the directory where all the migration scripts will be stored. These files must be added to version controll along with the rest of the application, they are important.
+
+
+## Creating a migration script
+We represent a database migration in `Alembic` with a `migration script`. This script has two functions called `upgrade()` and `downgrade()`. The first applies the changes that are parte of the migration and the second remove then. This means that the `Alembic` tool can rewind history when necessary.
+
+There are two ways of doing a migration, the fist is manual, and it creates a migration script skeleton with the `upgrade` and `downgrade` functions for the developer to write. And there is the automatically way, that instructs `Alembic` to look at the models in memory and figure it alt ways of changing the databases to conform to it. The the tool generate the code in the migration methods.
+
+You must be cautious as this automatically generated scripts can have mistakes. An example is if you want to change a column name, and when generating the migration script, the tool deletes the column and creates a new one, and the data in the column is lost. So is good practice that even when you generate the migration script automatically, at least you must read the code before applying changes.
+
+The following workflow is a good way of doing this:
+
+1. Make the necessary changes to the model classes.
+2. Create an automatic migration script with the `flask db migrate` command.
+3. Review the generated script and adjust it so that it accurately represents the changes that were made to the models.
+4. Add the migration script to source control.
+5. Apply the migration to the database with the `flask db upgrade` command.
+
+## Upgrading the database
+Once a migration script has been reviewed and accepted, you can make the `flask db upgrade` command to performe the changes in the real database. For the first migration, this is effectively equivalent to calling `db.create_all()`, but in successive migrations the `flask db upgrade` command applies updates to the tables without affecting their contents.
+
+If you already done the `db.create_all()` command you can take an error when trying to upgrade. To solve that you must mark the database as upgraded with the `flask db stamp` command.
+
+## Adding more migrations
+Then, when you are working in an application, you will find that you will need to make changes to the database very often, now that you already have done the fist, the other have a very similar workflow:
+
+1. Make the necessary changes in the database models.
+2. Generate a migration with the `flak db migrate` command.
+3. Review the generated migration script and correct it if it has any inaccuracies.
+4. Apply the changes to the database with the `flask db upgrade` command.
+
+If you already did this, but didn't committed to version controll yet, you can expand the script to incorporate new changes as you make then. This will save you to have a lot of small migration scripts. The proceature is the following:
+
+1. Remove the last migration from the database with the flask db downgrade com‐
+mand (note that this may cause some data to be lost).
+2. Delete the last migration script, which is now orphaned.
+3. Generate a new database migration with the flask db migrate command,
+which will now include the changes in the migration script you just removed, plus any other changes you've made to the models.
+4. Review and apply the migration script as described previously.
 
 
