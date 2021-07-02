@@ -26,45 +26,45 @@ So here we define a form with a text input and a submit button. The class extend
 
 The fields are:
 
-|Field type|Description
-|-|-
-|BooleanField|Checkbox with True and False values
-|DateField|Text field that accepts a datetime.date value in a given format
-|DateTimeField|Text field that accepts a datetime.datetime value in a given format
-|DecimalField|Text field that accepts a decimal.Decimal value
-|FileField|File upload field
-|HiddenField|Hidden text field
-|MultipleFileField|Multiple file upload field
-|FieldList|List of fields of a given type
-|FloatField|Text field that accepts a floating-point value
-|FormField|Form embedded as a field in a container form
-|IntegerField|Text field that accepts an integer value
-|PasswordField|Password text field
-|RadioField|List of radio buttons
-|SelectField|Drop-down list of choices
-|SelectMultipleField|Drop-down list of choices with multiple selection
-|SubmitField|Form submission button
-|StringField|Text field
-|TextAreaField|Multiple-line text field
+| Field type          | Description
+| -                   | -
+| BooleanField        | Checkbox with True and False values
+| DateField           | Text field that accepts a datetime.date value in a given format
+| DateTimeField       | Text field that accepts a datetime.datetime value in a given format
+| DecimalField        | Text field that accepts a decimal.Decimal value
+| FileField           | File upload field
+| HiddenField         | Hidden text field
+| MultipleFileField   | Multiple file upload field
+| FieldList           | List of fields of a given type
+| FloatField          | Text field that accepts a floating-point value
+| FormField           | Form embedded as a field in a container form
+| IntegerField        | Text field that accepts an integer value
+| PasswordField       | Password text field
+| RadioField          | List of radio buttons
+| SelectField         | Drop-down list of choices
+| SelectMultipleField | Drop-down list of choices with multiple selection
+| SubmitField         | Form submission button
+| StringField         | Text field
+| TextAreaField       | Multiple-line text field
 
 And the validators are the following:
 
-|Validator|Description
-|-|-
-|DataRequired|Validates that the field contains data after type conversion
-|Email|Validates an email address
-|EqualTo|Compares the values of two fields; useful when requesting a password to be entered twice for
-|confirmation|InputRequired Validates that the field contains data before type conversion
-|IPAddress|Validates an IPv4 network address
-|Length|Validates the length of the string entered
-|MacAddress|Validates a MAC address
-|NumberRange|Validates that the value entered is within a numeric range
-|Optional|Allows empty input in the field, skipping additional validators
-|Regexp|Validates the input against a regular expression
-|URL|Validates a URL
-|UUID|Validates a UUID
-|AnyOf|Validates that the input is one of a list of possible values
-|NoneOf|Validates that the input is none of a list of possible values
+| Validator    | Description
+| -            | -
+| DataRequired | Validates that the field contains data after type conversion
+| Email        | Validates an email address
+| EqualTo      | Compares the values of two fields; useful when requesting a password to be entered twice for
+| confirmation | InputRequired Validates that the field contains data before type conversion
+| IPAddress    | Validates an IPv4 network address
+| Length       | Validates the length of the string entered
+| MacAddress   | Validates a MAC address
+| NumberRange  | Validates that the value entered is within a numeric range
+| Optional     | Allows empty input in the field, skipping additional validators
+| Regexp       | Validates the input against a regular expression
+| URL          | Validates a URL
+| UUID         | Validates a UUID
+| AnyOf        | Validates that the input is one of a list of possible values
+| NoneOf       | Validates that the input is none of a list of possible values
 
 ## Rendering the forms
 Having the server expect the form isn't enough. The client side must be implemented as well. For that we need rendering and placement. That can be done with the following code:
@@ -188,14 +188,14 @@ A for loop is used because there could be multiple messages queued for display, 
 # Email
 Many applications need to notify users in some occasions. A good method is via email. Python has a standard library `smtplib` that sends emails, but flask has its own wrapper for it that integrates nicely with the app. It's called `Flask-Mail` and it connects to localhost at port 25 and sends email without authentication. you can install it with `pip install flask-mail`. Here goes some configurations:
 
-|Key|Default|Description
-|-|-|-
-|MAIL_SERVER|localhost|Hostname or IP address of the email server
-|MAIL_PORT|25|Port of the email server
-|MAIL_USE_TLS|False|Enable Transport Layer Security (TLS) security
-|MAIL_USE_SSL|False|Enable Secure Sockets Layer (SSL) security
-|MAIL_USERNAME|None|Mail account username
-|MAIL_PASSWORD|None|Mail account password
+| Key           | Default   | Description
+| -             | -         | -
+| MAIL_SERVER   | localhost | Hostname or IP address of the email server
+| MAIL_PORT     | 25        | Port of the email server
+| MAIL_USE_TLS  | False     | Enable Transport Layer Security (TLS) security
+| MAIL_USE_SSL  | False     | Enable Secure Sockets Layer (SSL) security
+| MAIL_USERNAME | None      | Mail account username
+| MAIL_PASSWORD | None      | Mail account password
 
 During development it may be more convenient to connect to an external `SMTP` server. The following application uses `Google Gmail` account:
 
