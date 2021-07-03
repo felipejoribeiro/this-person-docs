@@ -76,12 +76,65 @@ Then you must install the `Heroku CLI`, which provides integration with the serv
 TODO: Will continue later this section
 
 ## Docker deployment
-TODO: Will continue later this section
+Working with containers is a good choice too. They offer flexibility and reliability. These containers are special types of virtual machines that encapsulate the app and all it's dependencies. It uses the kernel of the host machine. Linux has full support to it.
+
+## Installation
+
+
+
 
 ## Traditional deployment
 If you have a server or a cloud provider like `E2C` or `DigitalOcean` you can follow this type of deployment. It is the more laborious, but offers tremendous flexibility.
 
 ### Server Setup
+There are several setup tasks you must perform to host your application.
+
+- Install the database provider, like `MySQL` or `Postgres`. Using `SQLite` isn't recommended in production due to its many limitations with regard to modification of existing database achemas.
+- Install the Mail Transport Agent (MTA) such as `Sendmail` or `Postfix` to enable email sending capabilities. Using gmail in production isn't possible. As it prohibits commercial use in it's terms of services.
+- Install a production-ready web server such as `Gunicorn` or `uWSGI`.
+- Install a process-monitoring utility such as Supervisor, that immediately restarts the web server if it crashes or after the host is power-cycled.
+- Install and configure an SSL certificate to enable `HTTPS`.
+- Install a front-end reverse proxy web server such as `nginx` or `Apache`. It can be configured to serve static files and forward requests into the application's web server, which is listening on a private port on localhost.
+- Secure the server, instaling `firewalls`, removing unused software and services and so on.
+
+A good tip is to not performe these tasks manually. You can create a scripted deployment using an automation framework like `Ansible`, `Chef` or `Puppet`.
+
+## Importing environment variables.
+The application relies on certain settings such as the database connection `URL`, email server credentials, etc. THese things must be provided as environment variable.
+
+One way of doing that is to create a `.env` file with the configuration and use the `python-dotenv` package to import into the environment the file.
+
+```python
+import os
+
+from dotenv import load_dotenv
+dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
+
+if os.path.exists(dotenv_path):
+    load_dotenv(dotenv_path)
+```
+
+The `.env` file can define the `FLASK_CONFIG` variable that selects the configuration to use, the `DATABASE_URL` connection, the email server credentials, etc. This file should not be added to version controll due to the sensitive information inside it. This is a great way of doing this as it is very platform agnostic.
+
+## Setting up Logging
+For Unix-based servers, logging can be sent to the `syslog daemon`. This new configuration, specifically for Unix can be created as a subclass of ProductionConfig:
+
+```python
+class UnixConfig(ProductionConfig):
+    @classmethod
+    def init_app(cls, app):
+        ProductionConfig.init_app(app)
+        # log to syslog
+        import logging
+        from logging.handlers import SysLogHandler
+        syslog_handler = SysLogHandler()
+        syslog_handler.setLevel(logging.WARNING)
+        app.logger.addHandler(syslog_handler)
+```
+
+With this configuration, the application logs will be written to the configured syslog messages file. This is typically `/var/log/messages` or `/var/log/syslog` depending on the linux distribution. The `syslog` can be configured to write a separate log file for application logs, or to send the logs to a different machine if desired.
+
+
 
 
 
