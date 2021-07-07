@@ -1,5 +1,0 @@
-- URI
-- Backend response numbers.
-- listas e sets.
-- HTTP commands.
-- Syntax.
