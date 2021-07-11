@@ -50,4 +50,12 @@ Notice that we cloned with the ssh address option. And watch out! The text betwe
 
 By cloning the repository in this way, it will register the link as a remote, and further steps are not needed. But, if you have a project that is already there and you want to enable the other ssh key, just modify the remotes of your repository. You can see then with thee `git remote -v` command and you can remove or add then, so just remove the one with `@git.github.com:` and add the one with `@my-account-name.github.com:`. This can be done with the `git remote add origin <new link>` and `git remote rm origin` commands.
 
+## Making operations with specific ssh keys
+If you whant to make operatiosn with a specific ssh key, another options is to declare it in the github operation that will need it.
+
+You can do this with the following command:
+
+```bash
+GIT_SSH_COMMAND='ssh -i ~/private.key' git push root@<IP>:/path/to/repository
+```
 
