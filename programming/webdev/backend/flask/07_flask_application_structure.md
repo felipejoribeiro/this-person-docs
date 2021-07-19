@@ -52,6 +52,7 @@ class Config:
     FLASKY_MAIL_SENDER = 'Flasky Admin <flasky@example.com>'
     FLASKY_ADMIN = os.environ.get('FLASKY_ADMIN')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+
     @staticmethod
     def init_app(app):
         pass
@@ -81,6 +82,14 @@ config = {
 
 The `config` class contains settings that are common to all configurations. The different subclasses have specific settings.
 
-The best practice is to import from environment variables these settings.
+The best practice is to import from environment variables these settings. Specially if you are dealling with source control. As you will not be able to erase the information after commit.
 
+The creation, form the beginning of test environments is a must for better future developments, even if you don't pretend to create the infrastructure now.
+
+
+## The app directory
+Inside the app directory will be located all the implementation of the application including the `templates` and `static` directories. The more important modules are implemented in the same directory as the app too.
+
+## The importance of an Application factory
+Creating the application and configuring it globally in the file that `gevent` runs is convenient for prototyping, but presents a series of inconveniences being the most important one the lack of flexibility.
 
