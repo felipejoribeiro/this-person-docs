@@ -91,5 +91,32 @@ The creation, form the beginning of test environments is a must for better futur
 Inside the app directory will be located all the implementation of the application including the `templates` and `static` directories. The more important modules are implemented in the same directory as the app too.
 
 ## The importance of an Application factory
-Creating the application and configuring it globally in the file that `gevent` runs is convenient for prototyping, but presents a series of inconveniences being the most important one the lack of flexibility.
+Creating the application and configuring it globally in the file that `gevent` runs is convenient for prototyping, but presents a series of inconveniences in further development being the most important one the lack of flexibility.
+
+To implement that we can move the app creation to a `factory function`. With this approach we can even create multiple application instances at the same time with different configurations. Here goes an example:
+
+```python
+from flask import Flask, render_template
+from flask_bootstrap import Bootstrap
+from flask_mail import Mail
+from flask_moment import Moment
+from flask_sqlalchemy import SQLAlchemy
+from config import config
+bootstrap = Bootstrap()
+mail = Mail()
+moment = Moment()
+db = SQLAlchemy()
+def create_app(config_name):
+    app = Flask(__name__)
+    app.config.from_object(config[config_name])
+    config[config_name].init_app(app)
+    bootstrap.init_app(app)
+    mail.init_app(app)
+    moment.init_app(app)
+    db.init_app(app)
+    # attach routes and custom error pages here
+    return app
+
+```
+This constructor imports most of the Flask extensions currently in use, but because there isn't any application instance to initialize them with , it creates them uninitialized by passing no arguments into their constructors.
 
