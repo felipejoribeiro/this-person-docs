@@ -304,7 +304,7 @@ Sending the email can freeze the request thread for a moment. Such thing makes t
 from threading import Thread
 
 def send_async_email(app, msg):
-    with app.app_context():
+    with app.app_context:
         mail.send(msg)
 
 def send_email(to, subject, template, **kwargs):

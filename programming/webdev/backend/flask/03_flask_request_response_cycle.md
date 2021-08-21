@@ -129,7 +129,7 @@ In this case we can send a cookie to the browser. The `make_response()` creates 
 |set_data()|Sets the response body as a string or bytes value
 |get_data()|Gets the response body
 
-There is a special response called `redirect` that is used a lot. To address that the flask team created a dedicated function that is `redirect()` which gives a response with `302` status code and the `URL` to navigate to. Here we can si it in use:
+There is a special response called `redirect` that is used a lot. To address that the flask team created a dedicated function that is `redirect()` which gives a response with `302` status code and the `URL` to navigate to. Here we can see it in use:
 
 ```python
 from flask import redirect

@@ -118,5 +118,20 @@ def create_app(config_name):
     return app
 
 ```
-This constructor imports most of the Flask extensions currently in use, but because there isn't any application instance to initialize them with , it creates them uninitialized by passing no arguments into their constructors.
+This constructor imports most of the Flask extensions currently in use, but because there isn't any application instance to initialize them with, it creates them uninitialized by passing no arguments into their constructors.
+
+Then, in the constructor function it inicialize each one of then with a new app instance. The app is configured too from the condig file previously created.
+
+## Blueprints
+The app object no being present in the global scope creates another problem. The `app.route` decorator, for instance, relies on an `app` object globally declared. To solve this issue, flask offers the blueprints. They are similar to application objects, as they can define routes and error handlers too. But, when they are blueprints they stay in a dormant state until the blueprint is registered within an application. These can be declared in the global scope. They can be created as follows:
+
+```python
+from flask import Blueprint
+main = Blueprint('main', __name__)
+from . import views, errors
+```
+The constructor of the `Blueprint` object takes the name of the the blueprint and the name of the application which `__name__` is a viable option.
+
+The routes are then stored in the relative archives `views.py` and `errors.py`. Just importing these modules cause then to be associated with the blueprints.
+
 
