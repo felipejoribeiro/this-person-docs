@@ -56,7 +56,7 @@ To run the app, just run the following commands: `export FLASK_APP=hello.py` and
 There is other way another way of initiating the development server. First you will have to include in your code the following:
 
 ```python
-if __name__ = "__name__":
+if __name__ = "__main__":
     app.run()
 ```
 Than you can run the development server by runing this code with `python app.py`.
