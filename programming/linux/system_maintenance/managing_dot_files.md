@@ -21,5 +21,3 @@ The `stow` package offers some good options when dealing with packages. We will 
 
 Some aditional opeions are present in the `man` page.
 
-## Some practical examples
-
