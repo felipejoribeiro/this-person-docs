@@ -39,8 +39,7 @@ The project will always contain an `serverless.yml` file. Like `json`, `yml` is 
 In this file we register metadata about our service. Like name, that describes the name of our service. Here goes what is created initially:
 
 ```yml
-service:
-  name: auction-service
+service: auction-service
 
 plugins:
   - serverless-bundle
