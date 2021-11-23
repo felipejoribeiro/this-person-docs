@@ -86,8 +86,16 @@ This will clean all log files that are older than 2 weeks. With months this dire
 you can use the `ncdu` package to check size of files and directories.
 
 
+### file conflicts
+Now and then there will be file conflicts when doing an update in your system. When that happens, something like this message will show:
 
-
-
+```
+error: failed to commit transaction (conflicting files)
+npm: /usr/lib/node_modules/npm/node_modules/@isaacs/string-locale-compare/LICENSE exists in filesystem
+npm: /usr/lib/node_modules/npm/node_modules/@isaacs/string-locale-compare/index.js exists in filesystem
+npm: /usr/lib/node_modules/npm/node_modules/@isaacs/string-locale-compare/package.json exists in filesystem
+Errors occurred, no packages were upgraded.
+```
+Don't be afraid, that's not a bug, but a feature. Pacman by design will never overwrite a file, so it issues this warning and abort. That means that the package maintainours did not anticipate this issue, or you placed such unexpected file there. To solve the issue, the first thing you can do is check what package owns that file (if any). Tha can be done with `pacman -Qo <path_to_file>`. if you find one, try to force update said package and issue a bug report to the maintainours. To solve the issue you can do a forced update on said software with `pacman -Sf <program>`. If the file don't belongs any package, you can try moving it to another place and check if anything breaks, then update. If everything is fine, delete the file and you are good to go.
 
 
