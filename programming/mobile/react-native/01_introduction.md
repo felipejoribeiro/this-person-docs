@@ -1,6 +1,37 @@
 # React Native from scratch
 Here we will learn **React native** development from scratch. This technology enables the developer to create mobile **apps** for **android** and **IOS** without having a **MAC** or running the slow and heavy **Android Studio** or **Xcode**.
 
+## React Native history
+Applications are created to run in a specific operating system. In this regard, **react-native** inovates by being able to evelop for both simultaneously. Apple asks for the developer to program on **Object-C** and android asks for **java** for development. Then apple came with a new proposition, the **Swift** programming language and android came with **Kotlin**.
+
+Then, the idea came along about using the browser to create web apps capable of running on both plataforms, like project **Cordova** and **Ionic** which use **WebView** which is a browser page on your phone that looks like an app. The problem with this is that the smartphone is optimized to run well with native code, so the browser ones were slowerr. Besides the fact that a bunch of resources ar laking.
+
+Last but not least, we had the **Native-like** options. What it does is converting high level code to compiled native code. **React-native** is based on this idea, which is based on **javascript**. Flutter is another option that was developed by google.
+
+## Why react native?
+- It has a big community: It has a big community of towsants of developers. With great library availability of libraries and tutorials. The comunity ends up being a great language resource.
+- Bit companies are using it: Facebook, Uber eats, discord, instagran and skype. So this technology is greatly employable and present in the industry.
+- Cross Platform: And this is the game changer bit brought by **react-native**. It is perfectly extensible so you can develop in **java** and **swift** if you need deeply performant code.
+
+## Building blocks of mobile development
+The most basic building block of native mobile development are views. You can put one view inside another and they can be images, rectangles or text. In **React Native** the core components are translated to views as well. Some basic options are `Text`, `View`, `Image`, `ScrollView` and `TextInput`. And React native convert these to native view groups (Android) and ui groups (ios) or div (web). So this is the workflow for **React-Native**, creating code that will be translated in native code. The **React-native** lib gives you these basic components plus API's, like the `Dimensions` which gives the dimension of the celphone screen.
+
+**React** is important as well, so that we can use the state, props, components and all that stuff like **jsx**.
+
+## How things are runned in react native
+There are two parts of a running app, the `view` parte which is aesthetic and the logic part. When the user takes an action inside the app there is logic that is runned inside the phone. The visual bit is convertied to native counterparts, but the logic is runned inside a javascript virtual machine which is called javascript engine. This engine is responsible to make the comunication between your javascript code and the phone operating system.
+
+This reveals an ugly side of react native. It will never be as lean and performant as a pure native solution as it must be shipped with it's virtual machine and the logic must pass through an abstraction layer to reach the operating system.
+
+There are ways to optimize this behavior. **Hermes** is an android optimized runtime. You can use it in place of javascript core.
+
+Interestling enough there isn't **css** for mobile, which is a web language. **React-native** styles are implemented with javascript. They try to emulate the behavior of **css** but they aren't nothing like it. All dimensions in react-native are dimensionless. They represent dpi-independent pixels. So it tries to figure it alt the best way of showing things based on the screen dimensions and the dpi. It uses flex-box by default as well.
+
+## It's important to know React before learning react-native
+It's important to have the component concept fresh in your mind. These self contained visual and logic apparatus are the core idea behind modern UI development. Is the separation of concerns down to the back button arrow.
+
+React was a great way of dealing with DOM in a more comprehensive way. The virtual DOM is a godsent feature which buries forever jquery...
+
 ## Installing the development environment
 Looking at the documentation of **React Native** we can see that there are two options for building the project, **react native CLI** or **Expo CLI**.
 
