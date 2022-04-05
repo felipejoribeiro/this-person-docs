@@ -18,6 +18,31 @@ The most basic building block of native mobile development are views. You can pu
 
 **React** is important as well, so that we can use the state, props, components and all that stuff like **jsx**.
 
+Here's an example of **react-native** code:
+
+```javascript
+function HelloThere() {
+    return (
+        <View>
+	    <Text>
+	        Hello there!
+	    </Text>
+        </View>
+    );
+}
+```
+
+CSS don't exist on this context. To create styles what is used are `StyleSheet` which can be summarized as follows:
+
+```javascript
+const styles = StyleSheet.create({
+    container: {
+        marginTop: 50,
+	color: 'red',
+    }
+});
+```
+
 ## How things are runned in react native
 There are two parts of a running app, the `view` parte which is aesthetic and the logic part. When the user takes an action inside the app there is logic that is runned inside the phone. The visual bit is convertied to native counterparts, but the logic is runned inside a javascript virtual machine which is called javascript engine. This engine is responsible to make the comunication between your javascript code and the phone operating system.
 
@@ -81,6 +106,9 @@ There are some features that expo doesn't support yet. You can check a little li
 
 You can check more in depth information on the following link:
 https://docs.expo.io/introduction/why-not-expo/
+
+### Expo advantages
+Besides these details, expo has great advantages over the native way of creating apps. Namely, an expo project is more simple, with less files than an native solution. It is very similar to react web applications. Without an `android` or `ios` directories with native files. The setup of a project is very light as well and simple. You can rapidly create projects and modify then quickly and deploy then for ios and android where the results (from an front end point of view) are identical to native. So this is awesome for rapid prototyping and testing. And the developer has always the freedom to eject the project if he wants so, turning it native in the same moment.
 
 ### Creating a new project.
 To create a new project with **Expo** you can issue the following command:
@@ -176,7 +204,7 @@ https://blog.logrocket.com/styling-in-react-4-ways-style-react-app/
 Here is an example of style:
 
 ```javascript
-const estyles = StyleSheet.create({
+const styles = StyleSheet.create({
 	topo: {
 		width: "100%",
 		height: 578 / 768 * width,
@@ -197,7 +225,7 @@ const estyles = StyleSheet.create({
 To use these styles one must reference it from within the file or by importing from another one (a `styles` files for sure). And to use the style on a component the developer must reference the object as follows:
 
 ```Jsx
-<Text style={estyles.title}>Detalhes da cesta</Text>
+<Text style={styles.title}>Detalhes da cesta</Text>
 ```
 It's important to know that **react-native** uses `display: flex` by default in all the document.
 
@@ -232,7 +260,7 @@ Here we will see some components that comes with **React Native**. You can acces
 <Button title="me aperte"/>
 
 <TouchableOpacity onPress={() => {console.log("hey")}}>
-	<Texto>{ botao }</Texto>
+	<Texto>{ botão }</Texto>
 </TouchableOpacity>
 ```
 
