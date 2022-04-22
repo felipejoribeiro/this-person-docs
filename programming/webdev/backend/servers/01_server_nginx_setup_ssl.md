@@ -10,7 +10,9 @@ Now we will configure the `Domain name` to point out to our server. For that cre
 - A @ <server_ipv4> ttl menor possível.
 - AAAA @ <server_ipv6> ttl menor possível.
 
-And create a Nameserver child apontando www.domainname para domainname.
+And create a Nameserver child pointing at www.domainname for the domainname. You can do that with:
+
+- CNAME www <domain_name> ttl
 
 And that is it. Wait for the changes to take effect as there is the `propagation` process to take effect.
 
