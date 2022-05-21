@@ -39,3 +39,23 @@ console.log(foo(baz));
 ```
 
 So the compiled code is safe from a type point of view, that means that it expects that `bar` is always a string.
+
+You can config the compiling process as well, that can be done with the `tsconfig.json` config file:
+
+```json
+{
+    "compilerOptions": {
+        "stricti": true,
+	"target": "ES2015",
+	"module": " CommonJS",
+	"outDir": "../dist",
+	"rootDir": "./",
+	"moduleResolution": "node"
+    },
+    "include": ["**/*.ts"]
+}
+```
+
+So now even your language server will use these configurations when linting your code so make sure you configure it well. You can make these configurations in the command options, but it's more simple this way. You can use javascript versions as you like, in the coruse the professor uses **ES2015**, but one can use **ES2016**, **ES2019** or whatever one you like.
+
+Other important command is `tsc ./src/test.ts --outDir ./dist -w`. The `-w` will make the compiler keep looking at changes in the chosen file. And when any change is made it compiles the code on the same moment.
