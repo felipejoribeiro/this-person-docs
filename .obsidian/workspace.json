@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "ec747824931a6ad3",
+        "id": "d04cb8a42029aea0",
         "type": "tabs",
         "children": [
           {
-            "id": "e84a42070fc5eb85",
+            "id": "07f71c4c25fe2c69",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -138,10 +138,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e84a42070fc5eb85",
+  "active": "07f71c4c25fe2c69",
   "lastOpenFiles": [
-    "2024-03-10.md",
+    "notes/dailies/2024-03-11.md",
+    "notes/dailies/2024-03-10.md",
     "README.md",
+    "notes/hello.md",
+    "2024-03-11.md",
+    "data/rofi.gif",
+    "Untitled.md",
+    "1710127181-AKGP.md",
+    "notes/dailies",
+    "notes",
+    "2024-03-10.md",
     "piloto.canvas",
     "linux/system/network/internet_check.md",
     "Testing note creation.md",
@@ -151,7 +160,6 @@
     "design/figma/03_basic_tools.md",
     "design/figma/02_wire_frames_vs_high_fidelity.md",
     "design/figma/01_introduction.md",
-    "data/rofi.gif",
     "data/books.png",
     "books/drive-daniel_pink/01_introduction.md"
   ]

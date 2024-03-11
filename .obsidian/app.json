@@ -1,3 +1,6 @@
 {
-  "vimMode": true
+  "vimMode": false,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "notes",
+  "attachmentFolderPath": "./data"
 }
