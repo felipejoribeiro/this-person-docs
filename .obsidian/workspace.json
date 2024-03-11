@@ -1,0 +1,158 @@
+{
+  "main": {
+    "id": "4d5c9709ac692605",
+    "type": "split",
+    "children": [
+      {
+        "id": "ec747824931a6ad3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e84a42070fc5eb85",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "428fda0d7bd67687",
+    "type": "split",
+    "children": [
+      {
+        "id": "4130096a3cffd93b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c4809dad77a865e1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f71680fa9305c5bc",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c3f6d80712727c07",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "6a433ffad8df77ca",
+    "type": "split",
+    "children": [
+      {
+        "id": "c85a19ae951e9f40",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9fef8bde8713ad2e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "96447140d5d5b4f5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e4c7c05b848125f0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "ed4a60ff15bc4f3d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "e84a42070fc5eb85",
+  "lastOpenFiles": [
+    "2024-03-10.md",
+    "README.md",
+    "piloto.canvas",
+    "linux/system/network/internet_check.md",
+    "Testing note creation.md",
+    "testing_create_note",
+    "linux/system/network/configure_internet_wifi_arch.md",
+    "linux/installation/linux_arch_create_bootable_usb.md",
+    "design/figma/03_basic_tools.md",
+    "design/figma/02_wire_frames_vs_high_fidelity.md",
+    "design/figma/01_introduction.md",
+    "data/rofi.gif",
+    "data/books.png",
+    "books/drive-daniel_pink/01_introduction.md"
+  ]
+}
