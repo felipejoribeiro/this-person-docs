@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "d04cb8a42029aea0",
+        "id": "92aa4a03871f0d50",
         "type": "tabs",
         "children": [
           {
-            "id": "07f71c4c25fe2c69",
+            "id": "40fc273d54990b8c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "notes/dailies/2024-03-11.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "notes/dailies/2024-03-11.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "notes/dailies/2024-03-11.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,15 +124,25 @@
             "type": "leaf",
             "state": {
               "type": "outline",
+              "state": {
+                "file": "notes/dailies/2024-03-11.md"
+              }
+            }
+          },
+          {
+            "id": "913b3ddb187ecffd",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 343.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -135,32 +151,48 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "obsidian-kindle-plugin:Sync your Kindle highlights": false,
+      "audio-recorder:Start/stop recording": false
     }
   },
-  "active": "07f71c4c25fe2c69",
+  "active": "913b3ddb187ecffd",
   "lastOpenFiles": [
-    "notes/dailies/2024-03-11.md",
-    "notes/dailies/2024-03-10.md",
     "README.md",
+    "notes/dailies/2024-03-11.md",
+    "Untitled 1.canvas",
+    "Untitled.canvas",
+    "estructured/books/how_speak_correctly_without_inhibition-reinaldo_polito/chapter_1.md",
+    "estructured/design/figma/03_basic_tools.md",
+    "estructured/design/figma/02_wire_frames_vs_high_fidelity.md",
+    "estructured/design/figma/01_introduction.md",
+    "estructured/programming/gamedev/VR/arch_linux_setup/01_introduction.md",
+    "estructured",
+    "estructured/managing/psychology_of_communication.md",
+    "estructured/linux/system_maintenance/arch_maintenence_wiki.md",
+    "estructured/linux/system_maintenance/arch_applications.md",
+    "estructured/linux/system/network/internet_check.md",
+    "estructured/linux/system/network/configure_internet_wifi_arch.md",
+    "estructured/linux/system/audio/production_ready_audio.md",
+    "estructured/linux/system/audio/alsa_audio_arch.md",
+    "estructured/linux/note_book/01_notebook_lid_suspend.md",
+    "estructured/linux/installation/linux_arch_create_bootable_usb.md",
+    "Excalidraw/Drawing 2024-03-11 02.15.25.excalidraw.md",
+    "Excalidraw/Drawing 2024-03-11 02.11.48.excalidraw.md",
+    "Excalidraw",
+    "Excalidraw/Drawing 2024-03-11 02.15.07.excalidraw.md",
+    "Excalidraw/Drawing 2024-03-11 02.13.19.excalidraw.md",
+    "Excalidraw/Drawing 2024-03-11 02.12.50.excalidraw.md",
+    "notes/dailies/2024-03-10.md",
     "notes/hello.md",
     "2024-03-11.md",
     "data/rofi.gif",
     "Untitled.md",
-    "1710127181-AKGP.md",
     "notes/dailies",
     "notes",
-    "2024-03-10.md",
     "piloto.canvas",
-    "linux/system/network/internet_check.md",
-    "Testing note creation.md",
     "testing_create_note",
-    "linux/system/network/configure_internet_wifi_arch.md",
-    "linux/installation/linux_arch_create_bootable_usb.md",
-    "design/figma/03_basic_tools.md",
-    "design/figma/02_wire_frames_vs_high_fidelity.md",
-    "design/figma/01_introduction.md",
-    "data/books.png",
-    "books/drive-daniel_pink/01_introduction.md"
+    "data/books.png"
   ]
 }
