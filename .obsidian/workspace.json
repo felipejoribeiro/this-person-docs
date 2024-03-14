@@ -4,49 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "deb232ad5c1b13c8",
-        "type": "split",
+        "id": "01eb6b89759e583c",
+        "type": "tabs",
         "children": [
           {
-            "id": "01eb6b89759e583c",
-            "type": "tabs",
-            "dimension": 28.3303730017762,
-            "children": [
-              {
-                "id": "2a14bdd407b1d8d7",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "notes/dailies/2024-03-13.md",
-                    "mode": "source",
-                    "source": false
-                  }
-                }
+            "id": "2a14bdd407b1d8d7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "notes/dailies/2024-03-13.md",
+                "mode": "source",
+                "source": false
               }
-            ]
-          },
-          {
-            "id": "fe1113226a17714c",
-            "type": "tabs",
-            "dimension": 71.6696269982238,
-            "children": [
-              {
-                "id": "7a3757d9a0f92ed8",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "notes/1710348733-periodic-table-basics.md",
-                    "mode": "preview",
-                    "source": false
-                  }
-                }
-              }
-            ]
+            }
           }
-        ],
-        "direction": "horizontal"
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,12 +72,22 @@
         "type": "tabs",
         "children": [
           {
+            "id": "e4c7c05b848125f0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
             "id": "9fef8bde8713ad2e",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/1710348733-periodic-table-basics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,20 +104,8 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/1710348733-periodic-table-basics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "e4c7c05b848125f0",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
               }
             }
           },
@@ -144,16 +115,15 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/1710348733-periodic-table-basics.md"
+                "file": "notes/hello.md"
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 263.5
+    "width": 390.5
   },
   "right": {
     "id": "6a433ffad8df77ca",
@@ -226,11 +196,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "7a3757d9a0f92ed8",
+  "active": "c4809dad77a865e1",
   "lastOpenFiles": [
+    "notes/dailies/2024-03-11.md",
+    "notes/hello.md",
+    "notes/1710348733-periodic-table-basics.md",
     "notes/1710355360-botanica-gimnospermas-basics.md",
     "notes/1710353702-botanica-briofitas-basics.md",
-    "notes/1710348733-periodic-table-basics.md",
     "data/notes/botanica-briofitas-basics-3.png",
     "data/notes/botanica-briofitas-basics-2.png",
     "data/notes/botanica_briofitas_basics_1.png",
@@ -252,7 +224,6 @@
     "1710344887-PEPA.md",
     "1710344800-HKLY.md",
     "data/notes/hello.png",
-    "notes/dailies/2024-03-11.md",
     "README.md",
     "data/rofi.gif",
     "data/books_2.png",
