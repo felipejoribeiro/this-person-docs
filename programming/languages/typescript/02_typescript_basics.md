@@ -141,7 +141,7 @@ abstract class Animal {
     this.age = age
   }
 
-  feed(food: string, amount: number): void {
+  protected feed(food: string, amount: number): void {
     console.log('feeding ' + name + ' ' + food + ' by ' + amount)
   }
 }
@@ -158,7 +158,7 @@ abstract class Animal {
   private age: number
 }
 ```
-So if a class has only static members it doesn't even make sense creating various instances of it as they will all refer to the same thing.
+So if a class has only static members it doesn't even make sense creating various instances of it as they will all refer to the same thing. this is a way of create singletons as well without to much focefuu.
 
 ### imports and exports in ES6
 It's common to separate your code in various files. So importing is how you fetch the code from a different file.
