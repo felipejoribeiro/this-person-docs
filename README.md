@@ -1,5 +1,6 @@
 # Personal WIKI
-Here resides all information concerning software development acquired through the ages. This include knowledge about web development, linux, information security and other related topics. The material is composed by notes that are scattered through directories and subdirectories organized by topic. 
+
+Here resides all information concerning software development acquired through the ages. This include knowledge about web development, linux, information security and other related topics. The material is composed by notes that are scattered through directories and subdirectories organized by topic.
 
 ![library](./data/books.png)
 
@@ -17,23 +18,30 @@ Which open the chosen note in **Neovim** for editing or reading. And it's possib
 
 The dot files are located in this [Repo](https://github.com/felipejoribeiro/my-dev-environment).
 
-## Table of contents
-Here goes all subjects and files that are present in the repo:
-
-- [Arch linux](https://github.com/felipejoribeiro/this-person-docs/tree/main/linux)
-- [React](https://github.com/felipejoribeiro/this-person-docs/tree/main/programming/webdev/frontend/react)
-- [React-native](https://github.com/felipejoribeiro/this-person-docs/tree/main/programming/mobile/react-native)
-- [flask](https://github.com/felipejoribeiro/this-person-docs/tree/main/programming/webdev/backend/flask)
-- [Node](https://github.com/felipejoribeiro/this-person-docs/tree/main/programming/webdev/backend/node_js)
-- [Git](https://github.com/felipejoribeiro/this-person-docs/tree/main/programming/tools/git)
-- [Nvim](https://github.com/felipejoribeiro/this-person-docs/tree/main/programming/tools/nvim)
-- [PostgreSQL](https://github.com/felipejoribeiro/this-person-docs/tree/main/programming/webdev/backend/PostgreSQL)
-
 ## Authorship
+
 All words here were written by myself and were based in a multitude of fonts that range from `Youtube` videos to `books` and academic `articles`. But, as these notes are intended for personal usage, rarely these fonts are mentioned in the text, only when strictly necessary for future research.
 
 ## Contributing
-If you whish to contribute fell free to send a pull request. New information, revisions or corrections are highly welcome and appreciated.
+
+If you wish to contribute fell free to send a pull request. New information, revisions or corrections are highly welcome and appreciated.
+
+## Zettelkasten
+
+"Slip box" in German, the method was created by Niklas Luhmann, a German sociologist. It's a method of note taking based on little documents linked to one another. You have the _zettel_ which is a note and the _kasten_ which is the container. Here we implement this method with markdown files as the notes and directories as the containers.
+
+About the notes, there are three categories:
+
+- **Permanent notes**: are created by revising and synthesizing fleeting notes and literature notes. They are intended to be permanent and are the main source of knowledge.
+- **Literature notes**: notes that are taken from content that is not created by the author. It has references to the original content, and synthesis of the content.
+- **Fleeting notes**: momentary notes that are not intended to be permanent. Authoral ideas, thoughts and reflections.
+
+Niklas says that the productivity of a knowledge worker is directly related to the amount of permanent notes that he produces per day.
+
+Each note must represent a single idea. As they represent building blocks of knowledge.
+
+Interesting enough, this isn't a top down knowledge method, which divides knowledge in categories, but it's the opposite, it starts from the ideas and then it leaves to the links between notes to create the organization. It's the greatest multidisciplinary method of knowledge building.
 
 ## Licenses
+
 [MIT](https://github.com/felipejoribeiro/this-person-docs/blob/main/LICENSE)

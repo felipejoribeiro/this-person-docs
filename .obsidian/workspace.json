@@ -1,0 +1,251 @@
+{
+  "main": {
+    "id": "4d5c9709ac692605",
+    "type": "split",
+    "children": [
+      {
+        "id": "01eb6b89759e583c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2a14bdd407b1d8d7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "notes/dailies/2024-03-13.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "428fda0d7bd67687",
+    "type": "split",
+    "children": [
+      {
+        "id": "4130096a3cffd93b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c4809dad77a865e1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f71680fa9305c5bc",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c3f6d80712727c07",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "6732e045bdf2037f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e4c7c05b848125f0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "9fef8bde8713ad2e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "96447140d5d5b4f5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ed4a60ff15bc4f3d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "notes/hello.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 390.5
+  },
+  "right": {
+    "id": "6a433ffad8df77ca",
+    "type": "split",
+    "children": [
+      {
+        "id": "b633f4b57a32c5fb",
+        "type": "tabs",
+        "dimension": 30.133333333333336,
+        "children": [
+          {
+            "id": "913b3ddb187ecffd",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "565fc1e0ac0f9b08",
+        "type": "tabs",
+        "dimension": 34.93333333333333,
+        "children": [
+          {
+            "id": "f771b33edc21e6a8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "notes/misc/❖ ♧ ◉ ✾.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "1b0038ae9935a297",
+        "type": "tabs",
+        "dimension": 34.93333333333333,
+        "children": [
+          {
+            "id": "40fc273d54990b8c",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 333.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "obsidian-kindle-plugin:Sync your Kindle highlights": false,
+      "audio-recorder:Start/stop recording": false,
+      "daily-notes:Open today's daily note": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "c4809dad77a865e1",
+  "lastOpenFiles": [
+    "notes/dailies/2024-03-11.md",
+    "notes/hello.md",
+    "notes/1710348733-periodic-table-basics.md",
+    "notes/1710355360-botanica-gimnospermas-basics.md",
+    "notes/1710353702-botanica-briofitas-basics.md",
+    "data/notes/botanica-briofitas-basics-3.png",
+    "data/notes/botanica-briofitas-basics-2.png",
+    "data/notes/botanica_briofitas_basics_1.png",
+    "data/notes/botanica briofitas basics 1.png",
+    "data/notes",
+    "notes/dailies/2024-03-13.md",
+    "notes/dailies/2024-03-12.md",
+    "notes/misc/❖ ♧ ◉ ✾.md",
+    "notes/1710348661-OLSH.md",
+    "zettelkasten/fleeting/1710345285-test-title.md",
+    "zettelkasten/literature",
+    "zettelkasten/fleeting",
+    "zettelkasten/permanent",
+    "zettelkasten",
+    "notes/1710345285-test-title.md",
+    "notes/others",
+    "notes/1710345086-FRCE.md",
+    "1710345039-JAOQ.md",
+    "1710344887-PEPA.md",
+    "1710344800-HKLY.md",
+    "data/notes/hello.png",
+    "README.md",
+    "data/rofi.gif",
+    "data/books_2.png",
+    "data/books.png",
+    "data",
+    "notes/misc",
+    "data/notes/test.png",
+    "assets/imgs/test_image.png",
+    "notes/templates/daily.md",
+    "notes/dailies/data/Recording 20240312014025.webm",
+    "notes/dailies/data",
+    "notes/templates/test.md",
+    "estructured/programming/webdev/backend/node_js/05_node_serving_static_pages_with_node.md",
+    "Untitled 1.canvas",
+    "Untitled.canvas",
+    "estructured/books/how_speak_correctly_without_inhibition-reinaldo_polito/chapter_1.md",
+    "estructured/design/figma/03_basic_tools.md",
+    "estructured/design/figma/02_wire_frames_vs_high_fidelity.md",
+    "estructured/design/figma/01_introduction.md",
+    "estructured/programming/gamedev/VR/arch_linux_setup/01_introduction.md",
+    "estructured/managing/psychology_of_communication.md",
+    "estructured/linux/system_maintenance/arch_maintenence_wiki.md",
+    "piloto.canvas"
+  ]
+}
