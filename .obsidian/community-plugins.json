@@ -2,5 +2,9 @@
   "obsidian-excalidraw-plugin",
   "obsidian-kindle-plugin",
   "calendar",
-  "obsidian-git"
+  "obsidian-git",
+  "obsidian-annotator",
+  "dataview",
+  "cm-editor-syntax-highlight-obsidian",
+  "templater-obsidian"
 ]

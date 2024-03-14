@@ -1,4 +1,5 @@
 {
   "folder": "notes/dailies",
-  "template": ".obsidian_templates"
+  "template": "notes/templates/daily",
+  "autorun": true
 }
