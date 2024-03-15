@@ -1,10 +1,10 @@
 ---
-id: 1710355360-botanica-gimnospermas-basics
+id: 1710355360-plantas-gimnospermas
 aliases:
-  - botanica gimnospermas basics
+  - plantas gimnospermas
 tags:
-  - biologia
-  - botanica
+  - biology
+  - botanics
 ---
 
 # botanica gimnospermas basics

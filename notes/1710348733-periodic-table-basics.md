@@ -1,8 +1,9 @@
 ---
-id: 1710348733-periodic-table-basics
+id: 1710348733-tabela-periodica
 aliases:
-  - periodic table basics
-tags: []
+  - tabela periodica
+tags:
+  - chemistry
 ---
 
 # periodic table basics

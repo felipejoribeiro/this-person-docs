@@ -1,15 +1,15 @@
 ---
-id: 1710353702-botanica-briofitas-basics
+id: 1710353702-plantas-briofitas
 aliases:
-  - botanica briofitas basics
+  - plantas briofitas
 tags:
-  - biologia
-  - botanica
+  - biology
+  - botanics
 ---
 
 # botanica briofitas basics
 
-São os musgos, hepáticas e antóceros. Pequenas plantas que dependem de ambientes húmidos para sobreviver. São as primeiras plantas a colonizar ambientes terrestres.
+São os musgos, hepáticas e antóceros. Pequenas plantas que dependem de ambientes úmidos para sobreviver. São as primeiras plantas a colonizar ambientes terrestres.
 
 ![botanica-briofitas-basics-2.png](../data/notes/botanica-briofitas-basics-2.png)
 
@@ -33,6 +33,7 @@ Essas plantas tem uma morfologia muito simples, com raízes, caules e folhas pou
 ## Ciclo de vida
 
 A seguir vemos o ciclo de vida do musgo (Bryophyta):
+
 ![botanica briofitas basics 1.png](../data/notes/botanica_briofitas_basics_1.png)
 
 - O esporófito é diploide, formado pela união de gametas (zigoto) e subsequente mitose;
