@@ -11,11 +11,9 @@
             "id": "e202e8d8ba03d671",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "notes/1710353702-botanica-briofitas-basics.md",
-                "mode": "source",
-                "source": false
+                "file": "assets/from_notes/botanica-briofitas-basics-2.png"
               }
             }
           }
@@ -88,7 +86,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/1710353702-botanica-briofitas-basics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +102,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/1710353702-botanica-briofitas-basics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -116,9 +112,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "notes/1710353702-botanica-briofitas-basics.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -155,12 +149,8 @@
             "id": "f771b33edc21e6a8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notes/❖ ♧ ◉ ✾.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -198,53 +188,53 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "e4c7c05b848125f0",
+  "active": "40fc273d54990b8c",
   "lastOpenFiles": [
-    "data/notes/test.png",
-    "notes/1710355360-botanica-gimnospermas-basics.md",
-    "notes/1710355360-gimnospermas-basics.md",
-    "notes/1710353702-botanica-briofitas-basics.md",
-    "notes/1710348733-periodic-table-basics.md",
-    "literature/README.md",
-    "dailies/2024-03-15.md",
-    "notes/1710482466-test-document.md",
-    "dailies/2024-03-14.md",
-    "notes/❖ ♧ ◉ ✾.md",
-    "❖ ♧ ◉ ✾.md",
-    "misc/❖ ♧ ◉ ✾.md",
-    "data/templates/daily.md",
-    "data/templates",
-    "dailies/2024-03-13.md",
-    "dailies/2024-03-12.md",
-    "dailies/2024-03-11.md",
-    "dailies",
-    "misc",
-    "data/notes/hello-there.png",
-    "notes/dailies/2024-03-15.md",
-    "data/notes/botanica-briofitas-basics-3.png",
-    "notes/misc/❖ ♧ ◉ ✾.md",
-    "README.md",
-    "notes/dailies/2024-03-14.md",
-    "notes/dailies/2024-03-11.md",
-    "notes/hello.md",
-    "data/notes/botanica-briofitas-basics-2.png",
-    "data/notes/botanica_briofitas_basics_1.png",
-    "data/notes/botanica briofitas basics 1.png",
+    "notes",
+    "assets/from_notes/hello.svg",
     "data/notes",
-    "notes/dailies/2024-03-13.md",
-    "notes/dailies/2024-03-12.md",
-    "notes/1710348661-OLSH.md",
-    "zettelkasten/fleeting/1710345285-test-title.md",
-    "zettelkasten/literature",
-    "zettelkasten/fleeting",
-    "zettelkasten/permanent",
-    "zettelkasten",
-    "notes/others",
-    "data/notes/hello.png",
-    "data/rofi.gif",
-    "data/books_2.png",
-    "data/books.png",
     "data",
+    "assets/from_notes/botanica-briofitas-basics-2.png",
+    "assets/from_notes/botanica_briofitas_basics_1.png",
+    "assets/README.md",
+    "assets/from_notes/botanica-briofitas-basics-3.png",
+    "assets/from_notes",
+    "fleeting/❖ ♧ ◉ ✾.md",
+    "fleeting/README.md",
+    "fleeting/1710355360-gimnospermas-basics.md",
+    "fleeting/1710353702-botanica-briofitas-basics.md",
+    "fleeting/1710348733-periodic-table-basics.md",
+    "fleeting",
+    "recent/❖ ♧ ◉ ✾.md",
+    "recent/README.md",
+    "recent/1710355360-gimnospermas-basics.md",
+    "recent/1710353702-botanica-briofitas-basics.md",
+    "recent/1710348733-periodic-table-basics.md",
+    "recent",
+    "notes/1710353702-botanica-briofitas-basics.md",
+    "new/❖ ♧ ◉ ✾.md",
+    "new/README.md",
+    "new/1710355360-gimnospermas-basics.md",
+    "new/1710353702-botanica-briofitas-basics.md",
+    "new/1710348733-periodic-table-basics.md",
+    "new",
+    "notes/1710355360-gimnospermas-basics.md",
+    "README.md",
+    "assets/templates/default.svg",
+    "assets/templates/daily.md",
+    "assets/notes/hy_there.svg",
+    "assets/notes/hey.svg",
+    "assets/notes/botanica_briofitas_basics_1.png",
+    "assets/notes/botanica-briofitas-basics-3.png",
+    "assets/notes/botanica-briofitas-basics-2.png",
+    "assets/templates",
+    "assets/notes",
+    "assets",
+    "notes/1710348733-periodic-table-basics.md",
+    "notes/README.md",
+    "dailies/2024-03-16.md",
+    "notes/1710355360-botanica-gimnospermas-basics.md",
+    "literature/README.md",
     "Untitled 1.canvas",
     "Untitled.canvas",
     "piloto.canvas"
