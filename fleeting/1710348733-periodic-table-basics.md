@@ -6,7 +6,7 @@ tags:
   - chemistry
 ---
 
-# periodic table basics
+# Periodic table basics
 
 Aula de química sobre propriedades da tabela periódica
 

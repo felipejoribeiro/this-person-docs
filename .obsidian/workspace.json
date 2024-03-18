@@ -11,8 +11,12 @@
             "id": "7d7ceb5af2f6f29c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "daily/2024-03-18.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -84,6 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "daily/2024-03-18.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,6 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "daily/2024-03-18.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -110,7 +116,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "daily/2024-03-18.md"
+              }
             }
           }
         ]
@@ -141,7 +149,7 @@
       {
         "id": "565fc1e0ac0f9b08",
         "type": "tabs",
-        "dimension": 34.93333333333333,
+        "dimension": 24.8,
         "children": [
           {
             "id": "f771b33edc21e6a8",
@@ -160,7 +168,7 @@
       {
         "id": "1b0038ae9935a297",
         "type": "tabs",
-        "dimension": 34.93333333333333,
+        "dimension": 45.06666666666666,
         "children": [
           {
             "id": "40fc273d54990b8c",
@@ -190,9 +198,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "40fc273d54990b8c",
+  "active": "7d7ceb5af2f6f29c",
   "lastOpenFiles": [
+    "fleeting/1710785875-testing.md",
+    "dailies",
     "daily/2024-03-18.md",
+    "fleeting/❖ ♧ ◉ ✾.md",
     "daily/2024-03-15.md",
     "daily/2024-03-14.md",
     "daily/2024-03-13.md",
@@ -207,7 +218,6 @@
     "fleeting/test.pdf",
     "lilypond-tmp-5768520.pdf",
     "test.pdf",
-    "lilypond-tmp-1311281.pdf",
     "assets/from_notes/2024-03-15-test-2024-03-18-01-22-08.svg",
     "assets/from_notes/2024-03-15-2024-03-18-01-19-13.svg",
     "assets/from_notes/2024-03-17-2024-03-18-00-53-05.svg",
@@ -219,7 +229,6 @@
     "assets/from_notes/2024-03-17-2024-03-17-23-43-11.svg",
     "assets/from_notes/2024-03-17-2024-03-17-23-37-54.svg",
     "dailies/2024-03-17.md",
-    "fleeting/❖ ♧ ◉ ✾.md",
     "assets/README.md",
     "fleeting/README.md",
     "fleeting/1710355360-gimnospermas-basics.md",
@@ -237,7 +246,6 @@
     "new/1710353702-botanica-briofitas-basics.md",
     "new/1710348733-periodic-table-basics.md",
     "notes/1710355360-gimnospermas-basics.md",
-    "README.md",
     "Untitled 1.canvas",
     "Untitled.canvas",
     "piloto.canvas"
