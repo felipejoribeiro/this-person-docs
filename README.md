@@ -32,8 +32,8 @@ If you wish to contribute fell free to send a pull request. New information, rev
 
 About the notes, there are three categories:
 
-- **Permanent notes**: are created by revising and synthesizing fleeting notes and literature notes. They are intended to be permanent and are the main source of knowledge.
-- **Literature notes**: notes that are taken from content that is not created by the author. It has references to the original content, and synthesis of the content.
+- **Permanent notes**: are created by revising and synthesizing fleeting notes and literature notes. They are intended to be permanent and are the main source of knowledge;
+- **Literature notes**: notes that are taken from content that is not created by the author. It has references to the original content, and synthesis of the content;
 - **Fleeting notes**: momentary notes that are not intended to be permanent. Authoral ideas, thoughts and reflections.
 
 Niklas says that the productivity of a knowledge worker is directly related to the amount of permanent notes that he produces per day.
