@@ -1,5 +1,5 @@
 {
   "folder": "dailies",
-  "template": "data/templates/daily",
+  "template": "assets/templates/daily",
   "autorun": true
 }

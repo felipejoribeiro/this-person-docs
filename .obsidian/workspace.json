@@ -4,17 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "300cd283ed7858c6",
+        "id": "f8bd1ae3ffe3a59f",
         "type": "tabs",
         "children": [
           {
-            "id": "e202e8d8ba03d671",
+            "id": "7d7ceb5af2f6f29c",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/from_notes/botanica-briofitas-basics-2.png"
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -149,8 +147,12 @@
             "id": "f771b33edc21e6a8",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "fleeting/❖ ♧ ◉ ✾.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -190,51 +192,52 @@
   },
   "active": "40fc273d54990b8c",
   "lastOpenFiles": [
-    "notes",
-    "assets/from_notes/hello.svg",
-    "data/notes",
-    "data",
-    "assets/from_notes/botanica-briofitas-basics-2.png",
-    "assets/from_notes/botanica_briofitas_basics_1.png",
-    "assets/README.md",
-    "assets/from_notes/botanica-briofitas-basics-3.png",
-    "assets/from_notes",
+    "daily",
+    "fleeting/test.mp3",
+    "fleeting/test.midi",
+    "test.midi",
+    "fleeting/lilypond-tmp-8252252.pdf",
+    "fleeting/test.pdf",
+    "lilypond-tmp-5768520.pdf",
+    "test.pdf",
+    "lilypond-tmp-1311281.pdf",
+    "lilypond-tmp-7241655.pdf",
+    "lilypond-tmp-8471235.pdf",
+    "assets/from_notes/2024-03-15-test-2024-03-18-01-22-08.svg",
+    "assets/from_notes/2024-03-15-2024-03-18-01-19-13.svg",
+    "assets/from_notes/2024-03-17-2024-03-18-00-53-05.svg",
+    "assets/from_notes/2024-03-17-hey-2024-03-18-00-50-36.svg",
+    "assets/from_notes/2024-03-17-hy-2024-03-18-00-37-05.svg",
+    "assets/from_notes/2024-03-17-2024-03-18-00-35-07.svg",
+    "assets/from_notes/2024-03-17-2024-03-17-23-45-16.svg",
+    "assets/from_notes/2024-03-17-hello-2024-03-17-23-43-44.svg",
+    "assets/from_notes/2024-03-17-2024-03-17-23-43-11.svg",
+    "assets/from_notes/2024-03-17-2024-03-17-23-37-54.svg",
+    "dailies/2024-03-17.md",
     "fleeting/❖ ♧ ◉ ✾.md",
+    "assets/README.md",
     "fleeting/README.md",
     "fleeting/1710355360-gimnospermas-basics.md",
     "fleeting/1710353702-botanica-briofitas-basics.md",
     "fleeting/1710348733-periodic-table-basics.md",
-    "fleeting",
     "recent/❖ ♧ ◉ ✾.md",
     "recent/README.md",
     "recent/1710355360-gimnospermas-basics.md",
     "recent/1710353702-botanica-briofitas-basics.md",
     "recent/1710348733-periodic-table-basics.md",
-    "recent",
     "notes/1710353702-botanica-briofitas-basics.md",
     "new/❖ ♧ ◉ ✾.md",
     "new/README.md",
     "new/1710355360-gimnospermas-basics.md",
     "new/1710353702-botanica-briofitas-basics.md",
     "new/1710348733-periodic-table-basics.md",
-    "new",
     "notes/1710355360-gimnospermas-basics.md",
     "README.md",
-    "assets/templates/default.svg",
     "assets/templates/daily.md",
-    "assets/notes/hy_there.svg",
-    "assets/notes/hey.svg",
-    "assets/notes/botanica_briofitas_basics_1.png",
-    "assets/notes/botanica-briofitas-basics-3.png",
-    "assets/notes/botanica-briofitas-basics-2.png",
-    "assets/templates",
-    "assets/notes",
-    "assets",
     "notes/1710348733-periodic-table-basics.md",
     "notes/README.md",
     "dailies/2024-03-16.md",
     "notes/1710355360-botanica-gimnospermas-basics.md",
-    "literature/README.md",
     "Untitled 1.canvas",
     "Untitled.canvas",
     "piloto.canvas"

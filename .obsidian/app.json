@@ -1,7 +1,9 @@
 {
   "vimMode": false,
   "newFileLocation": "folder",
-  "newFileFolderPath": "notes",
-  "attachmentFolderPath": "./data",
-  "alwaysUpdateLinks": true
+  "newFileFolderPath": "fleeting",
+  "attachmentFolderPath": "assets/from_notes",
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": false,
+  "promptDelete": false
 }
