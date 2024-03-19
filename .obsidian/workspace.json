@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7d7ceb5af2f6f29c",
+            "id": "40fc273d54990b8c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "daily/2024-03-18.md",
+                "file": "literature/1710798450-genesis.md",
                 "mode": "source",
                 "source": false
               }
@@ -88,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "daily/2024-03-18.md",
+                "file": "literature/1710798450-genesis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "daily/2024-03-18.md",
+                "file": "literature/1710798450-genesis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "daily/2024-03-18.md"
+                "file": "literature/1710798450-genesis.md"
               }
             }
           }
@@ -134,7 +134,7 @@
       {
         "id": "b633f4b57a32c5fb",
         "type": "tabs",
-        "dimension": 30.133333333333336,
+        "dimension": 32.08888888888889,
         "children": [
           {
             "id": "913b3ddb187ecffd",
@@ -149,7 +149,7 @@
       {
         "id": "565fc1e0ac0f9b08",
         "type": "tabs",
-        "dimension": 24.8,
+        "dimension": 67.91111111111111,
         "children": [
           {
             "id": "f771b33edc21e6a8",
@@ -161,21 +161,6 @@
                 "mode": "source",
                 "source": false
               }
-            }
-          }
-        ]
-      },
-      {
-        "id": "1b0038ae9935a297",
-        "type": "tabs",
-        "dimension": 45.06666666666666,
-        "children": [
-          {
-            "id": "40fc273d54990b8c",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
             }
           }
         ]
@@ -198,12 +183,32 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "7d7ceb5af2f6f29c",
+  "active": "c4809dad77a865e1",
   "lastOpenFiles": [
+    "assets/from_notes/1710798450-genesis-2024-03-19-03-18-22-history-universe-from-science.png",
+    "assets/from_notes/1710798450-genesis-2024-03-19-01-33-10-representation-beginning-universe-ocean-analogy.svg",
+    "fleeting/❖ ♧ ◉ ✾.md",
+    "literature/1710798450-genesis.md",
+    "assets/from_notes/1710798450-genesis-2024-03-18-23-44-58-moses-commandments-painting.png",
+    "assets/from_notes/1710798450-genesis-2024-03-18-22-41-46-moses-portrait.png",
+    "fleeting/1710348733-periodic-table-basics.md",
+    "fleeting/1710353702-botanica-briofitas-basics.md",
+    "fleeting/1710355360-gimnospermas-basics.md",
+    "fleeting/1710353702-plantas-briofitas.md",
+    "fleeting/().md",
+    "fleeting/velho testamento.md",
+    "fleeting/1710807288-velho-testamento.md",
+    "assets/from_notes/1710798450-genesis-2024-03-18-21-12-19-adam-eve-god-animals.png",
+    "daily/2024-03-18.md",
+    "assets/from_notes/1710798450-genesis-2024-03-18-20-51-16-adam-eve-god-animals.png",
+    "assets/from_notes/1710798450-genesis-2024-03-18-20-46-43-test-image.png",
+    "assets/from_notes/1710798450-genesis-2024-03-18-20-33-22-testing-caption.png",
+    "assets/from_notes/1710798450-genesis-2024-03-18-20-31-59-testing-capition.svg",
+    "assets/from_notes/1710798450-genesis-2024-03-18-20-28-19-testing-caption.svg",
+    "assets/from_notes/1710798450-genesis-2024-03-18-20-09-42-a-flag-of-rependence.svg",
+    "fleeting/1710796766-genesis.md",
     "fleeting/1710785875-testing.md",
     "dailies",
-    "daily/2024-03-18.md",
-    "fleeting/❖ ♧ ◉ ✾.md",
     "daily/2024-03-15.md",
     "daily/2024-03-14.md",
     "daily/2024-03-13.md",
@@ -218,34 +223,14 @@
     "fleeting/test.pdf",
     "lilypond-tmp-5768520.pdf",
     "test.pdf",
-    "assets/from_notes/2024-03-15-test-2024-03-18-01-22-08.svg",
-    "assets/from_notes/2024-03-15-2024-03-18-01-19-13.svg",
-    "assets/from_notes/2024-03-17-2024-03-18-00-53-05.svg",
-    "assets/from_notes/2024-03-17-hey-2024-03-18-00-50-36.svg",
-    "assets/from_notes/2024-03-17-hy-2024-03-18-00-37-05.svg",
-    "assets/from_notes/2024-03-17-2024-03-18-00-35-07.svg",
-    "assets/from_notes/2024-03-17-2024-03-17-23-45-16.svg",
-    "assets/from_notes/2024-03-17-hello-2024-03-17-23-43-44.svg",
-    "assets/from_notes/2024-03-17-2024-03-17-23-43-11.svg",
-    "assets/from_notes/2024-03-17-2024-03-17-23-37-54.svg",
     "dailies/2024-03-17.md",
     "assets/README.md",
     "fleeting/README.md",
-    "fleeting/1710355360-gimnospermas-basics.md",
-    "fleeting/1710353702-botanica-briofitas-basics.md",
-    "fleeting/1710348733-periodic-table-basics.md",
     "recent/❖ ♧ ◉ ✾.md",
     "recent/README.md",
     "recent/1710355360-gimnospermas-basics.md",
     "recent/1710353702-botanica-briofitas-basics.md",
     "recent/1710348733-periodic-table-basics.md",
-    "notes/1710353702-botanica-briofitas-basics.md",
-    "new/❖ ♧ ◉ ✾.md",
-    "new/README.md",
-    "new/1710355360-gimnospermas-basics.md",
-    "new/1710353702-botanica-briofitas-basics.md",
-    "new/1710348733-periodic-table-basics.md",
-    "notes/1710355360-gimnospermas-basics.md",
     "Untitled 1.canvas",
     "Untitled.canvas",
     "piloto.canvas"
