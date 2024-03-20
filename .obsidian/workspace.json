@@ -11,12 +11,8 @@
             "id": "40fc273d54990b8c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "literature/1710798450-genesis.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -88,7 +84,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "literature/1710798450-genesis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +100,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "literature/1710798450-genesis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -116,9 +110,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "literature/1710798450-genesis.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -183,12 +175,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "c4809dad77a865e1",
+  "active": "40fc273d54990b8c",
   "lastOpenFiles": [
+    "literature/1710798450-genesis.md",
+    "fleeting/1710798450-genesis.md",
     "assets/from_notes/1710798450-genesis-2024-03-19-03-18-22-history-universe-from-science.png",
     "assets/from_notes/1710798450-genesis-2024-03-19-01-33-10-representation-beginning-universe-ocean-analogy.svg",
     "fleeting/❖ ♧ ◉ ✾.md",
-    "literature/1710798450-genesis.md",
     "assets/from_notes/1710798450-genesis-2024-03-18-23-44-58-moses-commandments-painting.png",
     "assets/from_notes/1710798450-genesis-2024-03-18-22-41-46-moses-portrait.png",
     "fleeting/1710348733-periodic-table-basics.md",
@@ -205,7 +198,6 @@
     "assets/from_notes/1710798450-genesis-2024-03-18-20-33-22-testing-caption.png",
     "assets/from_notes/1710798450-genesis-2024-03-18-20-31-59-testing-capition.svg",
     "assets/from_notes/1710798450-genesis-2024-03-18-20-28-19-testing-caption.svg",
-    "assets/from_notes/1710798450-genesis-2024-03-18-20-09-42-a-flag-of-rependence.svg",
     "fleeting/1710796766-genesis.md",
     "fleeting/1710785875-testing.md",
     "dailies",
