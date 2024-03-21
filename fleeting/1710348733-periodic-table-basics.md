@@ -6,20 +6,33 @@ tags:
   - chemistry
 ---
 
-# Periodic table basics
+# THE PERIODIC TABLE
 
-Aula de química sobre propriedades da tabela periódica
+<span style="text-align: center; width: 100%; font-size: 0.75em">
+    Properties, relationships, and trends in the periodic table. Synthesis of the most important concepts on the matter.
+</span>
 
-- Propriedades principais:
-  - Raio atômico;
-  - Energia de ionização;
-  - afinidade eletrônica;
-  - eletronegatividade;
-  - eletropositividade;
-- Propriedades secundárias:
-  - densidade;
-  - volume atômico;
-  - pf e pe;
+---
+
+![periodic-table.png](../assets/from_notes/1710348733-periodic-table-basics-2024-03-21-17-34-42-periodic-table.png)
+
+The periodic table is a tabular arrangement of the chemical elements. These elements are ordered by their atomic number, electron configuration, and recurring chemical properties.
+
+## 📑 1 : Most important properties
+
+The properties of the elements are determined by the atomic number and molecular mass. The most important properties are:
+
+- Atomic radius;
+- Ionization energy;
+- Electron affinity;
+- Electronegativity;
+- Density;
+
+Secondary properties include:
+
+- density;
+- atomic volume;
+- `pf` and `pe`;
 
 ## Raio atômico
 

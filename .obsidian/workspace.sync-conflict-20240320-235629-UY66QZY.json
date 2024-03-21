@@ -177,7 +177,6 @@
   },
   "active": "40fc273d54990b8c",
   "lastOpenFiles": [
-    "estructured/music/hey.svg",
     "estructured/music/hey.pdf",
     "fleeting/1710951119-godot-source-code.md",
     "fleeting/1710950777-lilypond-basics.md",
@@ -219,6 +218,7 @@
     "assets/daily",
     "fleeting/test.mp3",
     "fleeting/test.midi",
+    "test.midi",
     "dailies/2024-03-17.md",
     "assets/README.md",
     "fleeting/README.md",
