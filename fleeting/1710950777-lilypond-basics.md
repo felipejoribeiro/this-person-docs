@@ -16,3 +16,7 @@ tags:
 ```bash
 lilypond --svg -o /path/to/a/directory /path/to/file.ly
 ```
+
+```lilypond
+\version "2.22.1"
+```

@@ -18,7 +18,9 @@ tags:
 
 The periodic table is a tabular arrangement of the chemical elements. These elements are ordered by their atomic number, electron configuration, and recurring chemical properties.
 
-## 📑 1 : Most important properties
+---
+
+## 1 | Most important properties
 
 The properties of the elements are determined by the atomic number and molecular mass. The most important properties are:
 
@@ -34,21 +36,24 @@ Secondary properties include:
 - atomic volume;
 - `pf` and `pe`;
 
-## Raio atômico
+Now we will check one by one.
 
-É o raio do átomo, a distância do núcleo até a última camada de elétrons.
-Propriedades mais importantes:
+### 🚧 Atomic radius
 
-- Ele cresce da direita pra esquerda e de cima para baixo;
+This value is the distance between the atom's nucleus and the last electron layer.
 
-> Ex1: Na família 1A temos H, Li, Na... O raio atômico cresce da a cada elemento, pois ganha-se uma camada.
+Most important trends:
 
-> Ex2: No terceiro período temos $Na_{11}$, $Mg_{12}$, $Al_{13}$ e o raio atômico cresce do alumínio para o sódio. Pois tem-se mais protóns para um mesmo número de camadas, uma vez que a maior quantidade de protons aumenta a compressão da camada eletrônica.
+- It increases from right to left and from top to bottom;
 
-Interessante constatar que cátions e ânios também tem um raio atômico diferente do átomo neutro. Para entender as diferenças, é valido observar a diferença na distribuição eletrônica:
+> Ex1: In the family 1A we have H, Li, Na... The atomic radius increases for each element, as a new layer is added.
 
-- A adição de elétrons aumenta o raio atômico;
-- A remoção de elétrons diminui o raio atômico;
+> Ex2: In the third period we have $Na_{11}$, $Mg_{12}$, $Al_{13}$ and the atomic radius increases from aluminum to sodium. This is because there are more protons for the same number of layers, and the higher number of protons increases the compression of the electron layer.
+
+It's interesting to note that cations and anions also have a different atomic radius than the neutral atom. To understand the differences, it is valid to observe the difference in electronic distribution:
+
+- The addition of electrons increases the atomic radius;
+- The removal of electrons decreases the atomic radius;
 
 ## Energia de ionização (potencial de ionização)
 
