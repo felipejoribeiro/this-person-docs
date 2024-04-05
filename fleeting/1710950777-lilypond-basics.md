@@ -5,6 +5,7 @@ aliases:
 tags:
   - music
   - lilypond
+  - engineering
 ---
 
 # lilypond-basics

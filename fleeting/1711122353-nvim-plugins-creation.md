@@ -2,10 +2,13 @@
 id: 1711122353-nvim-plugins-creation
 aliases:
   - nvim-plugins-creation
-tags: []
+tags:
+  - engineering
+  - neovim
+  - lua
 ---
 
-# Neovim pluggins: an introduction
+# Neovim plugins: an introduction
 
 <span style="text-align: center; width: 100%; font-size: 0.75em">
 
@@ -44,9 +47,9 @@ In this case, to execute the code, after sourcing the file, you can just make th
 
 Now, with the basics of the API, we can check how to distribute our extension.
 
-## ✅ - The structure of neovim pluggins
+## ✅ - The structure of neovim plugins
 
-The basic structure of a **neovim** plugging is the following one:
+The basic structure of a **neovim** plugin is the following one:
 
 ```
     MyNvimPluging
@@ -68,12 +71,12 @@ return M
 
 Whatever is returned from this `init.lua` command will be available to the user. And by creating a **GitHub** repository with this structure, any one who reference your plugin in their package manager will have access to the functionality.
 
-To local development, depending on the package manager, you can select a local directory where your plugging resides. In **Lazy** package manager, for example, the following configuration will work:
+To local development, depending on the package manager, you can select a local directory where your plugin resides. In **Lazy** package manager, for example, the following configuration will work:
 
 ```lua
 return {
-  "felipejoribeiro/illustrate.nvim",
-  dir = "~/work/personal/illustrate.nvim",
+  "felipejoribeiro/svgo.nvim",
+  dir = "~/work/personal/svgo.nvim",
   dependencies = { "rcarriga/nvim-notify" },
   opts = {
     illustration_dir = "../assets/from_notes",
@@ -102,7 +105,7 @@ Dealing with the configuration of your plugin is a common task. You can get user
 
 ## ✅ - Example plugin
 
-Here we have a single file plugging to use as a final example.
+Here we have a single file plugin to use as a final example.
 
 ```lua
 -- lua/print_treesitter_target/init.lua

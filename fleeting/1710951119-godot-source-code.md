@@ -2,7 +2,9 @@
 id: 1710951119-godot-source-code
 aliases:
   - godot-source-code
-tags: []
+tags:
+  - engineering
+  - game-development
 ---
 
 # godot-source-code

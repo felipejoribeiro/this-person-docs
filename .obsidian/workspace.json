@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f8bd1ae3ffe3a59f",
+        "id": "34e6cf7063d0e659",
         "type": "tabs",
         "children": [
           {
-            "id": "40fc273d54990b8c",
+            "id": "808d81532a1caa8d",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -117,49 +117,16 @@
       }
     ],
     "direction": "horizontal",
-    "width": 233.5
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "6a433ffad8df77ca",
     "type": "split",
-    "children": [
-      {
-        "id": "b633f4b57a32c5fb",
-        "type": "tabs",
-        "dimension": 32.08888888888889,
-        "children": [
-          {
-            "id": "913b3ddb187ecffd",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {}
-            }
-          }
-        ]
-      },
-      {
-        "id": "565fc1e0ac0f9b08",
-        "type": "tabs",
-        "dimension": 67.91111111111111,
-        "children": [
-          {
-            "id": "f771b33edc21e6a8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "fleeting/❖ ♧ ◉ ✾.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ]
-      }
-    ],
+    "children": [],
     "direction": "horizontal",
-    "width": 333.5
+    "width": 333.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -175,8 +142,20 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "40fc273d54990b8c",
+  "active": "808d81532a1caa8d",
   "lastOpenFiles": [
+    "ultima/story_boards/template.png~",
+    "ultima/story_boards/template.psd~",
+    "ultima/story_boards/story_board_en.md",
+    "assets/from_notes/1712254150-large-language-models-2024-04-04-20-14-33-large-language-model-architecture.svg",
+    "assets/from_notes/1712254150-large-language-models-2024-04-04-17-32-03-transformer-architecture-scheme.svg",
+    "ultima/story_boards/story_board.md",
+    "Untitled.canvas",
+    "fleeting/1712254150-large-language-models.md",
+    "assets/from_notes/1712254150-large-language-models-2024-04-04-15-19-12-ancient-text-ai-historian-nature.png",
+    "assets/from_notes/1712254150-large-language-models-2024-04-04-15-16-29-ancient-egypt-funerary-texts-header.png",
+    "daily/2024-04-04.md",
+    "daily/2024-04-02.md",
     "fleeting/1711400296-cinematica.md",
     "assets/from_notes/1711394673-chemical-bonds-2024-03-25-17-04-08-covalent-bonds-per-atom-periodic-table.png.jMSTfA",
     "assets/from_notes/1711394673-chemical-bonds-2024-03-25-17-04-08-covalent-bonds-per-atom-periodic-table.png~",
@@ -189,18 +168,13 @@
     "assets/from_notes/1711394673-chemical-bonds-2024-03-25-16-39-31-example-bond-drawing.png",
     "fleeting/1711394899-periodic-table.md",
     "fleeting/1711394673-chemical-bonds.md",
-    "estructured/music/teste.svg-1.svg",
-    "estructured/music/teste.svg-2.svg",
     "estructured/music/teste.svg.midi",
     "estructured/music/oi.mp3",
     "estructured/music/hey.pdf",
     "oi.midi",
     "estructured/music/oi.pdf",
     "oi.pdf",
-    "estructured/music/oi.ly",
     "fleeting/1711122353-nvim-plugins-creation.md",
-    "assets/from_notes/1711122353-nvim-plugins-creation-2024-03-22-13-36-56-magic-circle-header.png",
-    "assets/from_notes/1711122353-nvim-plugins-creation-2024-03-22-13-34-59-text-art-header.png",
     "adm_dust/notes/game_promotion.md",
     "adm_dust/notes/godot_plugins.md",
     "adm_dust/README.md",
@@ -217,14 +191,7 @@
     "fleeting/1710348733-periodic-table-basics.md",
     "fleeting/1710353702-botanica-briofitas-basics.md",
     "fleeting/1710355360-gimnospermas-basics.md",
-    "fleeting/1710353702-plantas-briofitas.md",
-    "fleeting/().md",
-    "fleeting/velho testamento.md",
-    "fleeting/1710807288-velho-testamento.md",
-    "daily/2024-03-18.md",
-    "fleeting/1710796766-genesis.md",
     "Untitled 1.canvas",
-    "Untitled.canvas",
     "piloto.canvas"
   ]
 }
