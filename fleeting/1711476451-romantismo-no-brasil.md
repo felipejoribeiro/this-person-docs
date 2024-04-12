@@ -76,3 +76,29 @@ Que não encontro por cá;
 Sem qu’inda aviste as palmeiras,
 Onde canta o Sabiá.
 ```
+
+## Características da segunda fase
+
+Também conhecida como "Mal do século", esta fase é marcada pela melancolia e pelo macabro. O ultrarromantismo é uma característica marcante desta fase. Destacam-se os seguintes autores:
+
+- **Álvares de Azevedo**: Caiu do cavalo e quebrou a bacia e foi operado sem anestesia; Mulher inacessível, idealização da mulher;
+
+  - Gênero Narrativo;
+    - Conto: Noite na taverna: Escarnecimento da religião;
+  - Poesia Lírica:
+    - Soneto:
+      - "Lira dos vinte anos";
+      - "Namoro a cavalo";
+      - "É ela é ela";
+
+- **Manoel Antônio de Alzevedo**: "O poeta morreu de amor";
+
+  - Gênero Narrativo;
+    - Conto: "Macário";
+  - Poesia Lírica:
+    - Soneto: "Lira dos vinte anos";
+    - É ela é ela
+
+- **Casimiro de Abreu**;
+
+Todos tiveram momentos difíceis em suas vidas, e isso refletiu em suas obras.
