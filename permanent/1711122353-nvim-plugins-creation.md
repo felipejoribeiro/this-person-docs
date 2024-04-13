@@ -84,7 +84,7 @@ return {
 }
 ```
 
-So, with this configuration, **neovim** will source your plugin's code.
+So, with this configuration, **neovim** will source your plugin's code from the given path.
 
 ## ✅ - Plugin live update
 
@@ -101,7 +101,24 @@ But be careful not to send this to production as this command will clutter your 
 
 ## ✅ - Plugin configuration
 
-Dealing with the configuration of your plugin is a common task. You can get user configurations by using the `setup` function. Which is a development pattern in **Neovim** plugins. The user will call this function to configure the plugin and pass it's options. Then, inside the plugin you can read these values, as in the final example.
+Dealing with the configuration of your plugin is a common task. You can get user configurations by using the `setup` function. Which is a development pattern in **Neovim** plugins. The user will call this function to configure the plugin and pass it's options. Then, inside the plugin you can read these values, and integrate with the default:
+
+```lua
+local plugin_options
+local default_options = {
+    my_opt_1 = 'Oranges',
+    my_opt_2 = 'Apples',
+}
+
+M = {}
+
+M.setup = function(options)
+    options = options or {}
+    plugin_options = vim.tbl_extend('keep', options, default_options)
+end
+```
+
+It's important to note that the `vim.tbl_extend` function will prioritize the user options over the default ones. So, if the user doesn't pass any options, the default ones will be used.
 
 ## ✅ - Example plugin
 

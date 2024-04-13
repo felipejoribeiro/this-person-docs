@@ -11,7 +11,7 @@ tags:
 
 <span style="text-align: center; width: 100%; font-size: 0.75em">
 
-Natural language generative models are a type of [artificial-inteligence](fleeting/1712174618-artificial-inteligence.md) that can generate human like text from a given prompt. They are trained on large datasets of text, and they work by predicting the next word in a sentence given the previous words.
+Natural language generative models are a type of [artificial-inteligence](1712174618-artificial-inteligence.md) that can generate human like text from a given prompt. They are trained on large datasets of text, and they work by predicting the next word in a sentence given the previous words.
 
 </span>
 
@@ -48,7 +48,7 @@ If we imagine the Language model as a function, it takes a string of a sequence 
 - **Output Embeddings**: Converts the string of words into a sequence of vectors that represent the words.
 - **Positional Encodings**: Adds information about the position of the words in the string.
 - **Masked Multi-Head Attention**: The model captures contextual information about the words in the sequence.
-- **Feed Forward**: Increases learning capacity by adding [artificial-neural-networks](fleeting/1712240474-artificial-neural-networks.md) layers with an activation function.
+- **Feed Forward**: Increases learning capacity by adding [artificial-neural-networks](1712240474-artificial-neural-networks.md) layers with an activation function.
 - **Output module**: Consists of a linear layer and a softmax function that outputs the probability distribution over the next word in the sequence. (it get all words and outputs the probability of each one).
 
   </div>

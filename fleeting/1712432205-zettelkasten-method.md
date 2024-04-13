@@ -24,6 +24,8 @@ The Zettelkasten method is the most multidisciplinary method of knowledge buildi
 
 "Slip box" in German, the method was created by Niklas Luhmann, a German sociologist.. It's a method of note taking based on little documents linked to one another. You have the _zettel_ which is a note and the _kasten_ which is the container. Here we implement this method with markdown files as the notes and directories as the containers.
 
+<img src="../assets/from_notes/1712432205-zettelkasten-method-2024-04-12-19-15-19-niklas-luhmann.png">
+
 > Interesting enough, this method was first implemented in a physical way. With little notes and boxes that were ordered based in their identification numbers. So when linking notes, the author would write the identification number to stablish the link. It was a very laborious process, made simpler with the advent of computers and the hyperlinking.
 
 This method isn't intended to make note taking easier, or more efficient, but to make knowledge building more effective. Observing the relationships between notes will show the author the connections between ideas, and writing these notes with connections in mind will make the author think more deeply and broadly about the subject.

@@ -51,7 +51,7 @@ Created by **Richard Ernest Bellman**, a mathematician. Created the concept of d
 With these concepts, we can define the simplified Bellman equation as follows:
 
 $
-V(s) = \max_a (R(s, a) + \gamma V(s'))
+V(s) = \max_a (R(s, a) + \gamma V(s'_a))
 $
 
 So the value of a state is the maximum reward that can be obtained from that state summed with the value of the next state.
@@ -83,10 +83,10 @@ The Markov Decision Processes (MDPs) provide a mathematical framework for modeli
 > The new equation that describes the value of a state in a Markov Decision Process is the following:
 >
 > $
->V(s) = \max_a (R(s, a) + \gamma \sum_{s'} P(s' | s, a) V(s'))
+>V(s) = \max_a (R(s, a) + \gamma \sum_{s'_a} P(s \rightarrow s'_a) V(s'_a))
 >$
 >
-> Where $P(s' | s, a)$ is the probability of reaching state $s'$ from state $s$ by taking action $a$.
+> Where $P(s \rightarrow s'_a)$ is the probability of reaching state $s'$ from state $s$ by taking action $a$.
 
 We can do the math with this new equation to find the value of each state. A possible result would be the following updated diagram:
 
@@ -115,16 +115,16 @@ Q-Learning is a model-free reinforcement learning algorithm. It works from the e
 The **Quality** isn't a property of the state, but of an action in a state, and represents it's perceived effectiveness towards the goal, it differs from **Value** as it is associated to an action. So the bellman equation can be rewritten as:
 
 $
-Q(s, a) = R(s, a) + \gamma \sum_{s'} P(s' | s, a) V(s')
+Q(s, a) = R(s, a) + \gamma \sum_{s'_a} P(s \rightarrow s'_a) V(s'_a)
 $
 
-And we can substitute $V(s') = \max_{a'} Q(s', a')$ (from the belman equation and the one above) to get the following expression:
+And we can substitute $V(s'_a) = \max_{a'_a} Q(s'_a, a'_a)$ (from the belman equation and the one above) to get the following expression:
 
 $
-Q(s, a) = R(s, a) + \gamma \sum_{s'} P(s' | s, a) \max_{a'} Q(s', a')
+Q(s, a) = R(s, a) + \gamma \sum_{s'_a} P(s \rightarrow s'_a) \max_{a'_a} Q(s'_a, a'_a)
 $
 
-Where $s'$ is the next state, and $a'$ is the actions available in the next state.
+Where $s'_a$ is the next state, given action $a$, and $a'_a$ is the actions available in the next state given action $a$.
 
 So, the _Quality_ of an action can be summarized as the immediate reward plus the discounted value of the next state, that is, the maximum quality of among the actions available in the next state.
 
@@ -138,13 +138,13 @@ So, the _Quality_ of an action can be summarized as the immediate reward plus th
 
 The algorithm of Q-learning can be implemented with an array that stores the _Quality_ of state action pairs. We initiate the array with random values, and as the agent interacts with the environment, the values are updated according to the Bellman equation.
 
-> Lets assume a deterministic approach, where from an action in a state, the next state is known, for simplicity sake. In this case $P(s' | s, a_{best}) = 1$, and $P(s' | s, a_{not-best}) = 0$, so the sum can be simplified to the maximum value of the next state resulting in the following equation:
+> Lets assume a deterministic approach, where from an action in a state, the next state is known, for simplicity sake. In this case $P(s \rightarrow s'_{a|best}) = 1$, and $P(s \rightarrow s'_{a|notbest}) = 0$, so the sum can be simplified to the maximum value of the next state resulting in the following equation:
 >
 > $
-> Q(s, a) = R(s, a) + \gamma \max_{a'} Q(s', a')
+> Q(s, a) = R(s, a) + \gamma \max_{a'_a} Q(s'_a, a'_a)
 > $
 
-We call $R(s, a) + \gamma \max_{a'} Q(s', a')$ the **target** value, and $Q(s, a)$ the **current** value. The difference between the target and the current value is called the **Temporal Difference** ($TD(a,s)$).
+We call $R(s, a) + \gamma \max_{a'_a} Q(s'_a, a'_a)$ the **target** value, and $Q(s, a)$ the **current** value. The difference between the target and the current value is called the **Temporal Difference** ($TD(a,s)$).
 
 Then, we can use this difference to update the current value of the state action pair by the following formula:
 
@@ -155,13 +155,13 @@ $ ,
 or
 
 $
-Q'(s, a) = Q(s, a) + \alpha (R(s, a) + \gamma \max_{a'} Q(s', a') - Q(s, a))
+Q'(s, a) = Q(s, a) + \alpha (R(s, a) + \gamma \max_{a'_a} Q(s'_a, a'_a) - Q(s, a))
 $ ,
 
 or, even,
 
 $
-Q'(s, a) = (1 - \alpha) Q(s, a) + \alpha (R(s, a) + \gamma \max_{a'} Q(s', a'))
+Q'(s, a) = (1 - \alpha) Q(s, a) + \alpha (R(s, a) + \gamma \max_{a'_a} Q(s'_a, a'_a))
 $ ,
 
 where $\alpha$ is the learning rate, which controls how much the new information will affect the current value. And $Q'(s, a)$ is the new value of the state action pair.
@@ -169,7 +169,7 @@ where $\alpha$ is the learning rate, which controls how much the new information
 > Considering the stochastic approach, the sum will be the expected value of the next state, and the equation will be:
 >
 > $
-> Q'(s, a) = Q(s, a) + \alpha (R(s, a) + \gamma \sum_{s'} P(s' | s, a) \max_{a'} Q(s', a') - Q(s, a))
+> Q'(s, a) = Q(s, a) + \alpha (R(s, a) + \gamma \sum_{s'_a} P(s \rightarrow s'_a) \max_{a'_a} Q(s'_a, a'_a) - Q(s, a))
 > $
 
 ### Additional resources:
@@ -197,7 +197,7 @@ We no long need to store the Q-values in an array, as the network can approximat
 The Loss function can be obtained by the L2 norm of the temporal difference:
 
 $
-Loss = \sum_{a} (R(x, y, a) + \gamma \max_{a'} Q(x', y', a') - Q(x, y, a)) ^ 2
+Loss = \sum_{a} (R(x, y, a) + \gamma \max_{a'_a} Q(x'_a, y'_a, a'_a) - Q(x, y, a)) ^ 2
 $
 
 So it calculates the **Q-value** for the current state with the neural network, and compares with the sum of the reward and the maximum Q-value of the next state (that is calculated with the neural network as well. The difference is squared and summed for all available actions.
