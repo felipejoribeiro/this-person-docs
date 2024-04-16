@@ -10,7 +10,7 @@ tags:
 
 <span style="text-align: center; width: 100%; font-size: 0.75em">
 
-Commercial open-source [large language model](fleeting/1712254150-large-language-models.md) created by **Facebook**. It can be used to commercial use-cases and is available as a base model, which can be further fine-tuned for specific tasks.
+Commercial open-source [large language model](1712254150-large-language-models.md) created by **Facebook**. It can be used to commercial use-cases and is available as a base model, which can be further fine-tuned for specific tasks.
 
 </span>
 
@@ -101,8 +101,8 @@ You can run this code on **google colab** or any other python environment.
 
 First, you need to download a pre-trained model. In this case, we are going to use [aboonaji/llama2finetune-v2](https://huggingface.co/aboonaji/llama2finetune-v2). Then you will need a dataset. The dataset must comply to the following format:
 
-```
-<s> [INST] what is your name? [/INST] my name is Julia</s>
+```html
+<s>[INST] what is your name? [/INST] my name is Julia</s>
 ```
 
 Where `<s>` and `</s>` are the start and end of the sentence, respectively. The `[INST]` and `[/INST]` tags are used to indicate the start and end of the instruction. And the text outside the instruction is the answer to the question.
@@ -147,5 +147,4 @@ llama_sft_trainer = SFTTrainer(
 llama_sft_trainer.train()
 ```
 
-t
 The model will be tuned and it can be used to text generation the same way it was described before.

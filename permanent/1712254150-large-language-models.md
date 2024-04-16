@@ -41,24 +41,14 @@ Therefore, the **language generation models** are a decoder-only version of the 
 
 If we imagine the Language model as a function, it takes a string of a sequence of words as input and outputs a probability distribution over the next word in the sequence. After that, the model can use it's own output as input to generate the next word in the sequence, and so on until the desired length of the text is reached, or the _"end of sequence token"_ is generated, which is an output that indicates the end of the text.
 
-<div style="width: 100%; display: flex">
-  <div style="width:60%">
-    
-- **Outputs (Shifted right)**: String of sequence of words. 
+- **Outputs (Shifted right)**: String of sequence of words.
 - **Output Embeddings**: Converts the string of words into a sequence of vectors that represent the words.
 - **Positional Encodings**: Adds information about the position of the words in the string.
 - **Masked Multi-Head Attention**: The model captures contextual information about the words in the sequence.
 - **Feed Forward**: Increases learning capacity by adding [artificial-neural-networks](1712240474-artificial-neural-networks.md) layers with an activation function.
 - **Output module**: Consists of a linear layer and a softmax function that outputs the probability distribution over the next word in the sequence. (it get all words and outputs the probability of each one).
 
-  </div>
-  <div style="width:45%">
-
-    ![large-language-model-architecture.svg](../assets/from_notes/1712254150-large-language-models-2024-04-04-20-14-33-large-language-model-architecture.svg)
-
-  </div>
-</div>
-
+![large-language-model-architecture.svg](../assets/from_notes/1712254150-large-language-models-2024-04-04-20-14-33-large-language-model-architecture.svg)
 So, with this level understanding you can start to grasp how these algorithms work. There are other important concepts that worth exploring, such as:
 
 - **The number of parameters**: This number defines the size of the model. The number of neurons in the model. The weights and the connections store the knowledge of the model. The more parameters, the more knowledge the model can store. The more knowledge, the better the model can generate text.

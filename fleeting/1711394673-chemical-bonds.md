@@ -21,7 +21,7 @@ There are three types of chemical bonds: ionic, covalent and metallic.
 
 ## ⭐️ Octet Rule
 
-The most important rule in chemical bonding is the octet rule. This rule states that atoms tend to gain, lose, or share electrons as so to have eight electrons in their outermost eletronic shell. Observe that this electron configuration is the same as the noble gases ([periodic table](fleeting/1711394899-periodic-table.md)), and represent maximum stability. For this reason, noble gases are inert- don't react with other elements.
+The most important rule in chemical bonding is the octet rule. This rule states that atoms tend to gain, lose, or share electrons as so to have eight electrons in their outermost eletronic shell. Observe that this electron configuration is the same as the noble gases ([periodic table](1710348733-periodic-table.md)), and represent maximum stability. For this reason, noble gases are inert- don't react with other elements.
 
 > There are examples to this rule, like the Hydrogen and Helium, which have only one shell and can be stable with two electrons.
 
@@ -29,7 +29,7 @@ The most important rule in chemical bonding is the octet rule. This rule states 
 
 ## Does it lose or gain electrons?
 
-The tendency of an atom to gain or lose electrons is determined by it's [electronegativity](fleeting/1710348733-periodic-table-basics.md#eletronegatividade-e-eletropositividade).
+The tendency of an atom to gain or lose electrons is determined by it's [electronegativity](1710348733-periodic-table.md#eletronegatividade-e-eletropositividade).
 The classic elements who **lose** electrons are the metals:
 
 - 1A family;

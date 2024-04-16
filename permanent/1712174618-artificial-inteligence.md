@@ -192,7 +192,7 @@ This method uses [artificial-neural-networks](1712240474-artificial-neural-netwo
 
 ![degree-of-freedom-to-neural-network.svg](../assets/from_notes/1712174618-artificial-inteligence-2024-04-04-11-32-46-degree-of-freedom-to-neural-network.svg)
 
-We no long need to store the Q-values in an array, as the network can approximate the values for any state. The network is trained by minimizing the _Loss function_ for the entire domain, by adjusting the weights of the network through [Backpropagation (stoachastic gradient descent)](fleeting/1712240474-artificial-neural-networks.md#backpropagation).
+We no long need to store the Q-values in an array, as the network can approximate the values for any state. The network is trained by minimizing the _Loss function_ for the entire domain, by adjusting the weights of the network through [Backpropagation (stoachastic gradient descent)](1712240474-artificial-neural-networks.md#backpropagation).
 
 The Loss function can be obtained by the L2 norm of the temporal difference:
 
@@ -202,9 +202,9 @@ $
 
 So it calculates the **Q-value** for the current state with the neural network, and compares with the sum of the reward and the maximum Q-value of the next state (that is calculated with the neural network as well. The difference is squared and summed for all available actions.
 
-From the resulting Q-values, the agent can choose the best action for each state with the use of a [Softmax-function](fleeting/1712240474-artificial-neural-networks.md#softmax-function) function. This function will output a probability distribution for the actions, where the best action will have the highest probability.
+From the resulting Q-values, the agent can choose the best action for each state with the use of a [Softmax-function](1712240474-artificial-neural-networks.md#softmax-function) function. This function will output a probability distribution for the actions, where the best action will have the highest probability.
 
-> Remember the concept of [Exploration vs Exploitation](fleeting/1712174618-artificial-inteligence.md#exploration-vs-exploitation). In case of the Deep Q-Learning, The agent could proceed without learning anything and only using the neural network and the softmax function to choose the best action. This would be a case of pure exploitation. By calculating the loss and updating the weights of the network the agent is always validating the results of the network with new **Bellman equation** calculations. For each state visited, the **Q-values** of all actions from the current and immediate next state are calculated, and the network is updated to minimize the loss.
+> Remember the concept of [Exploration vs Exploitation](1712174618-artificial-inteligence.md#exploration-vs-exploitation). In case of the Deep Q-Learning, The agent could proceed without learning anything and only using the neural network and the softmax function to choose the best action. This would be a case of pure exploitation. By calculating the loss and updating the weights of the network the agent is always validating the results of the network with new **Bellman equation** calculations. For each state visited, the **Q-values** of all actions from the current and immediate next state are calculated, and the network is updated to minimize the loss.
 
 ### Additional resources:
 
@@ -233,7 +233,7 @@ Until now, we have only used the **Softmax-function** to select the best action 
 
 - **$\epsilon$-greedy**: Randomly selects an action with probability $\epsilon$, and the best action with probability $1 - \epsilon$.
 - **$\epsilon$-soft $(1-\epsilon)$**: Randomly selects an action with probability $\epsilon - 1$, and the best action with probability $\epsilon$.
-- **Softmax**: Outputs a probability distribution for the actions, where the best action will have the highest probability ([artificial-neural-networks ❯ Softmax-function](fleeting/1712240474-artificial-neural-networks.md#softmax-function))
+- **Softmax**: Outputs a probability distribution for the actions, where the best action will have the highest probability ([artificial-neural-networks ❯ Softmax-function](1712240474-artificial-neural-networks.md#softmax-function))
 
 So the agent will choose randomly with probability for each action according to the policy.
 

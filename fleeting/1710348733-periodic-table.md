@@ -1,5 +1,5 @@
 ---
-id: 1710348733-tabela-periodica
+id: 1710348733-periodic-table
 aliases:
   - tabela periodica
 tags:
