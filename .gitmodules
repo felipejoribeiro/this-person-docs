@@ -1,0 +1,6 @@
+[submodule "daily"]
+  path = daily
+  url = dust_adm:/home/admin/daily_notes.git
+[submodule "adm_dust"]
+	path = adm_dust
+	url = dust_adm:/home/admin/adm_notes.git

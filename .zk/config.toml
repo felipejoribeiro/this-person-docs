@@ -1,0 +1,5 @@
+[notebook]
+dir = "~/notes"
+
+[tool]
+editor = "nvim"

@@ -1,0 +1,212 @@
+{
+  "main": {
+    "id": "4d5c9709ac692605",
+    "type": "split",
+    "children": [
+      {
+        "id": "85373380323853c6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "76be65ae6977bcef",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "428fda0d7bd67687",
+    "type": "split",
+    "children": [
+      {
+        "id": "4130096a3cffd93b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c4809dad77a865e1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f71680fa9305c5bc",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#art",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c3f6d80712727c07",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "6732e045bdf2037f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e4c7c05b848125f0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "9fef8bde8713ad2e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "96447140d5d5b4f5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ed4a60ff15bc4f3d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "6a433ffad8df77ca",
+    "type": "split",
+    "children": [
+      {
+        "id": "3c37d871364093df",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3e810199675b0b45",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 333.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "audio-recorder:Start/stop recording": false,
+      "daily-notes:Open today's daily note": false,
+      "obsidian-kindle-plugin:Sync your Kindle highlights": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "76be65ae6977bcef",
+  "lastOpenFiles": [
+    "legacy/programming/blockchain/images/01_01.jpg",
+    "legacy/programming/blockchain/images/01_02.jpg",
+    "legacy/programming/blockchain/solidity-etherium.md",
+    "fleeting/psychology_of_communication.md",
+    "legacy/programming/blockchain/images",
+    "legacy/programming/languages/typescript/02_typescript_basics.md",
+    "legacy/programming/mobile/react-native/02_adding_icons.md",
+    "legacy/programming/patterns/data/16.svg",
+    "legacy/linux/system/audio/production_ready_audio.md",
+    "legacy/programming/security/hashicorpVault/02_aws_iam_dynamic_management.md",
+    "legacy/programming/patterns/data/15.svg",
+    "legacy/programming/webdev/frontend/react/redux/02_redux_installing.md",
+    "legacy/programming/webdev/frontend/react/09_react_hooks.md",
+    "legacy/programming/webdev/backend/node_js/image_2.png",
+    "legacy/programming/webdev/frontend/react/08_react_forms.md",
+    "legacy/programming/misc/misc/solid-summary.pdf",
+    "legacy/programming/misc/misc/SOLID.md",
+    "legacy/programming/gamedev/VR/arch_linux_setup/01_introduction.md",
+    "legacy/programming/webdev/backend/aws/03_aws_initiate_project.md",
+    "legacy/programming/webdev/backend/kafka/01_introduction.md",
+    "legacy/programming/webdev/backend/node_js/file_2.js",
+    "legacy/programming/gamedev/engines/godot/godot_plugins.md",
+    "legacy/programming/patterns/22_behavioral_visitor.md",
+    "legacy/programming/patterns/data/02.svg",
+    "legacy/programming/webdev/protocols/websocket/websocket_intro.md",
+    "legacy/programming/patterns/data/10.svg",
+    "legacy/programming/webdev/backend/node_js/04_node_Restful_API.md",
+    "legacy/linux/system_maintenance/arch_applications.md",
+    "legacy/programming/tools/nvim/02_nvim_initialization.md",
+    "legacy/programming/webdev/backend/node_js/09_node_connect_back_to_data_base.md",
+    "legacy/programming/misc/misc/osi.md",
+    "legacy/linux/system/network/internet_check.md",
+    "legacy/programming/misc/misc/tcpip.md",
+    "legacy/programming/webdev/backend/servers/01_server_nginx_setup_ssl.md",
+    "legacy/programming/webdev/backend/flask/03_flask_request_response_cycle.md",
+    "legacy/programming/patterns/data/05.svg",
+    "legacy/programming/patterns/data/11.svg",
+    "legacy/programming/webdev/backend/node_js/image_1.png",
+    "legacy/programming/webdev/backend/node_js/face_recognition_back_end.js",
+    "legacy/programming/patterns/data/13.svg",
+    "legacy/programming/webdev/backend/node_js/file.js",
+    "legacy/programming/webdev/backend/node_js/server_2.js",
+    "legacy/programming/webdev/backend/node_js/server.js",
+    "legacy/programming/webdev/backend/node_js/file.mjs",
+    "legacy/programming/webdev/backend/node_js/file_2.mjs",
+    "legacy/programming/misc/misc/uml-summary.pdf",
+    "Untitled.canvas",
+    "Untitled 1.canvas",
+    "piloto.canvas"
+  ]
+}

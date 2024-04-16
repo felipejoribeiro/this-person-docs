@@ -1,0 +1,230 @@
+{
+  "main": {
+    "id": "4d5c9709ac692605",
+    "type": "split",
+    "children": [
+      {
+        "id": "f8bd1ae3ffe3a59f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "40fc273d54990b8c",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "428fda0d7bd67687",
+    "type": "split",
+    "children": [
+      {
+        "id": "4130096a3cffd93b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c4809dad77a865e1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f71680fa9305c5bc",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c3f6d80712727c07",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "6732e045bdf2037f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e4c7c05b848125f0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "9fef8bde8713ad2e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "96447140d5d5b4f5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ed4a60ff15bc4f3d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 233.5
+  },
+  "right": {
+    "id": "6a433ffad8df77ca",
+    "type": "split",
+    "children": [
+      {
+        "id": "b633f4b57a32c5fb",
+        "type": "tabs",
+        "dimension": 32.08888888888889,
+        "children": [
+          {
+            "id": "913b3ddb187ecffd",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "565fc1e0ac0f9b08",
+        "type": "tabs",
+        "dimension": 67.91111111111111,
+        "children": [
+          {
+            "id": "f771b33edc21e6a8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "fleeting/❖ ♧ ◉ ✾.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 333.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "audio-recorder:Start/stop recording": false,
+      "daily-notes:Open today's daily note": false,
+      "obsidian-kindle-plugin:Sync your Kindle highlights": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "40fc273d54990b8c",
+  "lastOpenFiles": [
+    "estructured/music/hey.pdf",
+    "fleeting/1710951119-godot-source-code.md",
+    "fleeting/1710950777-lilypond-basics.md",
+    "estructured/music/hey.ly",
+    "estructured/music/hey.mp3",
+    "estructured/music/hey.midi",
+    "assets/from_notes/1710950777-lilypond-basics-2024-03-20-22-42-36-conceptual-image-header.png",
+    "daily/2024-03-20.md",
+    "estructured/music",
+    "literature/1710798450-genesis.md",
+    "fleeting/1710798450-genesis.md",
+    "assets/from_notes/1710798450-genesis-2024-03-19-03-18-22-history-universe-from-science.png",
+    "assets/from_notes/1710798450-genesis-2024-03-19-01-33-10-representation-beginning-universe-ocean-analogy.svg",
+    "fleeting/❖ ♧ ◉ ✾.md",
+    "assets/from_notes/1710798450-genesis-2024-03-18-23-44-58-moses-commandments-painting.png",
+    "assets/from_notes/1710798450-genesis-2024-03-18-22-41-46-moses-portrait.png",
+    "fleeting/1710348733-periodic-table-basics.md",
+    "fleeting/1710353702-botanica-briofitas-basics.md",
+    "fleeting/1710355360-gimnospermas-basics.md",
+    "fleeting/1710353702-plantas-briofitas.md",
+    "fleeting/().md",
+    "fleeting/velho testamento.md",
+    "fleeting/1710807288-velho-testamento.md",
+    "assets/from_notes/1710798450-genesis-2024-03-18-21-12-19-adam-eve-god-animals.png",
+    "daily/2024-03-18.md",
+    "assets/from_notes/1710798450-genesis-2024-03-18-20-51-16-adam-eve-god-animals.png",
+    "assets/from_notes/1710798450-genesis-2024-03-18-20-46-43-test-image.png",
+    "assets/from_notes/1710798450-genesis-2024-03-18-20-33-22-testing-caption.png",
+    "assets/from_notes/1710798450-genesis-2024-03-18-20-31-59-testing-capition.svg",
+    "fleeting/1710796766-genesis.md",
+    "fleeting/1710785875-testing.md",
+    "dailies",
+    "daily/2024-03-15.md",
+    "daily/2024-03-14.md",
+    "daily/2024-03-13.md",
+    "daily/2024-03-12.md",
+    "daily/2024-03-11.md",
+    "daily",
+    "assets/daily",
+    "fleeting/test.mp3",
+    "fleeting/test.midi",
+    "test.midi",
+    "dailies/2024-03-17.md",
+    "assets/README.md",
+    "fleeting/README.md",
+    "recent/❖ ♧ ◉ ✾.md",
+    "Untitled 1.canvas",
+    "Untitled.canvas",
+    "piloto.canvas"
+  ]
+}
