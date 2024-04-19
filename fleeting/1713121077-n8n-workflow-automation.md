@@ -2,7 +2,9 @@
 id: 1713121077-n8n-workflow-automation
 aliases:
   - n8n-workflow-automation
-tags: []
+tags:
+  - engineering
+  - devops
 ---
 
 # N8N: Workflow Automation
@@ -32,6 +34,106 @@ To install the tool you can use the `npx n8n` command. It will download the pack
 ```
 Editor is now accessible via:
 http://localhost:5678/
+```
+
+### As a docker container
+
+You can also run the service as a docker container. First, create a docker file as following:
+
+```dockerfile
+version: "3.7"
+
+services:
+  traefik:
+    image: "traefik"
+    restart: always
+    command:
+      - "--api=true"
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
+      - "--entrypoints.web.http.redirections.entrypoint.scheme=https"
+      - "--entrypoints.websecure.address=:443"
+      - "--certificatesresolvers.mytlschallenge.acme.tlschallenge=true"
+      - "--certificatesresolvers.mytlschallenge.acme.email=${SSL_EMAIL}"
+      - "--certificatesresolvers.mytlschallenge.acme.storage=/letsencrypt/acme.json"
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - traefik_data:/letsencrypt
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
+  n8n:
+    image: docker.n8n.io/n8nio/n8n
+    restart: always
+    ports:
+      - "127.0.0.1:5678:5678"
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.n8n.rule=Host(`${SUBDOMAIN}.${DOMAIN_NAME}`)
+      - traefik.http.routers.n8n.tls=true
+      - traefik.http.routers.n8n.entrypoints=web,websecure
+      - traefik.http.routers.n8n.tls.certresolver=mytlschallenge
+      - traefik.http.middlewares.n8n.headers.SSLRedirect=true
+      - traefik.http.middlewares.n8n.headers.STSSeconds=315360000
+      - traefik.http.middlewares.n8n.headers.browserXSSFilter=true
+      - traefik.http.middlewares.n8n.headers.contentTypeNosniff=true
+      - traefik.http.middlewares.n8n.headers.forceSTSHeader=true
+      - traefik.http.middlewares.n8n.headers.SSLHost=${DOMAIN_NAME}
+      - traefik.http.middlewares.n8n.headers.STSIncludeSubdomains=true
+      - traefik.http.middlewares.n8n.headers.STSPreload=true
+      - traefik.http.routers.n8n.middlewares=n8n@docker
+    environment:
+      - N8N_HOST=${SUBDOMAIN}.${DOMAIN_NAME}
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=https
+      - NODE_ENV=production
+      - WEBHOOK_URL=https://${SUBDOMAIN}.${DOMAIN_NAME}/
+      - GENERIC_TIMEZONE=${GENERIC_TIMEZONE}
+    volumes:
+      - n8n_data:/home/node/.n8n
+
+volumes:
+  traefik_data:
+    external: true
+  n8n_data:
+    external: true
+```
+
+If you are using local files, add `- /home/<YOUR USERNAME>/n8n-local-files:/files` to `volumes`.
+
+Then, you must add a .env file with:
+
+```env
+# The top level domain to serve from
+DOMAIN_NAME=example.com
+
+# The subdomain to serve from
+SUBDOMAIN=n8n
+
+# DOMAIN_NAME and SUBDOMAIN combined decide where n8n will be reachable from
+# above example would result in: https://n8n.example.com
+
+# Optional timezone to set which gets used by Cron-Node by default
+# If not set New York time will be used
+GENERIC_TIMEZONE=Europe/Berlin
+
+# The email address to use for the SSL certificate creation
+SSL_EMAIL=user@example.com
+```
+
+Finally, run the following commands:
+
+```bash
+sudo docker volume create n8n_data
+sudo docker volume create traefik_data
+sudo docker compose up -d
+
+# To stop the process run:
+
 ```
 
 ## ✾ Workflow
@@ -107,10 +209,8 @@ The **N8N** service has [langchain](1713196132-langchain-llm-applications.md) in
 
 Simple example of a workflow that uses the AI nodes to connect to OpenAI's **GPT-3.5** service:
 
-![llm-n8n-chart-basic.png](../assets/from_notes/1713121077-n8n-workflow-automation-2024-04-15-11-30-57-llm-n8n-chart-basic.png)
+![llm-n8n-chart-basic.png](/assets/from_notes/1713121077-n8n-workflow-automation-2024-04-15-11-30-57-llm-n8n-chart-basic.png)
 
 Here is another example, but with an AI agent. This agent can remember the user's previous prompts, use a calculator and search for information on Wikipedia:
 
 ![example-workflow-calculator-wikipedia.png](../assets/from_notes/1713121077-n8n-workflow-automation-2024-04-15-17-31-19-example-workflow-calculator-wikipedia.png)
-
-Remember that.

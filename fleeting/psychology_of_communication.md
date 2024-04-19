@@ -4,7 +4,7 @@ aliases: []
 tags: []
 ---
 
-# Piscicology of communication
+## On communication and virtual teams
 
 Communication is the most important thing when managing virtual teams.
 
@@ -31,7 +31,7 @@ Communication is the most important thing when managing virtual teams.
     All then can be solved with good communication.
 - Knowing why and how to communicate is crucial.
 
-## Summary of actions to this module:
+### Summary of actions to this module:
 
 - Understand that communication is everything in virtual teams;
 - Observe how you currently communicate with your team and think about
@@ -46,16 +46,18 @@ Communication is the most important thing when managing virtual teams.
   - Convince your team members to stop with the ugly and bad responses as well.
   - Good responses: the answer, yes, no, I don't know.
 
-## Pyramid of communication
+### Pyramid of communication
 
 The team proximity spectrum:
 
 - a team's composition can be seen as a point in a spectrum, with 100% virtual and 100% co-located team on the other hand:
 
-           *--------------------------------------------*
-          100%                                         100%
+```
+       *--------------------------------------------*
+      100%                                         100%
+```
 
-  virtual team co-located team
+virtual team co-located team
 
 Changing the composition of your team to the right decreases the challenges; To being able to do that we should check the pyramid of communication. We have different technologies to communicate with virtual teams; The higher the tool is in the pyramid the more it promotes cohesion and intimancy.
 
@@ -68,7 +70,7 @@ Changing the composition of your team to the right decreases the challenges; To 
 
 Moving up this pyramid will incriase intimancy and cohesion in your team;
 
-## The curse of knowledge
+### The curse of knowledge
 
 The curse of knowledge is the idea that “individuals fail to ignore information they possess that others do not when predicting others behavior”. It's the biggest reason why you think you are communicating properly with someone when in reality you are not. This can be analysed in the tappers and listeners study which was conducted by elizabeth newton, a Ph.D. graduate student in psychology at Stanford University (1990).
 
@@ -88,7 +90,7 @@ To avoid the curse of knowledge:
 - The second step is to train your empathy. Always put yourself in the other person's shoes (think about their experience, background, and culture) and how they might be viewing your communication. Remember when the portuguese came to brazil, the indigenous people didn't recognize the ships until people started coming out of it.
 - The third is to simplify the message. “Explain this to me like I'm a 12 years old”.
 
-## The 3 responses to questions
+### The 3 responses to questions
 
 There are only three types of responses to any questions: The good, the bad and the ugly.
 
@@ -107,7 +109,7 @@ Good answers will make you an authority and will inspire confidence in your team
 
 ---
 
-# Principles of behavior change ⭐️
+## Principles of behavior change ⭐️
 
 The principles of behavior change is about simple tactics that will make you influence your team to get things done. There are 4 power principles of behavior change that every person responds to — regardless of background, experience, culture, age, or gender. Applying one or more of those 4 principles is going to get you immediate results (there is no faster return on investment in terms of making your team get things done)
 
@@ -124,7 +126,7 @@ Things to know about these principles:
 - Although the principles might sound simplistic, they are extremely powerful, so take then very seriously.
 - The principles are independend from each other. You can start from a specific one without order.
 
-## Summary of actions to this module:
+### Summary of actions to this module:
 
 - Always assign deadlines (with clear-cut dates for delivery, no ambiguity in objective);
   - avoid the **Parkinson's law**;
@@ -140,13 +142,13 @@ Things to know about these principles:
   - Always write your tasks down. Write then live and write then everywhere everytime.
 - Write text live and write these tasks everywhere.
 
-## The power of deadlines
+### The power of deadlines
 
 We are all lazy. Most human beings are enherently lazy — we have an instinctive tendency to procrastinate with tasks that don't have a sense of urgency associated with them. We typically delay working on stuff whenever we get the chance. And we usually come up with false alibis such as waiting until we're in a better mood or waiting for more information.
 
 There are plenty of psychological reasons for procrastinating, but one bug reason behind why we take a lot of time to finish a task is the Parkinson's law:
 
-                  "Work expands so as to fill the time available for its completion"
+> "Work expands so as to fill the time available for its completion"
 
 So if a task would typically take 1 hour to complete, then if you assign a 3-hour deadline to it, it will take up the full 3 hours to get done. So a task that doesn't have a deadline will never get done. And it applies both to self-imposed tasks and assigned tasks.
 
@@ -165,13 +167,13 @@ Three rules for setting deadlines:
 - Be clear-cut: Be 100% clear-cut about when the actual deadline is (day, date, and time) (no space for ambiguity);
 - always use deadlines: What doesn't have deadlines will not be completed. It's even okay if it's a fake deadline. Leave it always lurking in the backlog to let your team know it's important and one day will have to be done. (if a deadline is too far off, create intermediate deadlines for checkpoints. Big deadlines has the same effect as no deadline);
 
-## The power of assigning responsability
+### The power of assigning responsability
 
 The case of kitty genoveses: she was a young woman who was stabbed to death in New York City in 1964. Over the course of half an hour, she was attacked three times on the street as neighbors watched from their windows. There were 38 witnesses but no one called the police during the attack. The case caused a huge outcry in the community and prompted psychologists to study the behavior. They conducted one study were a something bad happened. When the subject being examined though that he was the only one seeing, he got to help in 85% of the times, wile if he tough that there was more people watching he would go help in only 31% of times.
 
 This is called the **bystander effect**, it says that, the bigger the number of bystanders in an emergency, the less likely it is that any one of them will help. It is closely realted to the **diffusion of responsibility** concept where people less likely will take responsibility where there are more people present.
 
-        "everyone responsibility is no one responsibility"
+> "everyone responsibility is no one responsibility"
 
 How it applies in virtual teams:
 
@@ -184,7 +186,7 @@ To avoid the effect:
 - Ask for volunteers: It has two advantages. It increases the chances for the task to being done because a concept called **internal consistency**, which makes self assigned tasks more likely to be completed and let people chose what they have want to work on; If no one volunteers then you step up and asign someone. All tasks should have a responsible personel;
 - Asign individuals and not groups: Always assign tasks to individual people and never to groups. Even if there are more individuals doing said task. One person should be chosed to be the "reporter" of said endeavour.
 
-## The power of specific tasks
+### The power of specific tasks
 
 Virtual teams have difficults understanding social cues, such as gestures, facial expressions, and tone of voice. You have to be precise and direct with them, be very specific about your expectations, and avoid sarcasm and nonverbal communication.
 
@@ -193,7 +195,7 @@ Two rules for assigning specific tasks:
 - Know what you want: Nine times out of ten people don't know what they want, and they really are in brainstorm mode. (but they think they know what they want). So before asking something from someone, first, finish the brainstorm phase, or be explicity that what you are proposing is a suggestion, and what are the options.
 - Be direct: You must get to the point as fast as possible. You must say what you want using the right words. Don't leave space open to interpretation or assumptions.
 
-## The power of writing
+### The power of writing
 
 In an old hidden camera tv show, producers placed a fake sign on the highway between pennsylvania and delaware that read "delaware closed". Some drivers ignored the sign, but others stopped and believed it. One concerned driver even asked "when will it be opened? My family lives there".
 
@@ -207,18 +209,18 @@ Rules for writting tasks down:
 
 ---
 
-# Tactics of influence and persuasion ⭐️
+## Tactics of influence and persuasion ⭐️
 
 The tactics of influence a persuasion is about methods to influence your team members to do what you need them to do. Unlike the previous module about principles of behavior change, which included a set of 4 principles that worked together, this module is about a fragmented list of strategies and tactics that you can use depending on the situation you're in.
 
-## Summary of actions to this module:
+### Summary of actions to this module:
 
 - use one or more of Cialdini's 6 principles of influence to persuade your virtual team to get things done: Reciprocation, commitment to consistency, social proof, authority, liking, and scarcity.
 - Increase the compliance rate of assigned tasks in your virtual team by using the word “because” in every meeting, email, IM, and voice message. It is best to include a well-thought-out reason after the word, even though a solid justification is not really needed;
 - Use the 6 steps process to ensure 100% commitment by your team on really important tasks: Get then to say it, get a time frame, develop an obligation, stress importance, confirm action, show appreciation;
 - To find out what someone is really thinking, isolate them and then ask them one of the following four questions: what would it take for you to love this idea? How do you think i can make this better? What would it take for you to be really excited about this? What would you do differently?
 
-## Cialdini's 6 principles of influence
+### Cialdini's 6 principles of influence
 
 Thes is based on the book "Influence: The Psychology of Persuasion".
 
@@ -253,7 +255,7 @@ There are 6 rules described in this book:
     - Use terms such as “unique opportunity” or "once in a lifetime event" to entice team members into working on tasks that are highly-visible;
     - Stress time constraints and deadlines as a way to highlight time scarcity as a factor;
 
-## The influential power of one word
+### The influential power of one word
 
 In 1978, Ellen Langer of Harvard University, co-authored a social psychology paper about how people react to placebic information; She conducted an experiment to understand how people who were waiting in line to make photocopies on a xerox sho were waiting in line to make photocopies on a xerox machine would react when someone cut in front of them; The experiment is commonly referred to as the _Xerox study_;
 The following three questons were used to see how people waiting in line would react:
@@ -272,9 +274,9 @@ The thing ta causes that is the **because** word, It is very powerfull. It is hi
 
 The main takeway:
 
-        use the word "because" everywhere to increase influence
+> use the word "because" everywhere to increase influence
 
-## 6 steps to ensure 100% commitment
+### 6 steps to ensure 100% commitment
 
 For high stakes tasks and projects, you can use a methodical step-by-step process that ensures 100% commitment by the person who is assigned to the task; This 6-step process builds on teh previous principles of behavior and persuasion;
 
@@ -298,7 +300,7 @@ Here are teh 6 steps:
   - **Show appreciation**: After you make the request and sometime before the due date of the task approaches, follow-up with the person by expressing appreciation; Let the person know how much you value their efforts of following through on a task and that they're the kind of person who gets the job done;
     - example: "Sarah, I really appreciate your help on this task — I know I can count on you to get it finished on time";
 
-## How to know what they're really thinking
+### How to know what they're really thinking
 
 It is very challenging to know exactly what someone's thoughts are about a task, a project, or a deliverable; asking a question like "what do you really think about htis?" would not necessarily give you a thruthful answer (because of human nature and/or politics);
 
@@ -318,13 +320,13 @@ All four of these questions do a couple of things:
 
 ---
 
-# Managing virtual meetings effectively ⭐️
+## Managing virtual meetings effectively ⭐️
 
 The best quote about meetings:
 
-            "if you had to identify, in one word, the reason why the human race
-            has not achieved, and never will achieve, its full potential,
-            that word would be meetings."
+> "if you had to identify, in one word, the reason why the human race
+> has not achieved, and never will achieve, its full potential,
+> that word would be meetings."
 
 Meetings are of course necessary for having effective virtual teams, however, there are 2 main problems with most meetings:
 
@@ -337,7 +339,7 @@ We will discuss:
 - what to do during the meeting;
 - what to do after the meeting;
 
-## Summary of actions to this module:
+### Summary of actions to this module:
 
 - Do the following 5 things before every meeting:
   - decide on a need;
@@ -360,7 +362,7 @@ We will discuss:
   - batch on the same part of the day;
   - think about spacing;
 
-## Before the meeting:
+### Before the meeting:
 
 Here's a list about what to do before a meeting:
 
@@ -377,7 +379,7 @@ Here's a list about what to do before a meeting:
 - **Draft an agenda**: Every meeting has an agenda which explains what the meeting is about. It doesn't need to be a document. It could be just a bullet point or a short paragraph about the meeting subject. Start the agenda with the important topics first. Set a time limit to each topic. Explain if any material needs to be reviewed or if any input is required before the meeting.
 - **Sendinvite, agenda & reminders**: Send out the agend ahead of time (include it in the calendar invite) so that individuals have time to prepare. In addition, send out reminders before the meeting to insist that all attendees review any material (and come prepared).
 
-## During the meeting:
+### During the meeting:
 
 Every meeting:
 
@@ -392,14 +394,14 @@ Every meeting:
     Remember: No documentation means useless meeting; everything that isn't written don't exist;
 - **close with a review**: A few minutes before teh meeting ends, do a full review of the notes you took; Start with the action items first (and verbally confirm the actions owners and deadlines); then talk about resks, issues and any other decisions or ideas that were discussed (if you have the time); summarizing what was said in the meeting is the best way to ensure understanding;
 
-## After the meeting:
+### After the meeting:
 
 You must:
 
 - **distribute meeting minutes**: after the meeting is over, distribute the meeting minutes to everyone who attended the meeting (as well as anyone who missed it), and possibly others who need to be kept informed; you could also upload the meeting minutes to a document repository for future reference; while there's some debate about whether meeting minutes are effective (most people don't really read them), they might be necessary (or even required) in some projects to track issues if they surface later on;
 - **follow up with a summary**: after the meeting is over, always follow up with a sumary email that specifically highlights who are working on what and when everything is due; although those actions are already included in the meeting minutes that you distributed there's a lot of power in highlighting them separately; one best practice is to send out an email with an action list and include the meeting minutes as an attachment (in you MS Word or PDF) to minimize the number of emails you send out;
 
-## Meeting scheduling guidelines
+### Meeting scheduling guidelines
 
 This gives you an overview about the best practices. Keep in mind that these guidelines are only general heuristics that will give you a good sense of drection; every team and project is different, so do whatever you think is helpful based on your specific situation;
 
@@ -410,7 +412,7 @@ This gives you an overview about the best practices. Keep in mind that these gui
 
 ---
 
-# Choosing and evaluating the right technology ⭐️
+## Choosing and evaluating the right technology ⭐️
 
 Technology is an important factor in managing virtual teams, but the role it plays is a lot less important than you might think;
 
@@ -421,11 +423,11 @@ Technology is an important factor in managing virtual teams, but the role it pla
 
 A lot of virtual team managers focus solely on the technology tools themselves; but the truth is that nobody cares about the technology itself but the solution to the problem that the technology solves.
 
-    "People don't want a quarter-inch drill, they want a quarter-inch hole"
+> "People don't want a quarter-inch drill, they want a quarter-inch hole"
 
 Here we will see how to find the best tools for the work; there is also a list over 40 technology tools that you can choose from (categorized under 10 different functions);
 
-## sumary of actions:
+### sumary of actions:
 
 - understand that although technology is very important in managing virtual teams, the technology itself is overrated; you probably do not need to change the technology tools you're currently using: 90 percent of times, what you have is more than enough to make a successfull project.
 - Chosing tools is difficult because the following reasons:
@@ -442,7 +444,7 @@ Here we will see how to find the best tools for the work; there is also a list o
   - pick tools you're comfortable with;
 - check the list as ther might be good tools there for your team;
 
-## Why choosing the perfect tool is hard?
+### Why choosing the perfect tool is hard?
 
 There are 4 important reasons:
 
@@ -454,7 +456,7 @@ There are 4 important reasons:
   - time constraints: how much time you have for a project;
   - team constraints: how technically competent the team is, and how open the members are to learning something new;
 
-## the 7 golden rules for choosing the best technology
+### the 7 golden rules for choosing the best technology
 
 use the rules as a framework that gives you a good sense of directino about what to select; if you are currently using technology tools within our team, then use those rules as guidelines ro reevaluate what you're using; pick what is best for your context:
 
@@ -466,7 +468,7 @@ use the rules as a framework that gives you a good sense of directino about what
 - **pick tools you're comfortable with**: as a leader of virtual team, you have to become the goto expert in the technology tools you use;
 - **accept that no tool is perfect**: even after following all rules, there's always something wrong, so don't feel bad if some feature is missing, remember that technology is not everything;
 
-## the ultimate list of 40 tools:
+### the ultimate list of 40 tools:
 
 The following list has virtual teams software (40+) categorized into 10 different functions; keep in mind that new tools are developed every day, so this list is not comprehensive;
 
@@ -557,13 +559,13 @@ The categories here are divided by function:
 
 ---
 
-# Building trust in your virtual environment ⭐️
+## Building trust in your virtual environment ⭐️
 
 Trust is the assured reliance on the character, ability, strength or thruth of someone or something; creating a high degree of trust among a virtual team is vital to the success of the team; individual who trust each other product more; a lack of trust results on a lack of commitment, poor team performance and negative energy; establishing trust is relatively complicated because of so many factors involved; however, developing and building trust among a virtual team can be developed;
 
 Here we will see how to develop the trust among your virtual team;
 
-## summary of actions:
+### summary of actions:
 
 - learn the formula for trus: trust = reliability + likeability
   - you should increase both these elements to incriase trust;
@@ -580,21 +582,21 @@ Here we will see how to develop the trust among your virtual team;
   - meet face to face;
   - be positive;
 
-## The secret formula for trust
+### The secret formula for trust
 
 Remember: trust is equal to reliability plus likeability; the reliability results in cognitive trust (evidence of performance, reliability, and competence) while likeability results in affective trust (social bonds developed in a reciprocal relationship);
 
 So, to make a team have trust among it's members, you must increase the likability and reliability among them; so, the objective of a the leader should be:
 
-     "Increase and sustain both the reliability and likeability factors among a team to keep trust high"
+> "Increase and sustain both the reliability and likeability factors among a team to keep trust high"
 
 If there was a single "common denominator" rule that helps you establish trust among a virtual team, it would be a rule that's summed up in a single word:
 
-     "megacommunication"
+> "megacommunication"
 
 Megacommunication is frequently communicating with your team (every day or every other day) to keep in touch with them; it helps keeping trust because it positively affects both the reliability and likeability factors of the trust equation. Even if there is no specific reason to comunicate, you must make sure that your team is communicating frequently.
 
-## How to increase reliability
+### How to increase reliability
 
 Reliability is the ability and dependability of a team member to accomplish a task according to pre-defined objectives; it is based on assessments o performance and competence of a team member; it is referred to as the cognitive trust component, and is a function of a person's ability and integrity;
 
@@ -607,7 +609,7 @@ To increse reliability you can follow these 4 main tactits and make your team me
 
 Keep in mind that no matter how much you try increasing the level of feliability, there are certain people who are just poor performers; those poor performers will affect the entire team by freeriding, and creating a negative atmosphere of distrust; you can try addressing poor performance issues by having honest conversations about conduct however, understand that ther's only so much you can do, and sometimes, letting team memebers go is the best solution for you and the team;
 
-## how to increase likeability
+### how to increase likeability
 
 The Likeability is the forming of emotional ties between members of a team; it is a result of social bonds developed in a reciprocal relationship between two people; likeability is referred to as the affective trust component, and is based on assessments of benevolence;
 
@@ -625,7 +627,7 @@ The 5 tactics:
 
 ---
 
-# Great email and phone techniques ⭐️
+## Great email and phone techniques ⭐️
 
 We constantly get bombarded by emails, meetings, phone, calls, and presentations on a daily basis; email is the worst: accordingly to a mckinsey study, the average worker spends over 28 percent of their workweek managing email; assuming a 40 hour workweek, that means the average workier spends over 11 hours per week on email alone; some managers receive between 100 and 300 emails a day;
 
@@ -633,7 +635,7 @@ Email is still the most commonly used and widely accepted channel of communicati
 
 We will se a list of practices to enhance the way you communicate via email and voice channels;
 
-## summary of actions:
+### summary of actions:
 
 - implement these strategies for email communication:
   - use batching;
@@ -654,7 +656,7 @@ We will se a list of practices to enhance the way you communicate via email and 
   - enunciation;
   - silence;
 
-## five strategies for managing email overload
+### five strategies for managing email overload
 
 fhe following 5 strategies will help managing your own email load when communicating with a virtual team; you should share these with your coworkers as well to increase overwall efficiency;
 
@@ -664,7 +666,7 @@ fhe following 5 strategies will help managing your own email load when communica
 - **know when to avoid email**: Sending emails on a friday evening or at the start of a national holiday might not be the best idea if you want a response; so use instant message and other communication mediums in these circunstances;
 - **create an email charter**: put together a short documet that explains the "rules of engagement" of email among your team; keep it simple and tailor it to your won team's needs; lead by example, and follow the chart; schedule a meeting to go through the email charter. It can be something like this: https://email-charter.github.io/
 
-## 6 killer email tactics that get things done
+### 6 killer email tactics that get things done
 
 the following 6 tactics will help minimize miscomunication issues samong your team members:
 
@@ -678,7 +680,7 @@ the following 6 tactics will help minimize miscomunication issues samong your te
 - **use "reply-all" and "CC" sparingly**: recipients who don't need to be copied falsely assume that they have to read all the messages and therefore cannot just ignore them; this causes a huge productivity issue and is a big time waste; in the long run people start just ignoring these emails as they usually don't concern then, so don't use reply all or cc; if that is a must, highlight why i had to do so in the beggining of the message;
 - **highlight your call to actions**: make it obvious the action the person must perform; it should be simple and acessible, with bullet points or somehting like that; even other colors or fonts could be used;
 
-## How to use your voice to your advantage
+### How to use your voice to your advantage
 
 During a meeting, there's what you say and how you say it; the second one is your voice; if you don't use it correctly you will lose your audience's attention;
 The four things to consider:

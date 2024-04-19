@@ -7,7 +7,7 @@ tags:
   - machine-learning
 ---
 
-# artificial-neural-networks
+# Artificial-neural-networks
 
 ## Backpropagation
 
