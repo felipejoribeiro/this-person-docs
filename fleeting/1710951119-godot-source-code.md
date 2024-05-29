@@ -36,5 +36,3 @@ It has:
 And many files.
 
 ## The Servers directory
-
-:

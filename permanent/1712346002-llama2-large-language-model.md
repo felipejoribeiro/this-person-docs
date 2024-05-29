@@ -6,7 +6,7 @@ tags:
   - python
 ---
 
-# LLAMA 2
+# THE LLAMA MODEL
 
 <span style="text-align: center; width: 100%; font-size: 0.75em">
 
@@ -18,6 +18,10 @@ Commercial open-source [large language model](1712254150-large-language-models.m
 
 ## ✾ Introduction
 
+The **llama** foundational model was designed differently from other **[transformers architecture](1712254150-large-language-models.md#-introduction)** based models. It's structure can be summarized as follows:
+
+![llama-architecture-scheme.svg](../assets/from_notes/1712346002-llama2-large-language-model-2024-04-29-11-18-43-llama-architecture-scheme.svg)
+
 ## ✾ Loading pre trained model
 
 First step is to download a pre-trained model. You can find the model in on the internet in websites like [huggingface](https://huggingface.co/models) or [kaggle](https://www.kaggle.com/datasets). After that, you can use the model to generate texts without the need of training it from the ground up, which is a very expensive and slow process.
@@ -25,7 +29,7 @@ First step is to download a pre-trained model. You can find the model in on the 
 First, install all necessary libraries:
 
 ```bash
-pip install accelerate==0.21.0 peft==0.4.0 bitsandbytes==0.40.2 transformers==4.31.0 trl==0.4.7 scipy
+pip install accelerate peft bitsandbytes transformers trl scipy
 pip install huggingface_hub
 ```
 

@@ -11,8 +11,27 @@
             "id": "76be65ae6977bcef",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "canvas",
+              "state": {
+                "file": "Untitled.canvas",
+                "viewState": {
+                  "x": 254,
+                  "y": -202,
+                  "zoom": 0
+                }
+              }
+            }
+          },
+          {
+            "id": "c5f00cb2f18a4dbf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "fleeting/❖ ♧ ◉ ✾.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -61,8 +80,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "6732e045bdf2037f",
@@ -85,6 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Untitled.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,6 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Untitled.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -111,7 +131,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Untitled.canvas"
+              }
             }
           }
         ]
@@ -159,8 +181,25 @@
   },
   "active": "76be65ae6977bcef",
   "lastOpenFiles": [
-    "daily/2024-04-18.md",
+    "permanent/1716862221-python-version-package-management-poetry-pyenv.md",
+    "daily/2024-05-29.md",
+    "Untitled.canvas",
+    "fleeting/❖ ♧ ◉ ✾.md",
+    "permanent/1716504098-github-pages-plus-cloudflare-hosting.md",
+    "permanent/1713121077-n8n-workflow-automation.md",
+    "daily/2024-05-27.md",
+    "permanent/1712174618-reinforcement-learning.md",
+    "Excalidraw/Drawing 2024-05-27 15.50.20.excalidraw.md",
+    "Excalidraw",
+    "daily/2024-05.md",
+    "daily/2024-05-09.md",
+    "daily/2024-04-25.md",
     "permanent/1710353702-briophytes.md",
+    "assets/from_notes/1710353702-briophytes-2024-04-24-11-43-33-briophytes-cover.png",
+    "assets/from_notes/1710353702-briophytes-2024-04-24-11-42-10-moss-cover-image.png",
+    "permanent/1711122353-nvim-plugins-creation.md",
+    "daily/2024-04-24.md",
+    "daily/2024-04-18.md",
     "node_modules/uri-js/dist/esnext/schemes/urn.js.map",
     "node_modules/tough-cookie/package.json",
     "node_modules/uri-js/dist/esnext/schemes/wss.js",
@@ -170,7 +209,6 @@
     "node_modules/har-schema/lib/har.json",
     "node_modules/tunnel-agent/index.js",
     "node_modules/jsprim/package.json",
-    "node_modules/uuid/lib/bytesToUuid.js",
     "node_modules/ajv/lib/dotjs/README.md",
     "node_modules/mime-db/README.md",
     "node_modules/safer-buffer/Porting-Buffer.md",
@@ -183,19 +221,6 @@
     "node_modules/json-stringify-safe/CHANGELOG.md",
     "node_modules/uuid/README.md",
     "node_modules/performance-now/README.md",
-    "node_modules/request/README.md",
-    "node_modules/mime-db/HISTORY.md",
-    "node_modules/ajv/README.md",
-    "node_modules/dashdash/CHANGES.md",
-    "node_modules/asynckit/README.md",
-    "node_modules/sshpk/README.md",
-    "node_modules/verror/CHANGES.md",
-    "node_modules/safer-buffer/Readme.md",
-    "node_modules/jsprim/CONTRIBUTING.md",
-    "node_modules/fast-deep-equal/README.md",
-    "node_modules/safe-buffer/README.md",
-    "node_modules/jsprim/CHANGES.md",
-    "node_modules/assert-plus/CHANGES.md",
     "legacy/programming/blockchain/images/01_01.jpg",
     "legacy/programming/blockchain/images/01_02.jpg",
     "legacy/programming/patterns/data/16.svg",
@@ -203,9 +228,6 @@
     "legacy/programming/webdev/backend/node_js/image_2.png",
     "legacy/programming/patterns/data/02.svg",
     "legacy/programming/patterns/data/10.svg",
-    "legacy/programming/patterns/data/05.svg",
-    "legacy/programming/patterns/data/11.svg",
-    "Untitled.canvas",
     "Untitled 1.canvas",
     "piloto.canvas"
   ]

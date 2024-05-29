@@ -2,7 +2,8 @@
 id: 1711394673-chemical-bonds
 aliases:
   - chemical-bonds
-tags: []
+tags:
+  - chemic
 ---
 
 # CHEMICAL BONDS

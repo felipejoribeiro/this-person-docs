@@ -1,13 +1,14 @@
 ---
-id: 1712174618-artificial-inteligence
+id: 1712174618-reinforcement-learning
 aliases:
-  - artificial-inteligence
+  - reinforcement-learning
+  - aprendizado-por-reforco
 tags:
   - engineering
-  - machine-learning
+  - artificial-intelligence
 ---
 
-# ARTIFICIAL INTELLIGENCE
+# Reinforcement Learning
 
 <span style="text-align: center; width: 100%; font-size: 0.75em">
 
@@ -15,9 +16,9 @@ Technology behind the prospect of machines that can perform tasks that require d
 
 </span>
 
-## ![header-brain.png](../assets/from_notes/1712174618-artificial-inteligence-2024-04-03-17-48-32-header-brain.png)
+![header-brain.png](../assets/from_notes/1712174618-artificial-inteligence-2024-04-03-17-48-32-header-brain.png)
 
-## Reinforcement Learning
+## Introduction
 
 Imagine a maze where a rat is trying to find a piece of cheese. The rat will interact with the maze by changing it's state (location, for example). For each state that the rat is in, it will have a different 'reward', like being closer to the cheese. By trying different states, it will learn the ones that give the best rewards.
 
@@ -50,9 +51,7 @@ Created by **Richard Ernest Bellman**, a mathematician. Created the concept of d
 
 With these concepts, we can define the simplified Bellman equation as follows:
 
-$
-V(s) = \max_a (R(s, a) + \gamma V(s'_a))
-$
+$V(s) = \max_a (R(s, a) + \gamma V(s'_a))$
 
 So the value of a state is the maximum reward that can be obtained from that state summed with the value of the next state.
 
@@ -82,9 +81,7 @@ The Markov Decision Processes (MDPs) provide a mathematical framework for modeli
 
 > The new equation that describes the value of a state in a Markov Decision Process is the following:
 >
-> $
->V(s) = \max_a (R(s, a) + \gamma \sum_{s'_a} P(s \rightarrow s'_a) V(s'_a))
->$
+> $V(s) = \max_a (R(s, a) + \gamma \sum_{s'_a} P(s \rightarrow s'_a) V(s'_a))$
 >
 > Where $P(s \rightarrow s'_a)$ is the probability of reaching state $s'$ from state $s$ by taking action $a$.
 
@@ -114,15 +111,11 @@ Q-Learning is a model-free reinforcement learning algorithm. It works from the e
 
 The **Quality** isn't a property of the state, but of an action in a state, and represents it's perceived effectiveness towards the goal, it differs from **Value** as it is associated to an action. So the bellman equation can be rewritten as:
 
-$
-Q(s, a) = R(s, a) + \gamma \sum_{s'_a} P(s \rightarrow s'_a) V(s'_a)
-$
+$Q(s, a) = R(s, a) + \gamma \sum_{s'_a} P(s \rightarrow s'_a) V(s'_a)$
 
 And we can substitute $V(s'_a) = \max_{a'_a} Q(s'_a, a'_a)$ (from the belman equation and the one above) to get the following expression:
 
-$
-Q(s, a) = R(s, a) + \gamma \sum_{s'_a} P(s \rightarrow s'_a) \max_{a'_a} Q(s'_a, a'_a)
-$
+$Q(s, a) = R(s, a) + \gamma \sum_{s'_a} P(s \rightarrow s'_a) \max_{a'_a} Q(s'_a, a'_a)$
 
 Where $s'_a$ is the next state, given action $a$, and $a'_a$ is the actions available in the next state given action $a$.
 
@@ -140,37 +133,27 @@ The algorithm of Q-learning can be implemented with an array that stores the _Qu
 
 > Lets assume a deterministic approach, where from an action in a state, the next state is known, for simplicity sake. In this case $P(s \rightarrow s'_{a|best}) = 1$, and $P(s \rightarrow s'_{a|notbest}) = 0$, so the sum can be simplified to the maximum value of the next state resulting in the following equation:
 >
-> $
-> Q(s, a) = R(s, a) + \gamma \max_{a'_a} Q(s'_a, a'_a)
-> $
+> $Q(s, a) = R(s, a) + \gamma \max_{a'_a} Q(s'_a, a'_a)$
 
 We call $R(s, a) + \gamma \max_{a'_a} Q(s'_a, a'_a)$ the **target** value, and $Q(s, a)$ the **current** value. The difference between the target and the current value is called the **Temporal Difference** ($TD(a,s)$).
 
 Then, we can use this difference to update the current value of the state action pair by the following formula:
 
-$
-Q'(s, a) = Q(s, a) + \alpha TD(s, a)
-$ ,
+$Q'(s, a) = Q(s, a) + \alpha TD(s, a)$ ,
 
 or
 
-$
-Q'(s, a) = Q(s, a) + \alpha (R(s, a) + \gamma \max_{a'_a} Q(s'_a, a'_a) - Q(s, a))
-$ ,
+$Q'(s, a) = Q(s, a) + \alpha (R(s, a) + \gamma \max_{a'_a} Q(s'_a, a'_a) - Q(s, a))$ ,
 
 or, even,
 
-$
-Q'(s, a) = (1 - \alpha) Q(s, a) + \alpha (R(s, a) + \gamma \max_{a'_a} Q(s'_a, a'_a))
-$ ,
+$Q'(s, a) = (1 - \alpha) Q(s, a) + \alpha (R(s, a) + \gamma \max_{a'_a} Q(s'_a, a'_a))$ ,
 
 where $\alpha$ is the learning rate, which controls how much the new information will affect the current value. And $Q'(s, a)$ is the new value of the state action pair.
 
 > Considering the stochastic approach, the sum will be the expected value of the next state, and the equation will be:
 >
-> $
-> Q'(s, a) = Q(s, a) + \alpha (R(s, a) + \gamma \sum_{s'_a} P(s \rightarrow s'_a) \max_{a'_a} Q(s'_a, a'_a) - Q(s, a))
-> $
+> $Q'(s, a) = Q(s, a) + \alpha (R(s, a) + \gamma \sum_{s'_a} P(s \rightarrow s'_a) \max_{a'_a} Q(s'_a, a'_a) - Q(s, a))$
 
 ### Additional resources:
 
@@ -192,13 +175,11 @@ This method uses [artificial-neural-networks](1712240474-artificial-neural-netwo
 
 ![degree-of-freedom-to-neural-network.svg](../assets/from_notes/1712174618-artificial-inteligence-2024-04-04-11-32-46-degree-of-freedom-to-neural-network.svg)
 
-We no long need to store the Q-values in an array, as the network can approximate the values for any state. The network is trained by minimizing the _Loss function_ for the entire domain, by adjusting the weights of the network through [Backpropagation (stoachastic gradient descent)](1712240474-artificial-neural-networks.md#backpropagation).
+We no long need to store the Q-values in an array, as the network can approximate the values for any state. The network is trained by minimizing the _Loss function_ for the entire domain, by adjusting the weights of the network through [Backpropagation (stoachastic gradient descent)](1712240474-artificial-neural-networks.md#back-propagation).
 
 The Loss function can be obtained by the L2 norm of the temporal difference:
 
-$
-Loss = \sum_{a} (R(x, y, a) + \gamma \max_{a'_a} Q(x'_a, y'_a, a'_a) - Q(x, y, a)) ^ 2
-$
+$Loss = \sum_{a} (R(x, y, a) + \gamma \max_{a'_a} Q(x'_a, y'_a, a'_a) - Q(x, y, a)) ^ 2$
 
 So it calculates the **Q-value** for the current state with the neural network, and compares with the sum of the reward and the maximum Q-value of the next state (that is calculated with the neural network as well. The difference is squared and summed for all available actions.
 

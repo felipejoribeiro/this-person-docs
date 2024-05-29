@@ -11,7 +11,7 @@ tags:
 
 <span style="text-align: center; width: 100%; font-size: 0.75em">
 
-Natural language generative models are a type of [artificial-inteligence](1712174618-artificial-inteligence.md) that can generate human like text from a given prompt. They are trained on large datasets of text, and they work by predicting the next word in a sentence given the previous words.
+Natural language generative models are a type of artificial-inteligence that can generate human like text from a given prompt. They are trained on large datasets of text, and they work by predicting the next word in a sentence given the previous words.
 
 </span>
 
@@ -49,6 +49,7 @@ If we imagine the Language model as a function, it takes a string of a sequence 
 - **Output module**: Consists of a linear layer and a softmax function that outputs the probability distribution over the next word in the sequence. (it get all words and outputs the probability of each one).
 
 ![large-language-model-architecture.svg](../assets/from_notes/1712254150-large-language-models-2024-04-04-20-14-33-large-language-model-architecture.svg)
+
 So, with this level understanding you can start to grasp how these algorithms work. There are other important concepts that worth exploring, such as:
 
 - **The number of parameters**: This number defines the size of the model. The number of neurons in the model. The weights and the connections store the knowledge of the model. The more parameters, the more knowledge the model can store. The more knowledge, the better the model can generate text.
@@ -61,4 +62,4 @@ There are a variety of commercial solutions-open source and proprietary-that can
 
 - **GPT-2**: OpenAI's model that can generate human-like text.
 - **GPT-3**: OpenAI's model that can generate human-like text.
-- **LLaMa**: A base model that can generate human-like text created by Meta.
+- **LLaMa**: A base model that can generate human-like text created by Meta which uses a [different architecture](1712346002-llama2-large-language-model.md).

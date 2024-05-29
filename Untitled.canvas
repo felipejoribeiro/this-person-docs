@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"id":"49bbce58d3c5915f","type":"file","file":"permanent/1713121077-n8n-workflow-automation.md","x":-680,"y":-320,"width":918,"height":80},
+		{"id":"d679c87217246b13","type":"file","file":"permanent/1712346002-llama2-large-language-model.md","x":-680,"y":-200,"width":918,"height":80},
+		{"id":"ea69c05bf525e76c","type":"file","file":"permanent/1712254150-large-language-models.md","x":-680,"y":-80,"width":918,"height":80},
+		{"id":"e364ab1c7b47d350","x":-680,"y":-440,"width":918,"height":75,"type":"file","file":"permanent/1716862221-python-version-package-management-poetry-pyenv.md"}
+	],
+	"edges":[]
+}
