@@ -103,6 +103,14 @@ To install **poetry** you can use the following command:
 curl -sSL https://install.python-poetry.org | python3 -
 ```
 
+### Configuration
+
+To use a local virtual environment with poetry, you can set the following configuration:
+
+```bash
+poetry config virtualenvs.in-project true
+```
+
 ### Usage
 
 Poetry is a big and complex tool, but you can use it to manage dependencies with the following commands:
@@ -113,5 +121,5 @@ poetry add package_name # Add a new package
 poetry remove package_name # Remove a package
 poetry update package_name # Update a package
 poetry run python script.py # Run a python script
-poetry shell # Activate the virtual environment
+poetry shell # Activate the virtual environment associated with the project
 ```

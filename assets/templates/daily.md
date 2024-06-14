@@ -24,22 +24,30 @@ Valuable quantitative data:
 
 Habits to be done daily:
 
-- [ ] | reading;
-- [ ] | Food intake;
-- [ ] | Pray the Rosary;
-- [ ] | Gym;
-- [ ] | Supplement and creatine;
-- [ ] | Meditation;
-- [ ] | Bath;
-- [ ] | Medication, minoxidil and orthodontic plate;
-- [ ] | Brush teeth;
-- [ ] | Artistic activity;
+- morning routine:
+  - [ ] | Brush teeth 1;
+  - [ ] | Gym;
+  - [ ] | Supplement and creatine;
+  - [ ] | Bath 1;
+  - [ ] | Food intake 1;
+  - [ ] | work;
+- evening routine:
+  - [ ] | Food intake 2;
+  - [ ] | Brush teeth 2;
+  - [ ] | Meditation;
+  - [ ] | work;
+  - [ ] | Bath 2;
+- night routine:
+  - [ ] | Food intake 3;
+  - [ ] | Brush teeth 3;
+  - [ ] | Medication, minoxidil and orthodontic plate;
+  - [ ] | reading;
+  - [ ] | Artistic activity;
+  - [ ] | Pray the Rosary;
 
 ## Time track
 
-| time | topic   |
-| ---- | ------- |
-| 7:00 | Woke up |
+- 7:30 - Woke up +
 
 ## General notes
 

@@ -84,8 +84,8 @@ For text generation, a prompt is necessary. Then a pipeline must be created. The
 user_prompt = "Please tell me about Bursitis"
 text_generation_pipeline = pipeline(
   task = "text-generation",
-  model = llama_model,
-  tokenizer = llama_tokenizer,
+  model = model,
+  tokenizer = tokenizer,
   max_length = 300
 )
 ```
@@ -101,7 +101,7 @@ This code will generate a text based on the user prompt. We downloaded the model
 
 You can run this code on **google colab** or any other python environment.
 
-## ✾ Fine-tuning the model with supervised training
+## ✾ Fine-tuning LLAMA2 with supervised training
 
 First, you need to download a pre-trained model. In this case, we are going to use [aboonaji/llama2finetune-v2](https://huggingface.co/aboonaji/llama2finetune-v2). Then you will need a dataset. The dataset must comply to the following format:
 
@@ -152,3 +152,250 @@ llama_sft_trainer.train()
 ```
 
 The model will be tuned and it can be used to text generation the same way it was described before.
+
+> Remember that your GPU must have enough memory, or else, you will receive this error:
+>
+> `torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 32.00 MiB. GP`
+
+## ✾ Fine-tuning LLAMA3 with supervised training
+
+For fine-tuning LLama3, we used [**unsloth**](https://github.com/unslothai/unsloth?tab=readme-ov-file#-installation-instructions), which is a tool to make the training process more feasible and cheap. So, first you will need the following packages:
+
+```bash
+pip install torch datasets transformers trl
+```
+
+There are additional steps to install **unsloth**. For that follow the instructions on the [github repo](https://github.com/unslothai/unsloth?tab=readme-ov-file#-installation-instructions).
+
+After all packages are installed, you can proceed with the following code to import the model and the tokenizer:
+
+```python
+import os
+
+import torch
+from datasets import load_dataset
+from transformers import TrainingArguments
+from trl import SFTTrainer
+from unsloth import FastLanguageModel, is_bfloat16_supported
+
+TOKEN = os.getenv("HUGGINGFACEHUB_API_TOKEN")
+max_seq_length = 2048
+dtype = None
+load_in_4bit = True
+
+model, tokenizer = FastLanguageModel.from_pretrained(
+    model_name="unsloth/llama-3-8b-bnb-4bit",
+    max_seq_length=max_seq_length,
+    dtype=dtype,
+    load_in_4bit=load_in_4bit,
+    token=TOKEN,
+)
+
+model = FastLanguageModel.get_peft_model(
+    model,
+    r=16,
+    target_modules=[
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj",
+    ],
+    lora_alpha=16,
+    lora_dropout=0,
+    bias="none",
+    use_gradient_checkpointing="unsloth",
+    random_state=3407,
+    use_rslora=False,
+    loftq_config=None,
+)
+```
+
+Then, you will need to get the training dataset and configure the training process as follows:
+
+```python
+
+TRAINING_PROMPT = """Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+{}
+
+### Input:
+{}
+
+### Response:
+{}"""
+
+
+EOS_TOKEN = tokenizer.eos_token
+
+
+def formatting_prompts_func(all_examples):
+
+    instructions = all_examples["instruction"]
+    inputs = all_examples["input"]
+    outputs = all_examples["output"]
+
+    texts = []
+    for instruction, input, output in zip(instructions, inputs, outputs):
+        text = TRAINING_PROMPT.format(instruction, input, output) + EOS_TOKEN
+        texts.append(text)
+
+    return {"text": texts}
+
+
+pass
+
+
+dataset = load_dataset("yahma/alpaca-cleaned", split="train")
+dataset = dataset.map(
+    formatting_prompts_func,
+    batched=True,
+)
+```
+
+And finally, you can train the model:
+
+```python
+trainer = SFTTrainer(
+    model=model,
+    train_dataset=dataset,
+    dataset_text_field="text",
+    max_seq_length=max_seq_length,
+    tokenizer=tokenizer,
+    args=TrainingArguments(
+        per_device_train_batch_size=2,
+        gradient_accumulation_steps=4,
+        warmup_steps=10,
+        max_steps=60,  # set "none" for full training
+        num_train_epochs=4,
+        fp16=not is_bfloat16_supported(),
+        bf16=is_bfloat16_supported(),
+        logging_steps=1,
+        output_dir="outputs",
+        optim="adamw_8bit",
+        seed=3407,
+    ),
+)
+
+trainer.train()
+```
+
+Finally, you will be able to use the model to generate text:
+
+```python
+FastLanguageModel.for_inference(model)
+
+inputs = tokenizer(
+    [
+        TRAINING_PROMPT.format(
+            "List the prime numbers contained within the range.",
+            "1-50",
+            "",
+        )
+    ],
+    return_tensors="pt",
+).to("cuda")
+
+outputs = model.generate(**inputs, max_new_tokens=128, use_cache=True)
+tokenizer.batch_decode(outputs)
+```
+
+## ✾ Saving the final model
+
+After training you would want to save the model in non-volatile memory. You can do this by using the following code:
+
+```python
+model.save_pretrained("lora_model") # Local saving
+tokenizer.save_pretrained("lora_model")
+```
+
+then you can use this model as follows:
+
+```python
+if False:
+    from unsloth import FastLanguageModel
+    model, tokenizer = FastLanguageModel.from_pretrained(
+        model_name = "lora_model", # YOUR MODEL YOU USED FOR TRAINING
+        max_seq_length = max_seq_length,
+        dtype = dtype,
+        load_in_4bit = load_in_4bit,
+    )
+    FastLanguageModel.for_inference(model) # Enable native 2x faster inference
+
+# alpaca_prompt = You MUST copy from above!
+
+inputs = tokenizer(
+[
+    alpaca_prompt.format(
+        "What is a famous tall tower in Paris?", # instruction
+        "", # input
+        "", # output - leave this blank for generation!
+    )
+], return_tensors = "pt").to("cuda")
+
+outputs = model.generate(**inputs, max_new_tokens = 64, use_cache = True)
+tokenizer.batch_decode(outputs)
+
+## or
+
+if False:
+    # I highly do NOT suggest - use Unsloth if possible
+    from peft import AutoPeftModelForCausalLM
+    from transformers import AutoTokenizer
+    model = AutoPeftModelForCausalLM.from_pretrained(
+        "lora_model", # YOUR MODEL YOU USED FOR TRAINING
+        load_in_4bit = load_in_4bit,
+    )
+    tokenizer = AutoTokenizer.from_pretrained("lora_model")
+```
+
+There are other ways of saving in different formats:
+
+```python
+# Merge to 16bit
+if False: model.save_pretrained_merged("model", tokenizer, save_method = "merged_16bit",)
+if False: model.push_to_hub_merged("hf/model", tokenizer, save_method = "merged_16bit", token = "")
+
+# Merge to 4bit
+if False: model.save_pretrained_merged("model", tokenizer, save_method = "merged_4bit",)
+if False: model.push_to_hub_merged("hf/model", tokenizer, save_method = "merged_4bit", token = "")
+
+# Just LoRA adapters
+if False: model.save_pretrained_merged("model", tokenizer, save_method = "lora",)
+if False: model.push_to_hub_merged("hf/model", tokenizer, save_method = "lora", token = "")
+```
+
+## ✾ Conclusion
+
+It's possible to train models in your local machine, but you will need a powerful GPU or else you will get errors like these for **llama3**:
+
+```text
+🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
+Major version: 6
+==((====))==  Unsloth: Fast Llama patching release 2024.5
+   \\   /|    GPU: NVIDIA GeForce GTX 1080. Max memory: 7.914 GB. Platform = Linux.
+O^O/ \_/ \    Pytorch: 2.3.0+cu121. CUDA = 6.1. CUDA Toolkit = 12.1.
+\        /    Bfloat16 = FALSE. Xformers = 0.0.26.post1. FA = False.
+ "-____-"     Free Apache license: http://github.com/unslothai/unsloth
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Unsloth 2024.5 patched 32 layers with 32 QKV layers, 32 O layers and 32 MLP layers.
+max_steps is given, it will override any value given in num_train_epochs
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs = 1
+   \\   /|    Num examples = 51,760 | Num Epochs = 1
+O^O/ \_/ \    Batch size per device = 2 | Gradient Accumulation steps = 4
+\        /    Total batch size = 8 | Total steps = 60
+ "-____-"     Number of trainable parameters = 41,943,040
+  0%|
+```
+
+And for **llama2**:
+
+```text
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 32.00 MiB. GPU
+  0%|          | 0/100 [00:00<?, ?it/s]
+```
+
+But **Google Colab** is a good alternative for training models, as it provides a free GPU. You can also use **unsloth** to make the training process faster and more efficient.

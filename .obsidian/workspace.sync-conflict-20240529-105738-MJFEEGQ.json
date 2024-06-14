@@ -8,6 +8,21 @@
         "type": "tabs",
         "children": [
           {
+            "id": "76be65ae6977bcef",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Untitled.canvas",
+                "viewState": {
+                  "x": 254,
+                  "y": -202,
+                  "zoom": 0
+                }
+              }
+            }
+          },
+          {
             "id": "c5f00cb2f18a4dbf",
             "type": "leaf",
             "state": {
@@ -88,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting/❖ ♧ ◉ ✾.md",
+                "file": "Untitled.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "fleeting/❖ ♧ ◉ ✾.md",
+                "file": "Untitled.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "fleeting/❖ ♧ ◉ ✾.md"
+                "file": "Untitled.canvas"
               }
             }
           }
@@ -164,11 +179,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "c5f00cb2f18a4dbf",
+  "active": "76be65ae6977bcef",
   "lastOpenFiles": [
-    "daily/2024-06-03.md",
-    "Untitled.canvas",
+    "permanent/1716862221-python-version-package-management-poetry-pyenv.md",
     "daily/2024-05-29.md",
+    "Untitled.canvas",
     "fleeting/❖ ♧ ◉ ✾.md",
     "permanent/1716504098-github-pages-plus-cloudflare-hosting.md",
     "permanent/1713121077-n8n-workflow-automation.md",
@@ -205,6 +220,7 @@
     "node_modules/form-data/README.md",
     "node_modules/json-stringify-safe/CHANGELOG.md",
     "node_modules/uuid/README.md",
+    "node_modules/performance-now/README.md",
     "legacy/programming/blockchain/images/01_01.jpg",
     "legacy/programming/blockchain/images/01_02.jpg",
     "legacy/programming/patterns/data/16.svg",

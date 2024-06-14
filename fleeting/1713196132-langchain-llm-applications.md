@@ -11,6 +11,11 @@ tags:
 
 ![chain-header.png](../assets/from_notes/1713196132-langchain-llm-applications-2024-04-24-17-11-12-chain-header.png)
 
+## ✾ Inportant concepts
+
+- **time-to-first-token**: Time required to output the first chunk of text;
+- **stream**: Stream of content of output that results of computations in AI work;
+
 ## ✾ Installation
 
 For installing the langchain framework, you can use the following command:
