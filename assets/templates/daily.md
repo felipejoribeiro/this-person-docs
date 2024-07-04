@@ -8,9 +8,6 @@ tags:
 
 # DAILY NOTES
 
-| Icoceno: 2 (scala) / 5 | Week: / 521 | Month: 53 / 120 |
-| ---------------------- | ----------- | --------------- |
-
 ## General values:
 
 Valuable quantitative data:
@@ -47,8 +44,8 @@ Habits to be done daily:
 
 ## Time track
 
-- 7:30 - Woke up +
 
 ## General notes
+
 
 ## Documents written

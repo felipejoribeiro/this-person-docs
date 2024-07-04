@@ -1,0 +1,15 @@
+{
+  "vimMode": false,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "fleeting",
+  "attachmentFolderPath": "assets/from_notes",
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": false,
+  "promptDelete": false,
+  "useMarkdownLinks": true,
+  "newLinkFormat": "absolute",
+  "userIgnoreFilters": [
+    "assets/",
+    "daily/"
+  ]
+}

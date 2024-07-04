@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "85373380323853c6",
+        "id": "7c78b96b69eb2aed",
         "type": "tabs",
         "children": [
           {
-            "id": "c5f00cb2f18a4dbf",
+            "id": "2ed306298da94b2a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "fleeting/❖ ♧ ◉ ✾.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "full-calendar-view",
+              "state": {}
             }
           }
         ]
@@ -33,6 +29,17 @@
         "type": "tabs",
         "children": [
           {
+            "id": "e4c7c05b848125f0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
             "id": "c4809dad77a865e1",
             "type": "leaf",
             "state": {
@@ -48,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#art",
+                "query": "tag:religion",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,30 +72,36 @@
               "state": {}
             }
           }
-        ]
-      },
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 232.5
+  },
+  "right": {
+    "id": "6a433ffad8df77ca",
+    "type": "split",
+    "children": [
       {
-        "id": "6732e045bdf2037f",
+        "id": "ce27ad7cced2c08b",
         "type": "tabs",
+        "dimension": 58.86332882273342,
         "children": [
           {
-            "id": "e4c7c05b848125f0",
+            "id": "f8d21e6cc7ef89bc",
             "type": "leaf",
             "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              }
+              "type": "graph",
+              "state": {}
             }
           },
           {
-            "id": "9fef8bde8713ad2e",
+            "id": "e681e8cb1f8946c5",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting/❖ ♧ ◉ ✾.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,46 +113,36 @@
             }
           },
           {
-            "id": "96447140d5d5b4f5",
+            "id": "e37d0e7d7ff79356",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "fleeting/❖ ♧ ◉ ✾.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "ed4a60ff15bc4f3d",
+            "id": "d197d424c3e9870f",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "fleeting/❖ ♧ ◉ ✾.md"
-              }
+              "state": {}
             }
           }
         ]
-      }
-    ],
-    "direction": "horizontal",
-    "width": 200
-  },
-  "right": {
-    "id": "6a433ffad8df77ca",
-    "type": "split",
-    "children": [
+      },
       {
-        "id": "3c37d871364093df",
+        "id": "6d548e869bc889c3",
         "type": "tabs",
+        "dimension": 41.13667117726657,
         "children": [
           {
-            "id": "3e810199675b0b45",
+            "id": "4e62e49ad5bc7727",
             "type": "leaf",
             "state": {
-              "type": "calendar",
+              "type": "mathpad-view",
               "state": {}
             }
           }
@@ -147,13 +150,13 @@
       }
     ],
     "direction": "horizontal",
-    "width": 333.5,
-    "collapsed": true
+    "width": 307.5
   },
   "left-ribbon": {
     "hiddenItems": {
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
+      "templater-obsidian:Templater": false,
       "canvas:Create new canvas": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
@@ -161,30 +164,44 @@
       "daily-notes:Open today's daily note": false,
       "obsidian-kindle-plugin:Sync your Kindle highlights": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
-      "templater-obsidian:Templater": false
+      "obsidian-full-calendar:Open Full Calendar": false,
+      "mathpad:Open Mathpad": false,
+      "pomodoro-timer:Toggle timer panel": false
     }
   },
-  "active": "c5f00cb2f18a4dbf",
+  "active": "2ed306298da94b2a",
   "lastOpenFiles": [
-    "daily/2024-06-03.md",
-    "Untitled.canvas",
-    "daily/2024-05-29.md",
+    "assets/20240704_114248.jpg",
+    "assets/20240704_114258.jpg",
+    "daily/2024-07-04.md",
+    "assets/templates/daily.md",
+    "daily/2024-07-02.md",
+    "daily/2024-06-30.md",
+    "daily/2024-07-01.md",
+    "daily/2024-06-29.md",
+    "daily/2024-07-03.md",
+    "daily/2024-06-28.md",
+    "permanent/1712346002-llama2-large-language-model.md",
+    "daily/2024-06-27.md",
+    "daily/2024-06-26.md",
+    "daily/2024-06-25.md",
     "fleeting/❖ ♧ ◉ ✾.md",
-    "permanent/1716504098-github-pages-plus-cloudflare-hosting.md",
-    "permanent/1713121077-n8n-workflow-automation.md",
-    "daily/2024-05-27.md",
-    "permanent/1712174618-reinforcement-learning.md",
-    "Excalidraw/Drawing 2024-05-27 15.50.20.excalidraw.md",
-    "Excalidraw",
-    "daily/2024-05.md",
-    "daily/2024-05-09.md",
-    "daily/2024-04-25.md",
+    "legacy/programming/patterns/14_behavioral_observer.md",
+    "daily/2024-06-19.md",
     "permanent/1710353702-briophytes.md",
+    "daily/2024-06-24.md",
+    "permanent/1710348733-periodic-table.md",
+    "fleeting/Untitled.md",
+    "fleeting/1710798450-genesis.md",
+    "permanent/1712174618-reinforcement-learning.md",
+    "fleeting/1712240474-artificial-neural-networks.md",
+    "permanent/1712254150-large-language-models.md",
+    "permanent/1712432205-zettelkasten-method.md",
+    "permanent/1713121077-n8n-workflow-automation.md",
+    "Untitled.canvas",
+    "Excalidraw",
     "assets/from_notes/1710353702-briophytes-2024-04-24-11-43-33-briophytes-cover.png",
     "assets/from_notes/1710353702-briophytes-2024-04-24-11-42-10-moss-cover-image.png",
-    "permanent/1711122353-nvim-plugins-creation.md",
-    "daily/2024-04-24.md",
-    "daily/2024-04-18.md",
     "node_modules/uri-js/dist/esnext/schemes/urn.js.map",
     "node_modules/tough-cookie/package.json",
     "node_modules/uri-js/dist/esnext/schemes/wss.js",
@@ -194,24 +211,13 @@
     "node_modules/har-schema/lib/har.json",
     "node_modules/tunnel-agent/index.js",
     "node_modules/jsprim/package.json",
-    "node_modules/ajv/lib/dotjs/README.md",
-    "node_modules/mime-db/README.md",
-    "node_modules/safer-buffer/Porting-Buffer.md",
-    "node_modules/tunnel-agent/README.md",
-    "node_modules/delayed-stream/Readme.md",
     "node_modules/psl/browserstack-logo.svg",
-    "node_modules/json-stringify-safe/README.md",
-    "node_modules/isstream/LICENSE.md",
-    "node_modules/form-data/README.md",
-    "node_modules/json-stringify-safe/CHANGELOG.md",
-    "node_modules/uuid/README.md",
     "legacy/programming/blockchain/images/01_01.jpg",
     "legacy/programming/blockchain/images/01_02.jpg",
     "legacy/programming/patterns/data/16.svg",
     "legacy/programming/patterns/data/15.svg",
     "legacy/programming/webdev/backend/node_js/image_2.png",
     "legacy/programming/patterns/data/02.svg",
-    "legacy/programming/patterns/data/10.svg",
     "Untitled 1.canvas",
     "piloto.canvas"
   ]

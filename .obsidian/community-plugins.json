@@ -7,5 +7,11 @@
   "dataview",
   "cm-editor-syntax-highlight-obsidian",
   "templater-obsidian",
-  "lilypond"
+  "lilypond",
+  "obsidian-full-calendar",
+  "mathpad",
+  "url-into-selection",
+  "pomodoro-timer",
+  "tag-wrangler",
+  "obsidian-tagfolder"
 ]
