@@ -4,18 +4,43 @@
     "type": "split",
     "children": [
       {
-        "id": "b557dc742f78073e",
+        "id": "7c78b96b69eb2aed",
         "type": "tabs",
         "children": [
           {
-            "id": "da222ca858fc69dd",
+            "id": "347003a208cf9c9a",
             "type": "leaf",
             "state": {
               "type": "full-calendar-view",
               "state": {}
             }
+          },
+          {
+            "id": "fe0d93afdf3a0011",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "daily/2024-07-13.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5a9dab38e73d8d05",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "daily/2024-07-13.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -86,7 +111,7 @@
       {
         "id": "ce27ad7cced2c08b",
         "type": "tabs",
-        "dimension": 47.14424007744434,
+        "dimension": 58.86332882273342,
         "children": [
           {
             "id": "f8d21e6cc7ef89bc",
@@ -102,6 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "daily/2024-07-13.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,6 +144,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "daily/2024-07-13.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +155,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "daily/2024-07-13.md"
+              }
             }
           }
         ]
@@ -136,7 +165,7 @@
       {
         "id": "6d548e869bc889c3",
         "type": "tabs",
-        "dimension": 52.85575992255567,
+        "dimension": 41.13667117726657,
         "children": [
           {
             "id": "4e62e49ad5bc7727",
@@ -150,7 +179,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 274.5
+    "width": 307.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -169,39 +198,38 @@
       "pomodoro-timer:Toggle timer panel": false
     }
   },
-  "active": "da222ca858fc69dd",
+  "active": "5a9dab38e73d8d05",
   "lastOpenFiles": [
-    "daily/2024-10-05.md",
-    "daily/2024-10-04.md",
-    "daily/2024-10-03.md",
-    "daily/2024-10-02.md",
-    "daily/2024-10-01.md",
-    "daily/2024-10-09.md",
-    "daily/2024-09-29.md",
-    "daily/2024-09-30.md",
-    "daily/2024-09-26.md",
-    "daily/2024-09-25.md",
-    "daily/2024-09-22.md",
-    "daily/2024-09-20.md",
-    "permanent/1726149526-apple-certificates-and-profiles.md",
-    "fleeting/1711394673-chemical-bonds.md",
-    "fleeting/1710951119-godot-source-code.md",
-    "fleeting/1710950777-lilypond-basics.md",
-    "fleeting/1710798450-genesis.md",
-    "fleeting/❖ ♧ ◉ ✾.md",
-    "permanent/1713121077-n8n-workflow-automation.md",
-    "fleeting/README.md",
-    "fleeting/Untitled.md",
-    "permanent/1716504098-github-pages-plus-cloudflare-hosting.md",
-    "permanent/1716862221-python-version-package-management-poetry-pyenv.md",
-    "permanent/1716862221-python-version-package-management-poetry-pyenv 1.md",
-    "permanent/1712432205-zettelkasten-method.md",
-    "permanent/1712346002-llama2-large-language-model.md",
-    "Excalidraw",
     "assets/from_notes/Pasted image 20240713161805.png",
+    "daily/2024-07-12.md",
+    "daily/2024-07-13.md",
+    "daily/2024-09-21.md",
+    "daily/2024-07-11.md",
+    "daily/2024-07-08.md",
+    "fleeting/1720483656-flutterdesignpatterns.md",
+    "daily/2024-07-10.md",
     "assets/20240704_114248.jpg",
     "assets/20240704_114258.jpg",
+    "daily/2024-07-04.md",
+    "assets/templates/daily.md",
+    "daily/2024-07-02.md",
+    "daily/2024-06-30.md",
+    "daily/2024-07-01.md",
+    "daily/2024-06-29.md",
+    "daily/2024-07-03.md",
+    "daily/2024-06-28.md",
+    "permanent/1712346002-llama2-large-language-model.md",
+    "daily/2024-06-27.md",
+    "daily/2024-06-26.md",
+    "daily/2024-06-25.md",
+    "fleeting/❖ ♧ ◉ ✾.md",
+    "legacy/programming/patterns/14_behavioral_observer.md",
+    "daily/2024-06-19.md",
+    "permanent/1710353702-briophytes.md",
+    "daily/2024-06-24.md",
+    "permanent/1710348733-periodic-table.md",
     "Untitled.canvas",
+    "Excalidraw",
     "assets/from_notes/1710353702-briophytes-2024-04-24-11-43-33-briophytes-cover.png",
     "assets/from_notes/1710353702-briophytes-2024-04-24-11-42-10-moss-cover-image.png",
     "node_modules/uri-js/dist/esnext/schemes/urn.js.map",
@@ -218,6 +246,7 @@
     "legacy/programming/blockchain/images/01_02.jpg",
     "legacy/programming/patterns/data/16.svg",
     "legacy/programming/patterns/data/15.svg",
+    "legacy/programming/webdev/backend/node_js/image_2.png",
     "Untitled 1.canvas",
     "piloto.canvas"
   ]

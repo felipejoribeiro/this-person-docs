@@ -44,8 +44,4 @@ Habits to be done daily:
 
 ## Time track
 
-
 ## General notes
-
-
-## Documents written

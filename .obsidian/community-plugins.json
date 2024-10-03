@@ -13,5 +13,6 @@
   "url-into-selection",
   "pomodoro-timer",
   "tag-wrangler",
-  "obsidian-tagfolder"
+  "obsidian-tagfolder",
+  "svelte-syntax-highlighter"
 ]
