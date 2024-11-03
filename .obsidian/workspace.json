@@ -4,15 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "b557dc742f78073e",
+        "id": "196d1ba1785c1b67",
         "type": "tabs",
         "children": [
           {
-            "id": "da222ca858fc69dd",
+            "id": "f8d21e6cc7ef89bc",
             "type": "leaf",
             "state": {
-              "type": "full-calendar-view",
-              "state": {}
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -36,7 +38,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -46,7 +50,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -61,7 +67,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -69,7 +77,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ],
@@ -77,7 +87,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 232.5
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "6a433ffad8df77ca",
@@ -86,22 +97,14 @@
       {
         "id": "ce27ad7cced2c08b",
         "type": "tabs",
-        "dimension": 47.14424007744434,
         "children": [
-          {
-            "id": "f8d21e6cc7ef89bc",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
-          },
           {
             "id": "e681e8cb1f8946c5",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +112,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for README"
             }
           },
           {
@@ -118,9 +123,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from README"
             }
           },
           {
@@ -128,29 +136,39 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "README.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of README"
             }
-          }
-        ]
-      },
-      {
-        "id": "6d548e869bc889c3",
-        "type": "tabs",
-        "dimension": 52.85575992255567,
-        "children": [
+          },
           {
-            "id": "4e62e49ad5bc7727",
+            "id": "70d7fee6b17739a5",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "f09bc13f6ccbbeac",
             "type": "leaf",
             "state": {
               "type": "mathpad-view",
-              "state": {}
+              "state": {},
+              "icon": "sigma",
+              "title": "Mathpad"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 274.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -161,48 +179,50 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "audio-recorder:Start/stop recording": false,
-      "daily-notes:Open today's daily note": false,
       "obsidian-kindle-plugin:Sync your Kindle highlights": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
-      "obsidian-full-calendar:Open Full Calendar": false,
-      "mathpad:Open Mathpad": false,
-      "pomodoro-timer:Toggle timer panel": false
+      "mathpad:Open Mathpad": false
     }
   },
-  "active": "da222ca858fc69dd",
+  "active": "f09bc13f6ccbbeac",
   "lastOpenFiles": [
-    "daily/2024-10-05.md",
-    "daily/2024-10-04.md",
-    "daily/2024-10-03.md",
-    "daily/2024-10-02.md",
-    "daily/2024-10-01.md",
-    "daily/2024-10-09.md",
-    "daily/2024-09-29.md",
-    "daily/2024-09-30.md",
-    "daily/2024-09-26.md",
-    "daily/2024-09-25.md",
-    "daily/2024-09-22.md",
-    "daily/2024-09-20.md",
-    "permanent/1726149526-apple-certificates-and-profiles.md",
-    "fleeting/1711394673-chemical-bonds.md",
-    "fleeting/1710951119-godot-source-code.md",
-    "fleeting/1710950777-lilypond-basics.md",
-    "fleeting/1710798450-genesis.md",
-    "fleeting/❖ ♧ ◉ ✾.md",
-    "permanent/1713121077-n8n-workflow-automation.md",
-    "fleeting/README.md",
-    "fleeting/Untitled.md",
-    "permanent/1716504098-github-pages-plus-cloudflare-hosting.md",
     "permanent/1716862221-python-version-package-management-poetry-pyenv.md",
-    "permanent/1716862221-python-version-package-management-poetry-pyenv 1.md",
-    "permanent/1712432205-zettelkasten-method.md",
-    "permanent/1712346002-llama2-large-language-model.md",
+    "permanent/1726149526-apple-certificates-and-profiles.md",
+    "README.md",
+    "fleeting/1727470680-emisso-de-nota-fiscal.md",
+    "fleeting/1712240474-artificial-neural-networks.md",
+    "fleeting/1710950777-lilypond-basics.md",
+    "assets/from_notes/1710798450-genesis-2024-03-19-03-18-22-history-universe-from-science.png",
+    "assets/from_notes/1710353702-briophytes-2024-04-24-11-43-33-briophytes-cover.png",
+    "assets/from_notes/2024-05-2024-05-08-13-21-50-whale-may-header.png",
+    "assets/rofi.gif",
+    "assets/books.png",
+    "assets/templates/default.svg",
+    "daily/2024-03-12.md",
+    "daily/2024-10-24.md",
+    "daily/2024-07-23.md",
+    "daily/2024-05.md",
+    "daily/2024-04-29.md",
+    "daily/2024-04-25.md",
+    "daily/2024-04-15.md",
+    "daily/2024-04-13.md",
+    "daily/2024-03-15.md",
+    "daily/2024-03-13.md",
+    "daily/2024-07-24.md",
+    "daily/2024-07-30.md",
+    "daily/2024-07-31.md",
+    "daily/2024-06-30.md",
+    "daily/2024-07-03.md",
+    "daily/2024-07-02.md",
+    "daily/2024-07-01.md",
+    "daily/2024-06-28.md",
+    "daily/2024-06-27.md",
+    "daily/2024-06-29.md",
     "Excalidraw",
     "assets/from_notes/Pasted image 20240713161805.png",
     "assets/20240704_114248.jpg",
     "assets/20240704_114258.jpg",
     "Untitled.canvas",
-    "assets/from_notes/1710353702-briophytes-2024-04-24-11-43-33-briophytes-cover.png",
     "assets/from_notes/1710353702-briophytes-2024-04-24-11-42-10-moss-cover-image.png",
     "node_modules/uri-js/dist/esnext/schemes/urn.js.map",
     "node_modules/tough-cookie/package.json",
@@ -213,11 +233,6 @@
     "node_modules/har-schema/lib/har.json",
     "node_modules/tunnel-agent/index.js",
     "node_modules/jsprim/package.json",
-    "node_modules/psl/browserstack-logo.svg",
-    "legacy/programming/blockchain/images/01_01.jpg",
-    "legacy/programming/blockchain/images/01_02.jpg",
-    "legacy/programming/patterns/data/16.svg",
-    "legacy/programming/patterns/data/15.svg",
     "Untitled 1.canvas",
     "piloto.canvas"
   ]

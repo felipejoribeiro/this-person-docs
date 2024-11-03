@@ -8,6 +8,19 @@ tags: []
 
 # Apple certificates and profiles
 
+Uploading apps to the apple app store can be done by following these steps:
+
+- register the `Bundle ID`;
+  - you can create an app in `xcode` and the `Bundle ID` will be created automatically;
+- create app record in the `App Store Connect`;
+  - select the `Bundle ID` created;
+- configure the app in the `App Store Connect`;
+  - add the app icon, screenshots, description, etc;
+- create a certificate;
+- create a provisioning profile;
+- register the devices;
+- upload the app to the `App Store Connect`;
+
 To send apple apps to the app store, you need to create a certificate and a provisioning profile. This is a simple guide to create these files.
 
 ## Certificates
@@ -48,7 +61,9 @@ To create a provisioning profile, you need to follow these steps:
 5. Select the type of provisioning profile you want to create;
 6. Follow the steps to create the provisioning profile;
 
-> **Note**: For distributino certificates, you will not need a physical device to create the certificate. But for development certificates, you will need a physical device to create the certificate.
+> **Note**: For distribution certificates in apple store connect you don't need an apple device.
+
+Here you approve capabilites for the apps published as well. For that, go in "Identifiers" and select or create a new one. Then select capabilites and app services that are required in your app. After this you can add these capabilites in Xcode without problems.
 
 Then, in Xcode, disable the **Automatically manage signing** option and select the provisioning profile you just created for direct distribution. Than you can send versions through **TestFlight** or **App Store Connect**.
 
