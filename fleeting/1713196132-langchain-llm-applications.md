@@ -25,3 +25,7 @@ pip install langchain openai huggingface_hub
 ```
 
 After that, you can start using the framework to create your own large language model application.
+
+## ✾ RAG
+
+https://github.com/run-llama/llama_parse

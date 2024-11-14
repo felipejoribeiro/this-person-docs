@@ -95,6 +95,12 @@ Besides managing dependencies, **poetry** can package your projects and publish 
 poetry new my_project
 ```
 
+The main benefits of using it instead of a pure `requirements.txt` file are:
+
+- It separates direct dependencies from indirect dependencies;
+- It has a lock file that is updated when any dependency version changes;
+- It's dependency resolver is better than pip's;
+
 ### Installation
 
 To install **poetry** you can use the following command:
