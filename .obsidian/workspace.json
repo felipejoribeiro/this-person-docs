@@ -11,10 +11,12 @@
             "id": "f8d21e6cc7ef89bc",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "fleeting/psychology_of_communication.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -38,9 +40,7 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              },
-              "icon": "lucide-tags",
-              "title": "Tags"
+              }
             }
           },
           {
@@ -50,9 +50,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              },
-              "icon": "lucide-folder-closed",
-              "title": "Files"
+              }
             }
           },
           {
@@ -67,9 +65,7 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              },
-              "icon": "lucide-search",
-              "title": "Search"
+              }
             }
           },
           {
@@ -77,9 +73,7 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {},
-              "icon": "lucide-bookmark",
-              "title": "Bookmarks"
+              "state": {}
             }
           }
         ],
@@ -87,8 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "6a433ffad8df77ca",
@@ -104,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "fleeting/psychology_of_communication.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,9 +105,7 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "Backlinks for README"
+              }
             }
           },
           {
@@ -123,12 +114,10 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "fleeting/psychology_of_communication.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              },
-              "icon": "links-going-out",
-              "title": "Outgoing links from README"
+              }
             }
           },
           {
@@ -137,10 +126,8 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
-              },
-              "icon": "lucide-list",
-              "title": "Outline of README"
+                "file": "fleeting/psychology_of_communication.md"
+              }
             }
           },
           {
@@ -148,9 +135,7 @@
             "type": "leaf",
             "state": {
               "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "state": {}
             }
           },
           {
@@ -158,9 +143,7 @@
             "type": "leaf",
             "state": {
               "type": "mathpad-view",
-              "state": {},
-              "icon": "sigma",
-              "title": "Mathpad"
+              "state": {}
             }
           }
         ],
@@ -184,8 +167,12 @@
       "mathpad:Open Mathpad": false
     }
   },
-  "active": "f09bc13f6ccbbeac",
+  "active": "f8d21e6cc7ef89bc",
   "lastOpenFiles": [
+    "fleeting/1732030573-sqlc.md",
+    "fleeting/psychology_of_communication.md",
+    "fleeting/1729684350-golang.md",
+    "fleeting/1729175271-chatgpt-api.md",
     "permanent/1716862221-python-version-package-management-poetry-pyenv.md",
     "permanent/1726149526-apple-certificates-and-profiles.md",
     "README.md",
@@ -214,10 +201,6 @@
     "daily/2024-06-30.md",
     "daily/2024-07-03.md",
     "daily/2024-07-02.md",
-    "daily/2024-07-01.md",
-    "daily/2024-06-28.md",
-    "daily/2024-06-27.md",
-    "daily/2024-06-29.md",
     "Excalidraw",
     "assets/from_notes/Pasted image 20240713161805.png",
     "assets/20240704_114248.jpg",
