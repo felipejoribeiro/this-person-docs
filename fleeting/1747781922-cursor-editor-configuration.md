@@ -7,7 +7,7 @@ tags: []
 
 # cursor-editor-configuration
 
-Here we will see how to configure the cursor editor for a great development experience. In addition to that we will se configurations to improve neovim integration with AI based workflows.
+Here we will see how to configure the cursor editor for a great development experience. We will check integrations with MCP, how to add rules for automatic self improvement, how to configure docs, and we will discuss a few tips concerning prompts and the context window.
 
 ## MCP integration
 
