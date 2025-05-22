@@ -107,7 +107,7 @@ But if its too big it might fail, Try limiting the indexing to specific pages. N
 
 In my use case, I added django 2.2 and python syntax to the context window.
 
-## Prompt engineering
+## Prompt engineering tips
 
 We interact with agents through prompts and, as so, we need to know how to specify our problems and list our requirements in the most effective and descriptive way. To acumplishe that the following steps are essential:
 
@@ -119,7 +119,7 @@ We interact with agents through prompts and, as so, we need to know how to speci
 - **Sixth step**: If you feel like something can be learned from this task resolution, ask cursor to update or create rules based on the experience acquired. It's a good thing that the rules changes are included in the same commit as the changes that motivated their creation, as this can give context and reference to why each rule bit was created with a simple diff check.
 - **Seventh step**: Commit if successful before the next micro development cycle.
 
-## Context window poisoning
+## Context window tips
 
 Be careful with your context window. Humans can be defined by the experiences they have gone through in life. LLM agents, in the same vein, are defined by their context window. The larger the context window, the greater the probability of unexpected behavior, as there is a higher likelihood that incorrect information has poisoned your agent's knowledge.
 
@@ -127,9 +127,8 @@ The art of effective context window creation lies in specificity, accuracy and f
 
 - Separate one context window per task. Always initiate a new context window whenever possible;
 - Be mindful about **MCP** integrations and **rules**. Be certain that all info that is being shared through these tools are relevant to the task at hand and correct;
-- Always;
 
-## TDD assisted AI agents
+## TDD assisted agent workflow
 
 By adding rules to run tests you can make your **AI** agent check it's implementation results and act upon errors and inconsistencies. Not only that, but, given the requirements, the first thing you can ask the agent do are the tests, then you can edit these tests and make then very specific, and then you can instruct the agent to adopt a test driven design approach, which will lead it to inspect the tests and implement based on then. And it will run the tests to get instant feedback on it's implementation.
 
@@ -141,6 +140,6 @@ This approach was validated and seems a great way of making the results of the a
 
 Cursor is a great tool to interact with coding ai agents in an efficient way. All the things offered by the tool are available for free with open source alternatives, but the total ensamble is really compelling from a pragmatic point of view. It being based on vscode is another great feature, as it allows for a familiar environment for most developers and it makes it simple to import pre-existing configurations. Being able to install vs-code plugins as well is a killer feature.
 
-This new way of configuring behaviors is very interesting as well, as you end up using AI directly in the tooling configuration, like during the auto rule creation topics. This made me think that maybe we are truly entering in a new programming paradigm, as descriptive strings are substituting config files and API interfaces. But how much deterministic can we make this process be? And how eager are we to let go of reliability for the sake of it?
+This new way of configuring behaviors is very interesting as well, as you end up using AI directly in the tooling configuration, like during the auto rule creation topics. This made me think that maybe we are truly entering in a new programming paradigm, as descriptive strings are substituting config files and API interfaces. But how much deterministic can we make this process be? And how eager are we to let go of total reliability for the sake of it?
 
 Truly interesting the times we live in.
