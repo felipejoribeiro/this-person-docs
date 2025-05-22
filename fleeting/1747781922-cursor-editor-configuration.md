@@ -19,7 +19,7 @@ First, create a directory to store the **MCP** code in your machine. That can be
 
 Then you can open cursor's settings and go to the MCP tab:
 
-![](data/cursor-tutorial-1.png)
+![cursor-tutorial-1](data/cursor-tutorial-1.png)
 
 After clicking on create it will present to you a `.json` file with all MCP related configuration. Add the following entry to the `mcpServers` key:
 
@@ -53,15 +53,70 @@ After clicking on create it will present to you a `.json` file with all MCP rela
 
 After the addition to the `mcp.json` file, you will be able to make questions and include **Jira** context:
 
-![](data/cursor-tutorial-2.png)
+![cursor tutorial 2](data/cursor-tutorial-2.png)
+
 Other good options:
 
 - [github](https://github.com/github/github-mcp-server)
 - [google calendar](https://www.pulsemcp.com/servers/nspady-google-calendar)
 - [python repl](https://www.pulsemcp.com/servers/tynan-daly-python-repl)
 
-If you install too much tools, it may show a warning: "You have X tools from enabled servers. Too many tools can degrade performance, and some models may not repsect more than Y tools". In this case you should change the configuration of the mcp-server to only expose the tools you will need. You can do this by clicking in the tools to disable then:
+If you install too much tools, it may show a warning: "You have X tools from enabled servers. Too many tools can degrade performance, and some models may not respect more than Y tools". In this case you should change the configuration of the mcp-server to only expose the tools you will need. You can do this by clicking in the tools to disable then:
 
-### Configuring rules
+## Configuring rules
 
 Something interesting that cursor offers is the ability to determine rules, which will be run against your prompts and will perform actions based on the content.
+
+A great strategy is asking cursor to write its own rules. A first rule can indicate only how to create rules, like indicating that it must be created at `.cursor/rules/`, describing very well the file system and dos and donts of rule creation and update, and then, whenever cursor does something great, you can ask it to learn from that experience and edit or create new rules, making it learn as it works in your codebase. With such approach it will learn from it's fails and wins, and carry this knowledge for the next problems it might face.
+
+By learning through experience with your codebase and your development experience, it will fine tune its behavior and enhance itself with each new rule addition.
+
+![cursor tutorial 4](data/cursor-tutorial-4.png)
+
+You might need to enter the rule and configure it to auto attach as attempts to make this automatic were not successful, maybe this is not determined by the rules file which is a little cringe. So after a new rule is created, remember to enter in the rule and set its type to `Agent requested`:
+
+![cursor tutorial 5](data/cursor-tutorial-5.png)
+
+## Documentation support
+
+It's recommended to add documentation to the knowledge base of cursor in the specific field you are acting upon. This can be done by going to `Cursor Settings > Docs`
+
+![cursor-tutorial-3](data/cursor-tutorial-3.png)
+
+Than, you can add an url for a website with the documentation you are interested in.
+
+Here are some good ones:
+
+- [x in y - flutter](https://learnxinyminutes.com/dart/);
+- [x in y - python](https://learnxinyminutes.com/python/);
+- [django 2.2](https://docs.djangoproject.com/en/2.2/)
+
+And yeah... It goes deep in the docs:
+
+![](data/cursor-tutorial-6.png)
+
+But if its too big it might fail, Try limiting the indexing to specific pages. Not including the final slash, for example will make it include only a specific page. This is ideal for **X in Y** website pages.
+
+In my use case, I added django 2.2 and python syntax to the context window.
+
+## Prompt engineering
+
+We interact with agents through prompts and, as so, we need to know how to specify our problems and list our requirements in the most effective and descriptive way. To acumplishe that the following steps are essential:
+
+- **First step**: Describe and discuss with your agent about your requirements. I mean, talk about your problem, your objective, your proposed solution, ask what the agent thinks, respond and so on, until you fill that enough context was given about your intent and your expectations. Remember to break your problem in the smallest step possible, the more the problem is specific and objective, the better.
+- **Second step**: Ask the agent to write the requirement to a file that you can reference again if needed. You can edit this file if requirements change, you can reference it if you are starting a new context window regarding the same problem.
+- **Third step**: Embed a file that you might change in the implementation and ask the agent to describe it before asking to implement the feature. As well as asking the agent to describe anything that might be useful through that micro development cycle.
+- **Forth step**: Ask the agent to implement the micro development cycle, as well as creating unit tests and documentation if applicable.
+- **Fifth step**: Check the changes with you git diff. Run the application. Run the tests. Test the solution. Make corrections if needed.
+- **Sixth step**: If you feel like something can be learned from this task resolution, ask cursor to update or create rules based on the experience acquired. It's a good thing that the rules changes are included in the same commit as the changes that motivated their creation, as this can give context and reference to why each rule bit was created with a simple diff check.
+- **Seventh step**: Commit if successful before the next micro development cycle.
+
+## Context window poisoning
+
+Be careful with your context window. Humans can be defined by the experiences they have gone through in life. LLM agents, in the same vein, are defined by their context window. The larger the context window, the greater the probability of unexpected behavior, as there is a higher likelihood that incorrect information has poisoned your agent's knowledge.
+
+The art of effective context window creation lies in specificity, accuracy and focus:
+
+- Separate one context window per task. Always initiate a new context window whenever possible;
+- Be mindful about **MCP** integrations and **rules**. Be certain that all info that is being shared through these tools are relevant to the task at hand and correct;
+- Always;
